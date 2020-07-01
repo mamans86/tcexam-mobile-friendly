@@ -1,0 +1,12 @@
+{
+  "short_name": "TCExam",
+  "name": "TCExam",
+  "icons": [{
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "48x48"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa"
+}
