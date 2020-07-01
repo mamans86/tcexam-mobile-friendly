@@ -5,6 +5,10 @@ No Additional JS or CSS Framework for User Interface just Modernizr.
 
 If there are any update from tecnickcom/tcexam i will update this version too if possible.
 
+# Screenshot
+1. Login Page - Desktop View
+![Login Page - Desktop View](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Login%20Page%20-%20Desktop.PNG?raw=true)
+
 # TO DO LIST
 1. Add unsure answer mark in test page
 2. Add text zooming in test page
