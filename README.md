@@ -1,3 +1,17 @@
+# TCExam Mobile Friendly Version
+
+This mobile friendly version created from HTML5 Boiler Plate Template started by modifying TCExam v14.3.0. This version applied only to Public Area (test taker page) of TCExam. Mobile Friendly version for Admin Area will be applied soon if possible :)
+No Additional JS or CSS Framework for User Interface just Modernizr.
+
+If there are any update from tecnickcom/tcexam i will update this version too if possible.
+
+# TO DO LIST
+1. Add unsure answer mark in test page
+2. Add text zooming in test page
+3. Add question number on top of question description
+4. Create button to toggle question list on top of question description
+5. Create mobile friendly Admin Area
+
 # TCExam - README
 
 ------------------------------------------------------
