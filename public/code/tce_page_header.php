@@ -34,6 +34,7 @@ require_once('tce_xhtml_header.php');
 
 // display header (image logo + timer)
 echo '<div class="header">'.K_NEWLINE;
+echo '<div id="menu_open"><span onclick="menuOpen()">&#9776;</span></div>'.K_NEWLINE;
 echo '<div class="left"></div>'.K_NEWLINE;
 echo '<div class="right">'.K_NEWLINE;
 echo '<a name="timersection" id="timersection"></a>'.K_NEWLINE;
@@ -43,6 +44,7 @@ echo '</div>'.K_NEWLINE;
 
 // display menu
 echo '<div id="scrollayer" class="scrollmenu">'.K_NEWLINE;
+echo '<p id="menu_close" onclick="menuClose()">&times;</p>'.K_NEWLINE;
 // CSS changes for old browsers
 echo '<!--[if lte IE 7]>'.K_NEWLINE;
 echo '<style type="text/css">'.K_NEWLINE;

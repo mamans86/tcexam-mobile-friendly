@@ -111,7 +111,7 @@ if (isset($_REQUEST['testid']) and ($_REQUEST['testid'] > 0)) {
         require_once('../code/tce_page_header.php');
         echo '<div class="container">'.K_NEWLINE;
 
-        echo '<span class="infolink">'.F_testInfoLink($test_id, $l['w_info']).'<br /><br /></span>'.K_NEWLINE;
+        echo '<span class="infolink">'.F_testInfoLink($test_id, $l['w_info']).'</span>'.K_NEWLINE;
 
         if (!isset($_REQUEST['terminationform'])) {
             if (F_isRightTestlogUser($test_id, $testlog_id)) {

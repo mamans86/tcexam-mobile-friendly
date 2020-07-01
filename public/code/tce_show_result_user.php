@@ -88,7 +88,7 @@ F_lockUserTest($test_id, $_SESSION['session_user_id']);
 
 echo '<div class="container">'.K_NEWLINE;
 
-echo '<div class="tceformbox">'.K_NEWLINE;
+echo '<div class="tceformbox test_result">'.K_NEWLINE;
 
 $usr_all = htmlspecialchars($userdata['user_lastname'].' '.$userdata['user_firstname'].' - '.$userdata['user_name'].'', ENT_NOQUOTES, $l['a_meta_charset']);
 echo getFormDescriptionLine($l['w_user'].':', $l['w_user'], $usr_all);
