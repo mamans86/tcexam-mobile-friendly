@@ -34,8 +34,10 @@ If there are any update from tecnickcom/tcexam i will update this version too if
 ## Contact
 1. Blog: [mamans86.blogspot.com](https://mamans86.blogspot.com)
 2. Telegram: [@mamans86](https://t.me/mamans86)
-3. WhatsApp: https://wa.me/628561575817
+3. Email: mamansulaeman86@gmail.com
 
+## Community / Telegram Group
+1. [TCExam Mobile Friendly](https://t.me/tcexam_mobile)
 
 
 # TCExam - README
