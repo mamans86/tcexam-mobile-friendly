@@ -30,27 +30,42 @@ $dbtypes = Array('MYSQL', 'POSTGRESQL', 'ORACLE', 'MYSQLDEPRECATED');
 
 require_once('tce_functions_install.php');
 
-//send XHTML headers
-echo '<'.'?'.'xml version="1.0" encoding="UTF-8" '.'?'.'>'."\n";
-echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'."\n";
-echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">'."\n";
-
+/////////////////////////////////////////////////////////
+echo '<!doctype html>'."\n";
+echo '<html class="no-js" lang="en">'."\n";
 echo '<head>'."\n";
-echo '<title>TCExam - Installation</title>'."\n";
-echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'."\n";
-echo '<meta name="description" content="Installation Script for TCExam" />'."\n";
-echo '<meta name="author" content="Nicola Asuni - Tecnick.com LTD" />'."\n";
-echo '<meta http-equiv="Pragma" content="no-cache" />'."\n";
-echo '<link rel="stylesheet" href="../admin/styles/default.css" type="text/css" />'."\n";
-echo '</head>'."\n";
+  echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'."\n";
+  echo '<meta name="viewport" content="width=device-width, initial-scale=1">'."\n";
+  echo '<title>TCExam - Installation</title>'."\n";
+  echo '<meta name="description" content="Installation Script for TCExam" />'."\n";
+  echo '<meta name="author" content="Nicola Asuni - Tecnick.com LTD"/>'."\n";
+  echo '<meta http-equiv="Pragma" content="no-cache" />'."\n";
+  echo '<meta property="og:title" content="TCExam - Installation">'."\n";
+  echo '<meta property="og:type" content="">'."\n";
+  echo '<meta property="og:url" content="">'."\n";
+  echo '<meta property="og:image" content="">'."\n";
 
+  echo '<link rel="manifest" href="../site.webmanifest">'."\n";
+  echo '<link rel="apple-touch-icon" href="../icon.png">'."\n";
+  echo '<!-- Place favicon.ico in the root directory -->'."\n";
+  
+  echo '<link rel="shortcut icon" href="../favicon.ico" />'."\n";
+  
+  echo '<link rel="stylesheet" href="../public/styles/normalize.css">'."\n";
+  echo '<link rel="stylesheet" href="../public/styles/main.css">'."\n";
+  echo '<link rel="stylesheet" href="../public/styles/default.css">'."\n";
+  echo '<meta name="theme-color" content="#fafafa">'."\n";
+echo '</head>'."\n";
+/////////////////////////////////////////////////////////
 echo '<body>'."\n";
 if (!F_are_files_writable(array($progress_log))) {
 	echo '</body></html>'."\n";
 	exit();
 }
 ?>
+<div class="container">
 
+<div class="tceformbox">
 <h1>TCExam - Installation</h1>
 
 <p>
@@ -188,9 +203,6 @@ if (isset($_REQUEST['forceinstall']) AND ($_REQUEST['forceinstall'] == 1)) {
 To start installation fill the form below and click the INSTALL button.<br />
 </p>
 
-<div class="container">
-
-<div class="tceformbox">
 <form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post" enctype="multipart/form-data" id="form_TCExam_installer">
 
 <div class="row">
