@@ -5,31 +5,48 @@ No Additional JS or CSS Framework for User Interface just Modernizr.
 
 If there are any update from tecnickcom/tcexam i will update this version too if possible.
 
-# Screenshot
+## Screenshot
 1. Login Page - Desktop View
 ![Login Page - Desktop View](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Login%20Page%20-%20Desktop.PNG?raw=true)
+
+
 
 2. Login Page - Mobile View
 ![Login Page - Mobile View](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Login%20Page%20-%20Mobile.PNG?raw=true)
 
+
+
 3. Test Page - MCMA (Multi Choice Multi Answer)
 ![Test Page - MCMA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test%20Page%20-%20MCMA.PNG?raw=true)
+
+
 
 4. Test Page - MCSA (Multi Choice Single Answer)
 ![Test Page - MCSA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test%20Page%20-%20MCSA.PNG?raw=true)
 
+
+
 5. Test Page - Ordering Question
 ![Test Page - Ordering Question](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test%20Page%20-%20Ordering.PNG?raw=true)
+
+
 
 6. Test Page - Warning
 ![Test Page - Warning](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test%20Page%20-%20Warning.PNG?raw=true)
 
-# TO DO LIST
+## TO DO LIST
 1. Add unsure answer mark in test page
 2. Add text zooming in test page
 3. Add question number on top of question description
 4. Create button to toggle question list on top of question description
 5. Create mobile friendly Admin Area
+
+## Contact
+1. Blog: [mamans86.blogspot.com](https://mamans86.blogspot.com)
+2. Telegram: [@mamans86](https://t.me/mamans86)
+3. WhatsApp: https://wa.me/628561575817
+
+
 
 # TCExam - README
 
