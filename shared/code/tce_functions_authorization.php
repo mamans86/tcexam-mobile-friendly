@@ -52,9 +52,9 @@ function F_loginForm($faction, $fid, $fmethod, $fenctype, $username)
     $str = '';
     $str .= '<div class="container">'.K_NEWLINE;
     if (K_USRREG_ENABLED) {
-        $str .= '<small><a href="../../public/code/tce_user_registration.php" title="'.$l['t_user_registration'].'">'.$l['w_user_registration_link'].'</a></small>'.K_NEWLINE;
+        $str .= '<small><a id="userreg_link" href="../../public/code/tce_user_registration.php" title="'.$l['t_user_registration'].'">'.$l['w_user_registration_link'].'</a></small>'.K_NEWLINE;
     }
-    $str .= '<div class="tceformbox">'.K_NEWLINE;
+    $str .= '<div class="tceformbox login_box">'.K_NEWLINE;
     $str .= '<form action="'.$faction.'" method="'.$fmethod.'" id="'.$fid.'" enctype="'.$fenctype.'">'.K_NEWLINE;
     // user name
     $str .= getFormRowTextInput('xuser_name', $l['w_username'], $l['h_login_name'], '', $username, '', 255, false, false, false, '');
