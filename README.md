@@ -30,6 +30,7 @@ If there are any update from tecnickcom/tcexam i will update this version too if
 3. Add question number on top of question description
 4. Create button to toggle question list on top of question description
 5. Create mobile friendly Admin Area
+6. Word Format Import Question
 
 ## Contact
 1. Blog: [mamans86.blogspot.com](https://mamans86.blogspot.com)
