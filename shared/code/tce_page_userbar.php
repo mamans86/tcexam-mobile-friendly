@@ -82,15 +82,10 @@ echo '<span class="copyright"><a href="http://www.tcexam.org">TCExam</a> ver. '.
 echo '</div>'.K_NEWLINE;
 
 // Display W3C logos
-/**echo '<div class="minibutton" dir="ltr">'.K_NEWLINE;
+echo '<div class="minibutton" dir="ltr">'.K_NEWLINE;
 echo '<a href="http://validator.w3.org/check?uri='.K_PATH_HOST.$_SERVER['SCRIPT_NAME'].'" class="minibutton" title="This Page Is Valid XHTML 1.0 Strict!">W3C <span>XHTML 1.0</span></a> <span style="color:white;">|</span>'.K_NEWLINE;
 echo '<a href="http://jigsaw.w3.org/css-validator/" class="minibutton" title="This document validates as CSS!">W3C <span>CSS 2.0</span></a> <span style="color:white;">|</span>'.K_NEWLINE;
 echo '<a href="http://www.w3.org/WAI/WCAG1AAA-Conformance" class="minibutton" title="Explanation of Level Triple-A Conformance">W3C <span>WAI-AAA</span></a>'.K_NEWLINE;
-echo '</div>'.K_NEWLINE;**/
-
-//mod version
-echo '<div class="minibutton" dir="ltr">'.K_NEWLINE;
-echo '<span class="copyright mamans86">Mod with :) by <a href="https://mamans86.blogspot.com" class="minibutton" title="Maman Sulaeman Blog"><span>@mamans86</span></a> ver 20.07.01</span>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 //============================================================+
