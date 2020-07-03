@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: id
-// DATE: 2020-07-03 08:08:19
+// DATE: 2020-07-03 08:26:00
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -284,7 +284,7 @@ $tmx['w_guide']='bantuan';
 $tmx['w_height']='tinggi';
 $tmx['w_help']='bantuan';
 $tmx['w_image']='gambar';
-$tmx['w_index']='index';
+$tmx['w_index']='Beranda';
 $tmx['w_import']='import';
 $tmx['w_info']='informasi';
 $tmx['w_ip']='IP';
@@ -517,27 +517,27 @@ Perlu diingat bahwa sebelum anda membuat file cadangan maka sistem secara otomat
 File cadangan tersimpan dalam folder "cache/backup" dengan tatabahasa: YYYYMMDDhhmmss_tcexam_backup.sql.gz , dimana YYYYMMDDhhmmss adalah tahun (Y), bulan (M), hari (D), jam (h), menit (m), detik (s).';
 $tmx['w_download']='download';
 $tmx['h_download']='download the selected backup file';
-$tmx['t_user_change_password']='Change Password';
-$tmx['t_user_change_email']='Change Email';
-$tmx['hp_user_change_password']='With this form you can change your access password.';
-$tmx['hp_user_change_email']='With this form you can change your email. A verification message will be sent to your new email address. Your account will be disabled until confirmation receipt.';
-$tmx['m_password_updated']='the password has been updated';
+$tmx['t_user_change_password']='Ganti Password';
+$tmx['t_user_change_email']='Ganti Email';
+$tmx['hp_user_change_password']='Melalui form ini anda dapat mengganti akses password anda.';
+$tmx['hp_user_change_email']='Melalui form ini anda dapat mengganti email. Pesan verifikasi akan dikirim ke email baru Anda. Akun anda akan dinonaktifkan hingga konfirmasi diterima.';
+$tmx['m_password_updated']='password sudah diubah';
 $tmx['m_email_updated']='the email has been updated';
 $tmx['m_different_emails']='the emails are different';
-$tmx['w_current_password']='current password';
-$tmx['w_new_password']='new password';
-$tmx['d_password_lenght']='at least 8 alphanumeric characters';
-$tmx['w_new_email']='new email';
+$tmx['w_current_password']='password saat ini';
+$tmx['w_new_password']='password baru';
+$tmx['d_password_lenght']='setidaknya 8 karakter alphanumeric';
+$tmx['w_new_email']='email baru';
 $tmx['h_email']='e-mail address';
 $tmx['h_login_link']='click on this link to access on this system';
-$tmx['w_change_email']='change email';
-$tmx['w_change_password']='change password';
+$tmx['w_change_email']='ganti email';
+$tmx['w_change_password']='ganti password';
 $tmx['w_admin']='admin';
 $tmx['h_admin_link']='administration area';
 $tmx['h_public_link']='public area';
 $tmx['w_public']='public';
-$tmx['t_test_list']='Test List';
-$tmx['w_action']='action';
+$tmx['t_test_list']='Daftar Ujian';
+$tmx['w_action']='aksi';
 $tmx['w_show']='show';
 $tmx['w_hide']='hide';
 $tmx['w_change_dir']='change directory';
