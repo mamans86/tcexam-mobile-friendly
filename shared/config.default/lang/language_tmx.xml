@@ -22578,7 +22578,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>каталог</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>index</seg>
+            <seg>Beranda</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>index</seg>
@@ -40918,7 +40918,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Change Password</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>Change Password</seg>
+            <seg>Ganti Password</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>Change Password</seg>
@@ -40998,7 +40998,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Change Email</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>Change Email</seg>
+            <seg>Ganti Email</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>Change Email</seg>
@@ -41078,7 +41078,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>With this form you can change your access password.</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>With this form you can change your access password.</seg>
+            <seg>Melalui form ini anda dapat mengganti akses password anda.</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>With this form you can change your access password.</seg>
@@ -41158,7 +41158,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>With this form you can change your email. A verification message will be sent to your new email address. Your account will be disabled until confirmation receipt.</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>With this form you can change your email. A verification message will be sent to your new email address. Your account will be disabled until confirmation receipt.</seg>
+            <seg>Melalui form ini anda dapat mengganti email. Pesan verifikasi akan dikirim ke email baru Anda. Akun anda akan dinonaktifkan hingga konfirmasi diterima.</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>With this form you can change your email. A verification message will be sent to your new email address. Your account will be disabled until confirmation receipt.</seg>
@@ -41238,7 +41238,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>the password has been updated</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>the password has been updated</seg>
+            <seg>password sudah diubah</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>the password has been updated</seg>
@@ -41478,7 +41478,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>current password</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>current password</seg>
+            <seg>password saat ini</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>current password</seg>
@@ -41558,7 +41558,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>new password</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>new password</seg>
+            <seg>password baru</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>new password</seg>
@@ -41638,7 +41638,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>at least 8 alphanumeric characters</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>at least 8 alphanumeric characters</seg>
+            <seg>setidaknya 8 karakter alphanumeric</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>at least 8 alphanumeric characters</seg>
@@ -41718,7 +41718,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>new email</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>new email</seg>
+            <seg>email baru</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>new email</seg>
@@ -41958,7 +41958,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>change email</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>change email</seg>
+            <seg>ganti email</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>change email</seg>
@@ -42038,7 +42038,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>change password</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>change password</seg>
+            <seg>ganti password</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>change password</seg>
@@ -42438,7 +42438,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Test List</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>Test List</seg>
+            <seg>Daftar Ujian</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>Test List</seg>
@@ -42518,7 +42518,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>action</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>action</seg>
+            <seg>aksi</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>action</seg>
