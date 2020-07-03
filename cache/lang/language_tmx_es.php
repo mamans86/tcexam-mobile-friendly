@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: es
-// DATE: 2020-01-03 12:04:56
+// DATE: 2020-07-03 08:10:35
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -420,7 +420,7 @@ $tmx['w_i_agree']='Acepto los terminos y las condiciones';
 $tmx['w_registration_verification']='Verifica el Registro';
 $tmx['m_email_registration']='<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><body><p>Esta es una respuesta automática para verificar a Petición de Registro de un Nuevo Usuario <a href="#TCEXAMURL#">TCExam</a>.<br />Se precisa verificar por email #EMAIL# enviado a la IP remota #USERIP#.<br />Si este mensaje ha sido enviado por error, por favor ignórelo.<br /><br /><b>PARA CONFIRMAR EL REGISTRO UTILICE EL SIGUIENTE LINK:<br /><a href="#SUBSCRIBEURL#">#SUBSCRIBEURL#</a></b></p></body></html>';
 $tmx['w_timer']='timer [sec]';
-$tmx['h_question_timer']='maximo numero de segundos en los cuales se muestra la pregunta (0 = deshabilita el timer)';
+$tmx['h_question_timer']='máximo número de segundos en los cuales se muestra la pregunta (0 = deshabilita el timer)';
 $tmx['w_fullscreen']='pantalla completa';
 $tmx['h_question_fullscreen']='habilita/deshabilita la modalidad pantalla completa para esta pregunta';
 $tmx['h_position']='orden de visualizaciòn corecto';
@@ -508,7 +508,7 @@ $tmx['h_restore']='restablezco la cobertura seleccionada';
 $tmx['m_backup_completed']='La cobertura ha sido ejecutada';
 $tmx['m_restore_completed']='El restablecimiento ha sido ejecutado';
 $tmx['m_restore_confirm']='confirma restablecimiento';
-$tmx['hp_edit_backups']='Através de esta màscara es posible crear y restablecer copias del archivo (cobertura) de la base de datos (funciona solo en los sistemas POSIX con MySQL o PostgreSQL).
+$tmx['hp_edit_backups']='A través de esta máscara es posible crear y restablecer copias del archivo (cobertura) de la base de datos (funciona solo en los sistemas POSIX con MySQL o PostgreSQL).
 Comprimiendo la tecla [cobertura] el sistema crea una copia comprimida del dump SQL de la entera base de datos de TCExam (estructura y datos).
 Para restablecer una copia de cobertura es suficiente seleccionarla  comprimiendo la tecla [restablece].
 Por seguridad, antes de cada restablecimiento el sistema ejecuta una cobertura asì para poder anular la \'operaciòn de restablecimiento.
@@ -517,21 +517,21 @@ $tmx['w_download']='descarga';
 $tmx['h_download']='descarga el archivo de backup seleccionado';
 $tmx['t_user_change_password']='Modifica Password';
 $tmx['t_user_change_email']='Modifica Email';
-$tmx['hp_user_change_password']='Atraves de esta máscara es posible modificar la propia password de acceso.';
-$tmx['hp_user_change_email']='Atraves de esta máscara es posible modificar la propia email. Un mensaje de verifica vendrà enviado a la nueva email. La cuenta vendrá desactivada hasta la recepciòn de la confirmación.';
+$tmx['hp_user_change_password']='A través de esta máscara es posible modificar la propia password de acceso.';
+$tmx['hp_user_change_email']='A través de esta máscara es posible modificar la propia email. Un mensaje de verifica vendrà enviado a la nueva email. La cuenta vendrá desactivada hasta la recepciòn de la confirmación.';
 $tmx['m_password_updated']='la password ha sido actualizada';
 $tmx['m_email_updated']='la password ha sido actualizada';
 $tmx['m_different_emails']='las emails son diferentes';
 $tmx['w_current_password']='password actual';
 $tmx['w_new_password']='nueva password';
-$tmx['d_password_lenght']='almenos 8 caracteres alfanumericos';
+$tmx['d_password_lenght']='Al menos 8 caracteres alfanuméricos';
 $tmx['w_new_email']='nueva email';
 $tmx['h_email']='dirección e-mail';
 $tmx['h_login_link']='clicar en este link para acceder a este sistema';
 $tmx['w_change_email']='modifica email';
 $tmx['w_change_password']='modifica password';
 $tmx['w_admin']='administración';
-$tmx['h_admin_link']='area de administración';
+$tmx['h_admin_link']='área de administración';
 $tmx['h_public_link']='área pública';
 $tmx['w_public']='pública';
 $tmx['t_test_list']='Lista Test';
@@ -542,7 +542,7 @@ $tmx['w_size']='dimensión';
 $tmx['w_date']='fecha';
 $tmx['w_permissions']='permisos';
 $tmx['t_filemanager']='Gestión Archivos Multimediales';
-$tmx['hp_filemanager']='Atraves de esta página es posible gestionar los archivos multimediales.';
+$tmx['hp_filemanager']='A través de esta página es posible gestionar los archivos multimediales.';
 $tmx['m_used_file']='este archivo es utilizado en la descripción de una pregunta o respuesta';
 $tmx['m_delete_file_error']='imposible cancelar el archivo o la carpeta seleccionados';
 $tmx['w_rename']='renombra';
@@ -563,7 +563,7 @@ $tmx['w_owner']='propietario';
 $tmx['h_module_owner']='propietario de este modulo';
 $tmx['h_topic_owner']='poprietario de este argumento';
 $tmx['t_omr_answers_importer']='Importación Respuestas (OMR)';
-$tmx['hp_omr_answers_importer']='Atraves de esta máscara es posible importar las respuestas del usuario desde las imágenes escaneadas de las hojas de respuesta. Las imágenes vendrán elaboradas utilizando un sistema de Optical Mark Recognition (OMR) para identificar los datos del test y las respuestas del usuario. Los datos importantes se sobrescribirán a los resultados existentes. Las hojas ORM deben ser enteramente escaneadas a color a almenos 200DPI.';
+$tmx['hp_omr_answers_importer']='A través de esta máscara es posible importar las respuestas del usuario desde las imágenes escaneadas de las hojas de respuesta. Las imágenes vendrán elaboradas utilizando un sistema de Optical Mark Recognition (OMR) para identificar los datos del test y las respuestas del usuario. Los datos importantes se sobrescribirán a los resultados existentes. Las hojas ORM deben ser enteramente escaneadas a color a al menos 200DPI.';
 $tmx['w_import_omr_answers']='importar respuestas';
 $tmx['w_omr_data_page']='OMR DATA';
 $tmx['w_omr_answer_sheet']='OMR ANSWER SHEET';
