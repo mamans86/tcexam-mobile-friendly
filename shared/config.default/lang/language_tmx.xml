@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tmx version="1.4">
    <header datatype="PlainText"
-           changedate="20200103T120400Z"
+           changedate="20200617T010500Z"
            creationtoolversion="1"
            segtype="sentence"
            creationtool="hand made"
@@ -417,7 +417,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>нажмите на кнопку, чтобы выйти из системы</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>Click pada tombol untuk keluar dari system</seg>
+            <seg>Klik pada tombol untuk keluar dari sistem</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>cliquer sur le bouton pour quitter le système</seg>
@@ -497,7 +497,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>TCExam это программное обеспечение для проведения интерактивных тестов, а также управления ими.</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>TCExam adalah software untuk mengelola dan menjalankan test online</seg>
+            <seg>TCExam adalah software untuk mengelola dan menjalankan ujian daring</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>TCExam est une application pour la gestion et l'exécution de tests en ligne.</seg>
@@ -1934,7 +1934,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>место рождения пользователя (город, край/область, страна)</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>kota tempat lahir user(kota, propinsi, negara)</seg>
+            <seg>kota tempat lahir user (kota, propinsi, negara)</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>lieu de naissance de l'utilisateur (ville, département, pays)</seg>
@@ -2414,7 +2414,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>изменить базу данных</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>merubah database</seg>
+            <seg>mengubah database</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>modifie la base de données</seg>
@@ -3535,7 +3535,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>имя пользователя (например: Михаил, Иван, ...)</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>nama depan user (contoh: Ahmad, Lina)</seg>
+            <seg>nama depan user (contoh: Ahmad, Siti, ...)</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>nom de l'utilisateur (p. ex. Michel, Jean, ...)</seg>
@@ -3615,7 +3615,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>номер соц. страхования пользователя</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>nomor tanda pengenal </seg>
+            <seg>nomor tanda pengenal</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>numéro de sécurité sociale de l'utilisateur</seg>
@@ -4255,7 +4255,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>Фамилия пользователя (например: Иванов, Петров, Сидоров, ...)</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>Nama belakang (contoh: Bardosono, Astuti</seg>
+            <seg>Nama belakang (contoh: Bardosono, Rahmawati</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>Nom de famille de l'utilisateur (p. ex. Dupont, Lavoix, ...)</seg>
@@ -12732,7 +12732,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>неверное имя пользователя или пароль</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>user atau èassword salah</seg>
+            <seg>user atau password salah</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>identifiant / mot de passe non valide</seg>
@@ -33500,7 +33500,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>suala verilən maksimum vaxt (0 = söndürmək)</seg>
          </tuv>
          <tuv xml:lang="ES">
-            <seg>maximo numero de segundos en los cuales se muestra la pregunta (0 = deshabilita el timer)</seg>
+            <seg>máximo número de segundos en los cuales se muestra la pregunta (0 = deshabilita el timer)</seg>
          </tuv>
          <tuv xml:lang="CN">
             <seg>题目显示的最长时间（秒，0＝不计时）</seg>
@@ -40649,7 +40649,7 @@ Backup files are stored on the "cache/backup" folder using the following syntax:
             <seg>Bu səhifə Sizə nüsxələri (backup) yaradıb bərpa etməyə imkan verir. (ancaq POSİX sistemlərdə MySQL və ya PostgreSQL-ı dəstəkləyir). [backup] düyməsini basmaqla Siz TCExam sisteminin verilənlər bazasının SQL damp (verilənlər və struktur) faylını arxivləşdirilmiş formatda yarada bilərsiniz. Seçilmiş faylı bərpa etmək üçün [bərpa et] düyməsini basın. Nəzərə alın ki, hər bir bərpadan əvvəl sistem avtomatik olaraq yeni nüsxə faylını yaradır. Beləliklə Siz əməliyyatınızdan imtina edə bilərsiniz. Fayllar "cache/backup" qovluğunda yerləşir. Onlar YYYYMMDDhhmmss_tcexam_backup.sql.gz kimi adlandırılacaq, YYYYMMDDhhmmss il - (Y), ay (M), gün (D), saat (h), dəqiqə (m), saniyə (s) deməkdir.</seg>
          </tuv>
          <tuv xml:lang="ES">
-            <seg>Através de esta màscara es posible crear y restablecer copias del archivo (cobertura) de la base de datos (funciona solo en los sistemas POSIX con MySQL o PostgreSQL).
+            <seg>A través de esta máscara es posible crear y restablecer copias del archivo (cobertura) de la base de datos (funciona solo en los sistemas POSIX con MySQL o PostgreSQL).
 Comprimiendo la tecla [cobertura] el sistema crea una copia comprimida del dump SQL de la entera base de datos de TCExam (estructura y datos).
 Para restablecer una copia de cobertura es suficiente seleccionarla  comprimiendo la tecla [restablece].
 Por seguridad, antes de cada restablecimiento el sistema ejecuta una cobertura asì para poder anular la 'operaciòn de restablecimiento.
@@ -41090,7 +41090,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Bu formu ile parolunuzu dəyişə bilərsiniz.</seg>
          </tuv>
          <tuv xml:lang="ES">
-            <seg>Atraves de esta máscara es posible modificar la propia password de acceso.</seg>
+            <seg>A través de esta máscara es posible modificar la propia password de acceso.</seg>
          </tuv>
          <tuv xml:lang="CN">
             <seg>通过此表单修改访问密码。</seg>
@@ -41170,7 +41170,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Bu form ilə email ünvanını dəyişə bilərsiniz. Siz yeni bir məktub alacaqsınız. Təstiq edilməmiş email aktiv olmayacaq.</seg>
          </tuv>
          <tuv xml:lang="ES">
-            <seg>Atraves de esta máscara es posible modificar la propia email. Un mensaje de verifica vendrà enviado a la nueva email. La cuenta vendrá desactivada hasta la recepciòn de la confirmación.</seg>
+            <seg>A través de esta máscara es posible modificar la propia email. Un mensaje de verifica vendrà enviado a la nueva email. La cuenta vendrá desactivada hasta la recepciòn de la confirmación.</seg>
          </tuv>
          <tuv xml:lang="CN">
             <seg>通过此表单修改邮箱，验证邮件会发送到新邮箱地址。在收到确认前账户会被禁用。</seg>
@@ -41650,7 +41650,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>azı 8 hərif-rəqəm simvolu</seg>
          </tuv>
          <tuv xml:lang="ES">
-            <seg>almenos 8 caracteres alfanumericos</seg>
+            <seg>Al menos 8 caracteres alfanuméricos</seg>
          </tuv>
          <tuv xml:lang="CN">
             <seg>至少8位数字字符</seg>
@@ -42210,7 +42210,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Administrasiya</seg>
          </tuv>
          <tuv xml:lang="ES">
-            <seg>area de administración</seg>
+            <seg>área de administración</seg>
          </tuv>
          <tuv xml:lang="CN">
             <seg>管理区</seg>
@@ -43143,7 +43143,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Bu forma ilə multimedia faylları idarə edə bilərsiniz.</seg>
          </tuv>
          <tuv xml:lang="ES">
-            <seg>Atraves de esta página es posible gestionar los archivos multimediales.</seg>
+            <seg>A través de esta página es posible gestionar los archivos multimediales.</seg>
          </tuv>
          <tuv xml:lang="CN">
             <seg>通过此表单管理文件。</seg>
@@ -44823,7 +44823,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Bu forma ilə Siz istifadəçilərin cavab kartlarının skan olunmuş şəkillərini import edə bilərsiniz. Bu şəkil OMR sistemi ilə oxunulacaq və istifadəçilərin imtahan nəticələri sistemə yazılacaq. Sistemdə olan nəticələr import olunmuş nəticələr ilə əvəz olunacaq. OMR səhifələr rəngli, ən azı 200DPİ keyfiyyəti ilə skan edilməlidir.</seg>
          </tuv>
          <tuv xml:lang="ES">
-            <seg>Atraves de esta máscara es posible importar las respuestas del usuario desde las imágenes escaneadas de las hojas de respuesta. Las imágenes vendrán elaboradas utilizando un sistema de Optical Mark Recognition (OMR) para identificar los datos del test y las respuestas del usuario. Los datos importantes se sobrescribirán a los resultados existentes. Las hojas ORM deben ser enteramente escaneadas a color a almenos 200DPI.</seg>
+            <seg>A través de esta máscara es posible importar las respuestas del usuario desde las imágenes escaneadas de las hojas de respuesta. Las imágenes vendrán elaboradas utilizando un sistema de Optical Mark Recognition (OMR) para identificar los datos del test y las respuestas del usuario. Los datos importantes se sobrescribirán a los resultados existentes. Las hojas ORM deben ser enteramente escaneadas a color a al menos 200DPI.</seg>
          </tuv>
          <tuv xml:lang="CN">
             <seg>通过这种形式，你可以导入用户从答卷的扫描图像的答案。这个图片将被用于光学标记识别（OMR）系统进行识别，以便处理测试数据和用户的答案。导入的数据将覆盖现有的结果。 OMR表必须完全使用200DPI或以上的全彩颜色进行扫描。</seg>
@@ -47367,7 +47367,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>One Time Password code generated using your smartphone application</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>One Time Password code generated using your smartphone application</seg>
+            <seg>Kode One Time Password dibangkitkan menggunakan aplikasi smartphone anda</seg>
          </tuv>
          <tuv xml:lang="IT">
             <seg>One Time Password : codice generato utlizzando l'applicazione del vostro smartphone</seg>
@@ -47447,7 +47447,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>You are trying to log too many times and too fast, please wait the following number of seconds before the next attempt:</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>You are trying to log too many times and too fast, please wait the following number of seconds before the next attempt:</seg>
+            <seg>Anda terlalu sering dan cepat dalam percobaan masuk, mohon tunggu sebanyak detik berikut sebelum mencoba masuk kembali:</seg>
          </tuv>
          <tuv xml:lang="IT">
             <seg>Stai tentando di accedere troppe volte e troppo velocemente, attendi il seguente numero di secondi prima di ritentare:</seg>
@@ -47527,7 +47527,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>test password</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>test password</seg>
+            <seg>password ujian</seg>
          </tuv>
          <tuv xml:lang="IT">
             <seg>password per il test</seg>
@@ -47607,7 +47607,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>password, alphanumeric code required to execute this test</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>password, alphanumeric code required to execute this test</seg>
+            <seg>password, kode alphanumeric code dibutuhkan untuk memulai ujian ini</seg>
          </tuv>
          <tuv xml:lang="IT">
             <seg>password, codice alfanumerico richiesto per eseguire questo test</seg>
@@ -47687,7 +47687,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>In order to execute this test you must provide the test password</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>In order to execute this test you must provide the test password</seg>
+            <seg>Agar dapat mengerjakan ujian ini, anda harus memasukkan password ujian</seg>
          </tuv>
          <tuv xml:lang="IT">
             <seg>Per eseguire questo test occorre inserire la password del test</seg>
@@ -47767,7 +47767,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>wrong test password</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>wrong test password</seg>
+            <seg>password ujian salah</seg>
          </tuv>
          <tuv xml:lang="IT">
             <seg>la password del test è sbagliata</seg>
@@ -47847,7 +47847,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Test Selection</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>Test Selection</seg>
+            <seg>Pilihan Test</seg>
          </tuv>
          <tuv xml:lang="IT">
             <seg>Selezione Test</seg>
@@ -47927,7 +47927,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>open a test selection page</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>open a test selection page</seg>
+            <seg>buka halaman pilihan test</seg>
          </tuv>
          <tuv xml:lang="IT">
             <seg>apre la pagina di selezione del test</seg>
@@ -48007,7 +48007,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>In this form you can see and select the tests. You can change the displayed sequence by clicking on the column names.</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>In this form you can see and select the tests. You can change the displayed sequence by clicking on the column names.</seg>
+            <seg>Pada form ini anda dapat melihat dan memilih test. Anda dapat mengganti urutan tampilan dengan klik pada nama kolom</seg>
          </tuv>
          <tuv xml:lang="IT">
             <seg>Questa maschera consente di visualizzare e selezionare i test. È possibile ordinare i test secondo vari criteri cliccando sui nomi delle colonne.</seg>
