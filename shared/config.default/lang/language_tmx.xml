@@ -39214,7 +39214,7 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>повторить</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>mengulang</seg>
+            <seg>ulangi</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>repeter</seg>
@@ -45531,7 +45531,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>I forgot my password</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>I forgot my password</seg>
+            <seg>Saya lupa password</seg>
          </tuv>
          <tuv xml:lang="FR">
             <seg>I forgot my password</seg>
