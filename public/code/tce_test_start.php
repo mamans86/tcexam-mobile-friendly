@@ -36,6 +36,7 @@ require_once('../config/tce_config.php');
 $test_id = 0;
 $pagelevel = K_AUTH_PUBLIC_TEST_EXECUTE;
 $thispage_title = $l['t_test_info'];
+$thispage_title_icon = '<i class="fas fa-info-circle"></i>';
 $thispage_description = $l['hp_test_info'];
 require_once('../../shared/code/tce_authorization.php');
 require_once('../code/tce_page_header.php');
@@ -46,14 +47,14 @@ if (isset($_REQUEST['testid']) and ($_REQUEST['testid'] > 0)) {
     $test_id = intval($_REQUEST['testid']);
     echo F_printTestInfo($test_id, false);
     echo '<br />'.K_NEWLINE;
-    echo '<div class="row">'.K_NEWLINE;
+    echo '<div class="row btn-action">'.K_NEWLINE;
     // display execute button
     echo '<a href="tce_test_execute.php?testid='.$test_id.'';
     if (isset($_REQUEST['repeat']) and ($_REQUEST['repeat'] == 1)) {
         echo '&amp;repeat=1';
     }
-    echo '" title="'.$l['h_execute'].'" class="xmlbutton">'.$l['w_execute'].'</a> ';
-    echo '<a href="index.php" title="'.$l['h_cancel'].'" class="xmlbutton">'.$l['w_cancel'].'</a>';
+    echo '" title="'.$l['h_execute'].'" class="xmlbutton"><i class="fas fa-edit"></i> '.$l['w_execute'].'</a> ';
+    echo '<a href="index.php" title="'.$l['h_cancel'].'" class="xmlbutton"><i class="fas fa-times-circle"></i> '.$l['w_cancel'].'</a>';
     echo '</div>'.K_NEWLINE;
 }
 echo '</div>'.K_NEWLINE;
