@@ -77,7 +77,7 @@ function F_print_error($messagetype = 'MESSAGE', $messagetoprint = '', $exit = f
                 break;
             }
         }
-        echo '<div id="msg-modal" class="'.$messagetype.'">'.$msgtitle.': '.$messagetoprint.'<span id="close_btn" onclick="msgClose()">X</span></div>'.K_NEWLINE;
+        echo '<div id="msg-modal" class="'.$messagetype.'"><span id="msgCont">'.$msgtitle.': '.$messagetoprint.'</span><span id="close_btn" onclick="msgClose()">&times;</span></div>'.K_NEWLINE;
         if (K_ENABLE_JSERRORS) {
             //display message on JavaScript Alert Window.
             echo '<script type="text/javascript">'.K_NEWLINE;
