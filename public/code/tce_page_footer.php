@@ -32,9 +32,9 @@
 
 echo K_NEWLINE;
 echo '</div>'.K_NEWLINE; //close div.body
-
+echo '<div id="footer">'.K_NEWLINE;
 include('../../shared/code/tce_page_userbar.php'); // display user bar
-
+echo '</div>'.K_NEWLINE; //close div#footer
 echo '<!-- '.base64_decode(K_KEY_SECURITY).' -->'.K_NEWLINE;
 
 echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/jquery.min.js"></script>'.K_NEWLINE;
