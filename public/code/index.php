@@ -35,6 +35,7 @@ require_once('../config/tce_config.php');
 
 $pagelevel = K_AUTH_PUBLIC_INDEX;
 $thispage_title = $l['t_test_list'];
+$thispage_title_icon = '<i class="fas fa-calendar-check"></i>';
 $thispage_description = $l['hp_public_index'];
 
 require_once('../../shared/code/tce_authorization.php');
