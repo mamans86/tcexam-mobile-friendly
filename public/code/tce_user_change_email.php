@@ -34,6 +34,7 @@ require_once('../config/tce_config.php');
 
 $pagelevel = K_AUTH_USER_CHANGE_EMAIL;
 $thispage_title = $l['t_user_change_email'];
+$thispage_title_icon = '<i class="fas fa-envelope"></i>';
 require_once('../../shared/code/tce_authorization.php');
 require_once('../../shared/code/tce_functions_form.php');
 require_once('../code/tce_page_header.php');
