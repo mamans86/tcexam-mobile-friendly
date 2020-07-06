@@ -34,6 +34,7 @@ require_once('../config/tce_config.php');
 
 $pagelevel = K_AUTH_PUBLIC_TEST_EXECUTE;
 $thispage_title = $l['t_test_execute'];
+$thispage_title_icon = '<i class="fas fa-clock"></i>';
 $thispage_description = $l['hp_test_execute'];
 require_once('../../shared/code/tce_authorization.php');
 require_once('../../shared/code/tce_functions_form.php');
@@ -109,9 +110,10 @@ if (isset($_REQUEST['testid']) and ($_REQUEST['testid'] > 0)) {
         $thispage_title .= ': '.F_getTestName($test_id);
 
         require_once('../code/tce_page_header.php');
+		echo '<div id="infolinkCont"><span class="infolink">'.F_testInfoLink($test_id, $l['w_info']).'</span></div>'.K_NEWLINE;
         echo '<div class="container">'.K_NEWLINE;
 
-        echo '<span class="infolink">'.F_testInfoLink($test_id, $l['w_info']).'</span>'.K_NEWLINE;
+        
 
         if (!isset($_REQUEST['terminationform'])) {
             if (F_isRightTestlogUser($test_id, $testlog_id)) {
@@ -189,10 +191,12 @@ if (isset($_REQUEST['testid']) and ($_REQUEST['testid'] > 0)) {
             echo '<input type="hidden" name="reaction_time" id="reaction_time" value="" />'.K_NEWLINE;
 
             // textarea field for user's comment
-            echo '<span class="testcomment">'.F_testComment($test_id).'</span>'.K_NEWLINE;
+            echo F_testComment($test_id).K_NEWLINE;
 
             // test termination button
+			echo '<div id="forceterminateCont">'.K_NEWLINE;
             F_submit_button('terminatetest', $l['w_terminate_exam'], $l['w_terminate_exam']);
+			echo '</div>'.K_NEWLINE;
 
             echo K_NEWLINE;
             echo '</div>'.K_NEWLINE;
