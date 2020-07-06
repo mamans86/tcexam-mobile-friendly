@@ -111,6 +111,7 @@ echo '<!-- '.'T'.'C'.'E'.'x'.'a'.'m'.'19'.'73'.'01'.'04'.' -->'.K_NEWLINE;
   <link rel="stylesheet" href="<?php echo K_PATH_HOST.K_PATH_TCEXAM.'public/styles/normalize.css'; ?>">
   <link rel="stylesheet" href="<?php echo K_PATH_HOST.K_PATH_TCEXAM.'public/styles/main.css'; ?>">
   <link rel="stylesheet" href="<?php echo $thispage_style; ?>">
+  <link rel="stylesheet" href="<?php echo K_PATH_HOST.K_PATH_TCEXAM; ?>public/styles/fontawesome/css/all.min.css" type="text/css" />
   <meta name="theme-color" content="#fafafa">
 </head>
 <?php
