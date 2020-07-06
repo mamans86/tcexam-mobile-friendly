@@ -113,14 +113,14 @@ function F_getUserTests()
                                 // directly execute test
                                 $str .= 'tce_test_execute.php';
                             }
-                            $str .= '?testid='.$m['test_id'].'" title="'.$l['h_execute'].'" class="buttongreen">'.$l['w_execute'].'</a>';
+                            $str .= '?testid='.$m['test_id'].'" title="'.$l['h_execute'].'" class="buttongreen"><i class="far fa-edit"></i> '.$l['w_execute'].'</a>';
                             break;
                         }
                         case 1: // 1 = the test has been successfully created
                         case 2: // 2 = all questions have been displayed to the user
                         case 3: { // 3 = all questions have been answered
                             // continue test
-                            $str .= '<a href="tce_test_execute.php?testid='.$m['test_id'].'" title="'.$l['h_continue'].'" class="xmlbutton">'.$l['w_continue'].'</a>';
+                            $str .= '<a href="tce_test_execute.php?testid='.$m['test_id'].'" title="'.$l['h_continue'].'" class="xmlbutton"><i class="fas fa-arrow-alt-circle-right"></i> '.$l['w_continue'].'</a>';
                             break;
                         }
                         default: { // 4 or greater = test can be repeated
@@ -134,7 +134,7 @@ function F_getUserTests()
                                     // directly execute test
                                     $str .= 'tce_test_execute.php';
                                 }
-                                $str .= '?testid='.$m['test_id'].'&amp;repeat=1" title="'.$l['h_repeat_test'].'" class="buttonblue">'.$l['w_repeat'].'</a>';
+                                $str .= '?testid='.$m['test_id'].'&amp;repeat=1" title="'.$l['h_repeat_test'].'" class="buttonblue"><i class="fa fa-history"></i> '.$l['w_repeat'].'</a>';
                             }
                             break;
                         }
@@ -480,17 +480,17 @@ function F_printTestInfo($test_id, $showip = false)
             $str .= '<h1>'.htmlspecialchars($m['test_name'], ENT_NOQUOTES, $l['a_meta_charset']).'</h1>'.K_NEWLINE;
             $str .= '<div class="tcecontentbox">'.F_decode_tcecode($m['test_description']).'<br /><br /></div>'.K_NEWLINE;
             $str .= '<div class="tceformbox">'.K_NEWLINE;
-            $str .= F_twoColRow($l['w_time_begin'], $l['h_time_begin'], $m['test_begin_time']);
-            $str .= F_twoColRow($l['w_time_end'], $l['h_time_end'], $m['test_end_time']);
-            $str .= F_twoColRow($l['w_test_time'], $l['h_test_time'], $m['test_duration_time'].' '.$l['w_minutes']);
-            $str .= F_twoColRow($l['w_score_right'], $l['h_score_right'], $m['test_score_right']);
-            $str .= F_twoColRow($l['w_score_wrong'], $l['h_score_wrong'], $m['test_score_wrong']);
-            $str .= F_twoColRow($l['w_score_unanswered'], $l['h_score_unanswered'], $m['test_score_unanswered']);
-            $str .= F_twoColRow($l['w_max_score'], $l['w_max_score'], $m['test_max_score']);
-            $str .= F_twoColRow($l['w_test_score_threshold'], $l['h_test_score_threshold'], $m['test_score_threshold']);
-            $str .= F_twoColRow($l['w_results_to_users'], $l['h_results_to_users'], $boolval[intval(F_getBoolean($m['test_results_to_users']))]);
-            $str .= F_twoColRow($l['w_report_to_users'], $l['h_report_to_users'], $boolval[intval(F_getBoolean($m['test_report_to_users']))]);
-            $str .= F_twoColRow($l['w_repeatable'], $l['h_repeatable_test'], $boolval[intval(F_getBoolean($m['test_repeatable']))]);
+            $str .= F_twoColRow($l['w_time_begin'], $l['h_time_begin'], $m['test_begin_time'], '<i class="fas fa-calendar-times"></i>');
+            $str .= F_twoColRow($l['w_time_end'], $l['h_time_end'], $m['test_end_time'], '<i class="fas fa-calendar-times"></i>');
+            $str .= F_twoColRow($l['w_test_time'], $l['h_test_time'], $m['test_duration_time'].' '.$l['w_minutes'], '<i class="fas fa-clock"></i>');
+            $str .= F_twoColRow($l['w_score_right'], $l['h_score_right'], $m['test_score_right'], '<i class="fas fa-check"></i>');
+            $str .= F_twoColRow($l['w_score_wrong'], $l['h_score_wrong'], $m['test_score_wrong'], '<i class="fas fa-times"></i>');
+            $str .= F_twoColRow($l['w_score_unanswered'], $l['h_score_unanswered'], $m['test_score_unanswered'], '<i class="fas fa-square"></i>');
+            $str .= F_twoColRow($l['w_max_score'], $l['w_max_score'], $m['test_max_score'], '<i class="fas fa-sort-numeric-up"></i>');
+            $str .= F_twoColRow($l['w_test_score_threshold'], $l['h_test_score_threshold'], $m['test_score_threshold'], '<i class="fas fa-check-double"></i>');
+            $str .= F_twoColRow($l['w_results_to_users'], $l['h_results_to_users'], $boolval[intval(F_getBoolean($m['test_results_to_users']))], '<i class="fas fa-paste"></i>');
+            $str .= F_twoColRow($l['w_report_to_users'], $l['h_report_to_users'], $boolval[intval(F_getBoolean($m['test_report_to_users']))], '<i class="fas fa-chalkboard-teacher"></i>');
+            $str .= F_twoColRow($l['w_repeatable'], $l['h_repeatable_test'], $boolval[intval(F_getBoolean($m['test_repeatable']))], '<i class="fa fa-history"></i>');
             // Additional information hidden by default
             //$str .= F_twoColRow($l['w_random_questions_select'], $l['h_random_questions_select'], $boolval[intval(F_getBoolean($m['test_random_questions_select']))]);
             //$str .= F_twoColRow($l['w_random_questions_order'], $l['h_random_questions_order'], $boolval[intval(F_getBoolean($m['test_random_questions_order']))]);
@@ -503,7 +503,7 @@ function F_printTestInfo($test_id, $showip = false)
             //$str .= F_twoColRow($l['w_noanswer_enabled'], $l['h_noanswer_enabled'], $boolval[intval(F_getBoolean($m['test_noanswer_enabled']))]);
             //$str .= F_twoColRow($l['w_mcma_radio'], $l['h_mcma_radio'], $boolval[intval(F_getBoolean($m['test_mcma_radio']))]);
             if ($showip) {
-                $str .= F_twoColRow($l['w_ip_range'], $l['h_ip_range'], $m['test_ip_range']);
+                $str .= F_twoColRow($l['w_ip_range'], $l['h_ip_range'], $m['test_ip_range'], '<i class="fas fa-user-check"></i>');
             }
             $str .= '<br/>';
         }
@@ -633,13 +633,13 @@ function F_getTestStartTime($testuser_id)
  * @param $value (string) string to display on the right column
  * @return string XHTML code
  */
-function F_twoColRow($label = "", $description = "", $value = "")
+function F_twoColRow($label = "", $description = "", $value = "", $icon)
 {
     $str = '';
     $str .= '<div class="row">';
     $str .= '<span class="label">';
-    $str .= '<span title="'.$description.'">';
-    $str .= $label.': ';
+    $str .= $icon.' <span title="'.$description.'">';
+    $str .= $label.' ';
     $str .= '</span>';
     $str .= '</span>';
     $str .= '<span class="value">';
@@ -1707,7 +1707,7 @@ function F_questionForm($test_id, $testlog_id, $formname)
                 $str .= '</label>';
             }
             $str .= '<div class="row">'.K_NEWLINE;
-            $str .= '<hr/>'.K_NEWLINE;
+            $str .= '<br/>'.K_NEWLINE;
             $str .= '</div>'.K_NEWLINE;
             $str .= '<div class="rowl">'.K_NEWLINE;
             if ($m['question_type'] == 3) {
@@ -1938,13 +1938,13 @@ function F_questionsMenu($testdata, $testuser_id, $testlog_id = 0, $disable = fa
             ++$i;
             if ($m['testlog_id'] != $testlog_id) {
                 $str .= '<li>';
-                $str .= '<input type="submit" name="jumpquestion_'.$m['testlog_id'].'" id="jumpquestion_'.$m['testlog_id'].'" value="&gt;" title="'.F_tcecodeToTitle($m['question_description']).'" /> ';
+                $str .= '<input type="submit" name="jumpquestion_'.$m['testlog_id'].'" id="jumpquestion_'.$m['testlog_id'].'" value="'.$i.'" title="'.F_tcecodeToTitle($m['question_description']).'" /> ';
                 if ($testlog_id_last == $testlog_id) {
                     $testlog_id_next = $m['testlog_id'];
                 }
             } else {
                 $str .= '<li class="selected">';
-                $str .= '<input type="button" name="jumpquestion_'.$m['testlog_id'].'" id="jumpquestion_'.$m['testlog_id'].'" value="&gt;" title="'.F_tcecodeToTitle($m['question_description']).'" disabled="disabled"/> ';
+                $str .= '<input type="button" name="jumpquestion_'.$m['testlog_id'].'" id="jumpquestion_'.$m['testlog_id'].'" value="'.$i.'" title="'.F_tcecodeToTitle($m['question_description']).'" disabled="disabled"/> ';
                 $testlog_id_prev = $testlog_id_last;
                 $question_timer = F_getBoolean($m['question_timer']);
                 $qsel = $i;
@@ -1998,23 +1998,35 @@ function F_questionsMenu($testdata, $testuser_id, $testlog_id = 0, $disable = fa
 
     // button for previous question
     if (!$question_timer) {
-        $navlink .= '<input type="submit" name="prevquestion" id="prevquestion" title="'.$l['w_previous'].'" value="&lt; '.$l['w_previous'].$qprev.'"';
+        //$navlink .= '<input type="submit" name="prevquestion" id="prevquestion" title="'.$l['w_previous'].'" value="&lt; '.$l['w_previous'].$qprev.'"';
+		$navlink .= '<input type="submit" name="prevquestion" id="prevquestion" title="'.$l['w_previous'].'" value="&#10094; '.$l['w_previous'].'"';
         if (($testlog_id_prev <= 0) or ($testlog_id_prev > $testlog_id)) {
-            $navlink .= ' disabled="disabled"';
+            $navlink .= ' disabled="disabled" style="display:none !important"';
         }
         $navlink .= ' />';
         // button for confirm current question
-        $navlink .= '<input type="submit" name="confirmanswer" id="confirmanswer" value="('.$qsel.') '.$l['w_confirm'].'" />';
+        //$navlink .= '<input type="submit" name="confirmanswer" id="confirmanswer" value="('.$qsel.') '.$l['w_confirm'].'" />';
+		$navlink .= '<input type="submit" name="confirmanswer" id="confirmanswer" value="'.$l['w_confirm'].'" />';
     }
+	
+	echo '<div id="nosoalCont"><div id="ns1"><span id="nosoal">#'.$qsel.'</span></div><div id="ns2">';
+	if (F_getBoolean($testdata['test_comment_enabled']) and (!$disable)){
+		echo '<span id="commentShow" onclick="commentOpen()"><i class="fas fa-comment"></i> <span id="txtComment">'.$l['w_comment'].'</span></span>';
+	}
+	if (F_getBoolean($testdata['test_menu_enabled']) and (!$disable)){
+		echo '<span id="qlistShow" onclick="qlistOpen()"><i class="fas fa-th"></i> <span id="txtQuestion">'.$l['w_questions'].'</span></span>';
+	}
+	echo '</div></div>';
 
     // button for next question
     $qnext = '';
     if ($testlog_id_next > 0) {
         $qnext = '('.($qsel + 1).') ';
     }
-    $navlink .= '<input type="submit" name="nextquestion" id="nextquestion" title="'.$l['w_next'].'" value="'.$qnext.$l['w_next'].' &gt;"';
+    //$navlink .= '<input type="submit" name="nextquestion" id="nextquestion" title="'.$l['w_next'].'" value="'.$qnext.$l['w_next'].' &gt;"';
+	$navlink .= '<input type="submit" name="nextquestion" id="nextquestion" title="'.$l['w_next'].'" value="'.$l['w_next'].' &#10095;"';
     if ($testlog_id_next <= 0) {
-        $navlink .= ' disabled="disabled"';
+        $navlink .= ' disabled="disabled" style="display:none !important"';
     }
     $navlink .= ' />'.K_NEWLINE;
 
@@ -2030,17 +2042,17 @@ function F_questionsMenu($testdata, $testuser_id, $testlog_id = 0, $disable = fa
     $rstr = '';
     $rstr .= '<br />'.K_NEWLINE;
     $rstr .= $navlink;
-    $rstr .= '<br />'.K_NEWLINE;
+    //$rstr .= '<br />'.K_NEWLINE;
     if (F_getBoolean($testdata['test_menu_enabled']) and (!$disable)) {
         // display questions menu
         $rstr .= '<a name="questionssection" id="questionssection"></a>'.K_NEWLINE;
-        $rstr .= '<div class="tcecontentbox">'.K_NEWLINE; //fieldset
+        $rstr .= '<div class="tcecontentbox qlistCont">'.K_NEWLINE; //fieldset
         //$rstr .= '<legend>';
-        $rstr .= $l['w_questions'];
+        $rstr .= '<div id="qlistTitle"><div><p><i class="fas fa-question-circle"></i> '.$l['w_questions'].'</p><span id="qlistClose" onclick="qlistHide()">&times;<span></div></div>';
         //$rstr .= '</legend>'.K_NEWLINE;
         $rstr .= '<ol class="qlist">'.K_NEWLINE.$str.'</ol>'.K_NEWLINE;
         $rstr .= '</div>'.K_NEWLINE; //fieldset
-        $rstr .= '<br />'.K_NEWLINE;
+        //$rstr .= '<br />'.K_NEWLINE;
     }
     return $rstr;
 }
@@ -2084,6 +2096,7 @@ function F_testComment($test_id)
     $str = '';
     // user's comment
     if (F_getBoolean($td['test_comment_enabled'])) {
+		$str .= '<span class="testcomment">';
         // get user's test comment
         $comment = '';
         $sql = 'SELECT testuser_comment
@@ -2099,8 +2112,9 @@ function F_testComment($test_id)
         } else {
             F_display_db_error();
         }
-        $str .= '<label for="testcomment">'.$l['w_comment'].'</label><br />';
+        $str .= '<label for="testcomment">'.$l['w_comment'].'</label><br /><span id="commentClose" onclick="commentHide()">×<span></span></span>';
         $str .= '<textarea cols="'.K_ANSWER_TEXTAREA_COLS.'" rows="4" name="testcomment" id="testcomment" class="answertext" title="'.$l['h_testcomment'].'">'.$comment.'</textarea><br />'.K_NEWLINE;
+		$str .= '</span>';
     }
     return $str;
 }
