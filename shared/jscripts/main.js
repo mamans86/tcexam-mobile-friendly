@@ -24,3 +24,10 @@ function commentOpen(){
 function commentHide(){
 	$("span.testcomment").animate({top:"-147px"});
 }
+
+function infoToggle(){
+	$("h1#h1_testpage").toggle();
+	$("div#infolinkCont").toggle();
+}
+
+$("span.infolink a").append('&nbsp;&nbsp;<i class="fas fa-window-restore"></i>');

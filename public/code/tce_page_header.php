@@ -65,7 +65,15 @@ if(isset($thispage_title_icon)){
 }else{
 	$page_icon = '';
 }
-echo '<h1>'.$page_icon.' '.htmlspecialchars($thispage_title, ENT_NOQUOTES, $l['a_meta_charset']).'</h1>'.K_NEWLINE;
+
+if(isset($_REQUEST['testid'])){
+	$testid = 'id="h1_testpage"';
+}else{
+	$testid = 'id=""';
+}
+
+
+echo '<h1 '.$testid.'>'.$page_icon.' '.htmlspecialchars($thispage_title, ENT_NOQUOTES, $l['a_meta_charset']).'</h1>'.K_NEWLINE;
 
 //============================================================+
 // END OF FILE

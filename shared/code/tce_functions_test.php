@@ -1671,12 +1671,12 @@ function F_questionForm($test_id, $testlog_id, $formname)
                 // hide some section for fullscreen mode
                 $str .= '<style>'.K_NEWLINE;
                 $str .= '.header{visibility:hidden;display:none;}'.K_NEWLINE;
-                $str .= '.infolink{visibility:hidden;display:none;}'.K_NEWLINE;
-                $str .= 'h1{visibility:hidden;display:none;}'.K_NEWLINE;
+                //$str .= '.infolink{visibility:hidden;display:none;}'.K_NEWLINE;
+                //$str .= 'h1{visibility:hidden;display:none;}'.K_NEWLINE;
                 $str .= '.pagehelp{visibility:hidden;display:none;}'.K_NEWLINE;
                 $str .= '.userbar{visibility:hidden;display:none;}'.K_NEWLINE;
                 $str .= '.minibutton{visibility:hidden;display:none;}'.K_NEWLINE;
-                $str .= '.navlink{visibility:hidden;display:none;}'.K_NEWLINE;
+                //$str .= '.navlink{visibility:hidden;display:none;}'.K_NEWLINE;
                 $str .= '.testcomment{visibility:hidden;display:none;}'.K_NEWLINE;
                 $str .= '#terminatetest{visibility:hidden;display:none;}'.K_NEWLINE;
                 $str .= '</style>'.K_NEWLINE;
@@ -1693,7 +1693,7 @@ function F_questionForm($test_id, $testlog_id, $formname)
                 $str .= '<input type="hidden" name="timeout_logout" id="timeout_logout" value="1" />'.K_NEWLINE;
             }
             $str .= '<a name="questionsection" id="questionsection"></a>'.K_NEWLINE;
-            $str .= '<div class="tcecontentbox">'.K_NEWLINE;
+            $str .= '<div class="tcecontentbox question-block">'.K_NEWLINE;
             //fieldset
             //$str .= '<legend>';
             //$str .= $l['w_question'];
@@ -1938,13 +1938,13 @@ function F_questionsMenu($testdata, $testuser_id, $testlog_id = 0, $disable = fa
             ++$i;
             if ($m['testlog_id'] != $testlog_id) {
                 $str .= '<li>';
-                $str .= '<input type="submit" name="jumpquestion_'.$m['testlog_id'].'" id="jumpquestion_'.$m['testlog_id'].'" value="'.$i.'" title="'.F_tcecodeToTitle($m['question_description']).'" /> ';
+                $str .= '<input type="submit" name="jumpquestion_'.$m['testlog_id'].'" id="jumpquestion_'.$m['testlog_id'].'" value="'.$i.'" title="'.F_tcecodeToTitle($m['question_description']).'"';
                 if ($testlog_id_last == $testlog_id) {
                     $testlog_id_next = $m['testlog_id'];
                 }
             } else {
                 $str .= '<li class="selected">';
-                $str .= '<input type="button" name="jumpquestion_'.$m['testlog_id'].'" id="jumpquestion_'.$m['testlog_id'].'" value="'.$i.'" title="'.F_tcecodeToTitle($m['question_description']).'" disabled="disabled"/> ';
+                $str .= '<input type="button" name="jumpquestion_'.$m['testlog_id'].'" id="jumpquestion_'.$m['testlog_id'].'" value="'.$i.'" title="'.F_tcecodeToTitle($m['question_description']).'" disabled="disabled"';
                 $testlog_id_prev = $testlog_id_last;
                 $question_timer = F_getBoolean($m['question_timer']);
                 $qsel = $i;
@@ -1952,29 +1952,32 @@ function F_questionsMenu($testdata, $testuser_id, $testlog_id = 0, $disable = fa
                     $qprev = ' ('.($i - 1).')';
                 }
             }
-            // display mark when the current question has been displayed
-            $str .= '<acronym';
+			
+			// display mark when the current question has been displayed
+            //$str .= '<acronym';
             if (!empty($m['testlog_display_time'])) {
-                $str .= ' class="onbox"';
-                $str .= ' title="'.$l['h_question_displayed'].'">+';
+                $str .= ' class="q_displayed ';
+                //$str .= ' title="'.$l['h_question_displayed'].'"><i id="i_qdisplayed" class="fas fa-eye"></i>';
             } else {
-                $str .= ' class="offbox"';
-                $str .= ' title="'.$l['h_question_not_displayed'].'">-';
+                $str .= ' class="q_notdisplayed ';
+                //$str .= ' title="'.$l['h_question_not_displayed'].'"><i id="i_qnotdisplayed" class="fas fa-eye-slash"></i>';
             }
-            $str .= '</acronym>';
-
-            $str .= '&nbsp;';
+            //$str .= '</acronym>';
+			
+			
+            //$str .= '&nbsp;';
 
             // show mark when the current question has been answered
-            $str .= '<acronym';
+            //$str .= '<acronym';
             if (!empty($m['testlog_change_time'])) {
-                $str .= ' class="onbox"';
-                $str .= ' title="'.$l['h_question_answered'].'">+';
+                $str .= 'q_answered"';
+                //$str .= ' title="'.$l['h_question_answered'].'"><i id="i_qanswered" class="fas fa-paperclip"></i>';
             } else {
-                $str .= ' class="offbox"';
-                $str .= ' title="'.$l['h_question_not_answered'].'">-';
+                $str .= 'q_notanswered"';
+                //$str .= ' title="'.$l['h_question_not_answered'].'">-';
             }
-            $str .= '</acronym>';
+            //$str .= '</acronym>';
+			$str .= ' />';
             $str .= '&nbsp;';
             // show question score
             $n_question_score = $testdata['test_score_right'] * $m['question_difficulty'];
@@ -2009,7 +2012,7 @@ function F_questionsMenu($testdata, $testuser_id, $testlog_id = 0, $disable = fa
 		$navlink .= '<input type="submit" name="confirmanswer" id="confirmanswer" value="'.$l['w_confirm'].'" />';
     }
 	
-	echo '<div id="nosoalCont"><div id="ns1"><span id="nosoal">#'.$qsel.'</span></div><div id="ns2">';
+	echo '<div id="nosoalCont"><div id="ns1"><span id="nosoal">#'.$qsel.'</span></div><div id="ns2"><span id="information" onclick="infoToggle()"><i class="fas fa-info"></i> <span id="txtInfo">'.$l['w_info'].'</span></span>';
 	if (F_getBoolean($testdata['test_comment_enabled']) and (!$disable)){
 		echo '<span id="commentShow" onclick="commentOpen()"><i class="fas fa-comment"></i> <span id="txtComment">'.$l['w_comment'].'</span></span>';
 	}
