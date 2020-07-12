@@ -6,8 +6,6 @@ No Additional JS or CSS Framework for User Interface just Modernizr.
 If there are any update from tecnickcom/tcexam i will update this version too if possible.
 
 ## Screenshot
-###### Login Page - Desktop View
-![Login Page - Desktop View](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Login%20Page%20-%20Desktop.PNG?raw=true)
 
 ###### Login Page - Mobile View
 ![Login Page - Mobile View](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Login-Screen-v20.07.12.jpg?raw=true)
