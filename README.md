@@ -28,6 +28,7 @@ If there are any update from tecnickcom/tcexam i will update this version too if
 - [x] Add question number on top of question description
 - [x] Create button to toggle question list on top of question description
 - [ ] Create mobile friendly Admin Area
+- [ ] Add HTML WYSIWFG Editor switcher to Questions/answers
 - [ ] Word Format Import Question
 
 ## Contact
