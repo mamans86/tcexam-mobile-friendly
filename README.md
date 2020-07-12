@@ -13,7 +13,7 @@ If there are any update from tecnickcom/tcexam i will update this version too if
 ![Login Page - Mobile View](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Login-Screen-v20.07.12.jpg?raw=true)
 
 ###### Test Page - MCMA (Multi Choice Multi Answer)
-![Test Page - MCMA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test%20Page%20-%20MCMA.PNG?raw=true)
+![Test Page - MCMA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test-Page-MultiAnswer-v20.07.12.jpg?raw=true)
 
 ###### Test Page - MCSA (Multi Choice Single Answer)
 ![Test Page - MCSA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test%20Page%20-%20MCSA.PNG?raw=true)
