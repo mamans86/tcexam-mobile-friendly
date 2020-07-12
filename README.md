@@ -14,7 +14,7 @@ If there are any update from tecnickcom/tcexam i will update this version too if
 ![Test Page - MCMA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test-Page-MultiAnswer-v20.07.12.jpg?raw=true)
 
 ###### Test Page - MCSA (Multi Choice Single Answer)
-![Test Page - MCSA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test%20Page%20-%20MCSA.PNG?raw=true)
+![Test Page - MCSA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test-Page-SingleAnswer-v20.07.12.png?raw=true)
 
 ###### Test Page - Ordering Question
 ![Test Page - Ordering Question](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test%20Page%20-%20Ordering.PNG?raw=true)
