@@ -10,7 +10,7 @@ If there are any update from tecnickcom/tcexam i will update this version too if
 ![Login Page - Desktop View](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Login%20Page%20-%20Desktop.PNG?raw=true)
 
 ###### Login Page - Mobile View
-![Login Page - Mobile View](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Login-Screen-v20.07.12.PNG?raw=true)
+![Login Page - Mobile View](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Login-Screen-v20.07.12.jpg?raw=true)
 
 ###### Test Page - MCMA (Multi Choice Multi Answer)
 ![Test Page - MCMA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test%20Page%20-%20MCMA.PNG?raw=true)
