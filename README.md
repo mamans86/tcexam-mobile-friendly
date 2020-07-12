@@ -23,12 +23,12 @@ If there are any update from tecnickcom/tcexam i will update this version too if
 ![Public Area Main Menu](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/TMF-MainMenu-v20.07.12.png?raw=true)
 
 ## TO DO LIST
-1. Add unsure answer mark in test page
-2. Add text zooming in test page
-3. Add question number on top of question description
-4. Create button to toggle question list on top of question description
-5. Create mobile friendly Admin Area
-6. Word Format Import Question
+- [ ] Add unsure answer mark in test page
+- [ ] Add text zooming in test page
+- [x] Add question number on top of question description
+- [x] Create button to toggle question list on top of question description
+- [ ] Create mobile friendly Admin Area
+- [ ] Word Format Import Question
 
 ## Contact
 1. Blog: [mamans86.blogspot.com](https://mamans86.blogspot.com)
