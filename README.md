@@ -19,8 +19,8 @@ If there are any update from tecnickcom/tcexam i will update this version too if
 ###### Test Page - Questions List
 ![Test Page - Questions List](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test-Page-QuestionList-v20.07.12.png?raw=true)
 
-###### Test Page - Warning
-![Test Page - Warning](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test%20Page%20-%20Warning.PNG?raw=true)
+###### Public Area Main Menu
+![Public Area Main Menu](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/TMF-MainMenu-v20.07.12.png?raw=true)
 
 ## TO DO LIST
 1. Add unsure answer mark in test page
