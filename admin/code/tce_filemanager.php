@@ -256,8 +256,9 @@ echo '<div>'.K_NEWLINE;
 echo '<input type="hidden" name="d" id="d" value="'.$dir.'" />'.K_NEWLINE;
 
 echo '<fieldset>'.K_NEWLINE;
-echo '<legend title="'.$l['w_action'].'">'.$l['w_action'].'</legend>'.K_NEWLINE;
 
+echo '<legend title="'.$l['w_action'].'">'.$l['w_action'].'</legend>'.K_NEWLINE;
+echo '<div class="d-flex p-5">'.K_NEWLINE;
 if (!empty($file)) {
     // file mode
     // preview
@@ -285,6 +286,7 @@ if (!empty($file)) {
     echo '<input type="file" name="userfile" id="userfile" size="20" title="'.$l['h_upload_file'].'" />'.K_NEWLINE;
     echo '<input type="submit" name="sendfile" id="sendfile" value="'.$l['w_upload'].'" title="'.$l['h_upload_file'].'" />'.K_NEWLINE;
 }
+echo '</div>'.K_NEWLINE;
 echo '</fieldset>'.K_NEWLINE;
 
 // change view mode
@@ -302,8 +304,9 @@ echo '</div>'.K_NEWLINE;
 
 // directory link path
 echo '<br />'.K_NEWLINE;
-echo '<strong>'.$l['w_position'].': '.F_getMediaDirPathLink($dir, $viewmode).'</strong>';
 
+echo '<strong>'.$l['w_position'].': '.F_getMediaDirPathLink($dir, $viewmode).'</strong>';
+echo '<div class="d-flex p-5">'.K_NEWLINE;
 if ($_SESSION['session_user_level'] >= K_AUTH_ADMIN_DIRS) {
     // directory mode
     echo ' <input type="text" name="newdirname" id="newdirname" value="" size="15" maxlength="255" title="'.$l['w_new_directory'].'" />'.K_NEWLINE;
@@ -312,7 +315,7 @@ if ($_SESSION['session_user_level'] >= K_AUTH_ADMIN_DIRS) {
         F_submit_button('deldir', $l['w_delete'], $l['w_delete']);
     }
 }
-
+echo '</div>'.K_NEWLINE;
 echo '<br />'.K_NEWLINE;
 
 // list files

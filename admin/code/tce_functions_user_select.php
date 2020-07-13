@@ -177,7 +177,7 @@ function F_show_select_user($order_field, $orderdir, $firstrow, $rowsperpage, $g
                 }
                 echo '<td style="text-align:'.$txtalign.';">&nbsp;'.htmlspecialchars(substr($grp, 0, -2), ENT_NOQUOTES, $l['a_meta_charset']).'</td>'.K_NEWLINE;
 
-                echo '<td><a href="tce_show_result_allusers.php?user_id='.$m['user_id'].'" class="xmlbutton" title="'.$l['t_all_results_user'].'">...</a></td>'.K_NEWLINE;
+                echo '<td><a href="tce_show_result_allusers.php?user_id='.$m['user_id'].'" class="xmlbutton" title="'.$l['t_all_results_user'].'"><i class="fas fa-edit"></i></a></td>'.K_NEWLINE;
 
                 echo '</tr>'.K_NEWLINE;
             } while ($m = F_db_fetch_array($r));
@@ -200,15 +200,15 @@ function F_show_select_user($order_field, $orderdir, $firstrow, $rowsperpage, $g
             echo '</span>'.K_NEWLINE;
             echo '<br />'.K_NEWLINE;
             echo '<strong style="margin:5px">'.$l['m_with_selected'].'</strong>'.K_NEWLINE;
-            echo '<ul style="margin:0">';
+            echo '<ul style="margin:0;list-style-type:none;padding:0">';
             if ($_SESSION['session_user_level'] >= K_AUTH_DELETE_USERS) {
                 // delete user
-                echo '<li>';
+                echo '<li class="d-flex liStyle1">';
                 F_submit_button('delete', $l['w_delete'], $l['h_delete']);
                 echo '</li>'.K_NEWLINE;
             }
             if ($_SESSION['session_user_level'] >= K_AUTH_ADMIN_GROUPS) {
-                echo '<li>';
+                echo '<li class="d-flex liStyle1">';
                 // add/delete group
                 echo F_user_group_select('new_group_id');
                 F_submit_button('addgroup', $l['w_add'], $l['w_add']);
@@ -218,7 +218,7 @@ function F_show_select_user($order_field, $orderdir, $firstrow, $rowsperpage, $g
                 echo '</li>'.K_NEWLINE;
                 if ($_SESSION['session_user_level'] >= K_AUTH_MOVE_GROUPS) {
                     // move group
-                    echo '<li>';
+                    echo '<li class="d-flex liStyle1">';
                     if ($l['a_meta_dir'] == 'rtl') {
                         $arr = '&larr;';
                     } else {
@@ -254,7 +254,7 @@ function F_show_select_user($order_field, $orderdir, $firstrow, $rowsperpage, $g
                 F_show_page_navigator($_SERVER['SCRIPT_NAME'], $sql, $firstrow, $rowsperpage, $param_array);
             }
 
-            echo '<div class="row">'.K_NEWLINE;
+            echo '<div class="row d-block ta-center">'.K_NEWLINE;
             echo '<br />';
             echo '<a href="tce_xml_users.php" class="xmlbutton" title="'.$l['h_xml_export'].'">XML</a> ';
             echo '<a href="tce_xml_users.php?format=JSON" class="xmlbutton" title="JSON">JSON</a> ';

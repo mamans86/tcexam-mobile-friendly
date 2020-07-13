@@ -708,7 +708,7 @@ echo '<br />'.K_NEWLINE;
 echo '<a href="#" title="'.$l['h_preview'].'" class="xmlbutton" onclick="previewWindow=window.open(\'tce_preview_tcecode.php?tcexamcode=\'+encodeURIComponent(document.getElementById(\'form_questioneditor\').question_description.value),\'previewWindow\',\'dependent,height=500,width=500,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no\'); return false;">'.$l['w_preview'].'</a>'.K_NEWLINE;
 
 echo '</span>'.K_NEWLINE;
-echo '<span class="formw" style="border:1px solid #808080;">'.K_NEWLINE;
+echo '<span class="formw d-block" style="border:1px solid #808080;">'.K_NEWLINE;
 echo '<textarea cols="50" rows="10" name="question_description" id="question_description" onselect="FJ_update_selection(document.getElementById(\'form_questioneditor\').question_description)" title="'.$l['h_question_description'].'"';
 if (K_ENABLE_VIRTUAL_KEYBOARD) {
     echo ' class="keyboardInput"';
@@ -720,7 +720,7 @@ echo '</span>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 if (K_ENABLE_QUESTION_EXPLANATION) {
-    echo '<div class="row">'.K_NEWLINE;
+    echo '<div class="row d-block ta-left">'.K_NEWLINE;
     echo '<span class="label">'.K_NEWLINE;
     echo '<label for="question_explanation">'.$l['w_explanation'].'</label>'.K_NEWLINE;
     echo '<br />'.K_NEWLINE;
@@ -745,7 +745,7 @@ if (K_ENABLE_QUESTION_EXPLANATION) {
 }
 
 // question type
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-iflex ta-left">'.K_NEWLINE;
 echo '<span class="label">&nbsp;</span>'.K_NEWLINE;
 echo '<div class="formw">'.K_NEWLINE;
 echo '<fieldset class="noborder">'.K_NEWLINE;
@@ -826,11 +826,11 @@ echo getFormRowCheckBox('question_inline_answers', $l['w_inline_answers'], $l['h
 echo getFormRowCheckBox('question_auto_next', $l['w_auto_next'], $l['h_question_auto_next'], '', 1, $question_auto_next, false, '');
 echo getFormRowCheckBox('question_enabled', $l['w_enabled'], $l['h_enabled'], '', 1, $question_enabled, false, '');
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 
 // show buttons by case
 if (isset($question_id) and ($question_id > 0)) {
-    echo '<span style="background-color:#999999;">';
+    echo '<span>';
     echo '<input type="checkbox" name="confirmupdate" id="confirmupdate" value="1" title="confirm &rarr; update" />';
     F_submit_button('update', $l['w_update'], $l['h_update']);
     echo '</span>';
@@ -843,7 +843,7 @@ F_submit_button('clear', $l['w_clear'], $l['h_clear']);
 
 echo '</div>'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 echo '<span class="left">'.K_NEWLINE;
 echo '&nbsp;'.K_NEWLINE;
 if (isset($question_subject_id) and ($question_subject_id > 0)) {

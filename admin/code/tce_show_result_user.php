@@ -359,7 +359,7 @@ if (isset($teststat) and !empty($teststat)) {
         echo '</div>'.K_NEWLINE;
     }
 
-    echo '<div class="row">'.K_NEWLINE;
+    echo '<div class="row d-block">'.K_NEWLINE;
 
     // show buttons by case
     if (($test_id > 0) and ($user_id > 0) and ($testuser_id > 0)) {
@@ -374,9 +374,11 @@ if (isset($teststat) and !empty($teststat)) {
         }
 
         echo '<br /><br />';
+		echo '<div class="d-block">'.K_NEWLINE;
         echo '<a href="tce_pdf_results.php?mode=3'.$filter.'" class="xmlbutton" title="'.$l['h_pdf'].'">'.$l['w_pdf'].'</a> ';
         echo '<a href="tce_email_results.php?mode=1&amp;menu_mode=startlongprocess'.$filter.'" class="xmlbutton" title="'.$l['h_email_result'].'">'.$l['w_email_result'].'</a> ';
         echo '<a href="tce_email_results.php?mode=0&amp;menu_mode=startlongprocess'.$filter.'" class="xmlbutton" title="'.$l['h_email_result'].' + PDF">'.$l['w_email_result'].' + PDF</a> ';
+		echo '</div>'.K_NEWLINE;
     }
 
     echo '</div>'.K_NEWLINE;
@@ -386,7 +388,7 @@ echo '</form>'.K_NEWLINE;
 
 echo '</div>'.K_NEWLINE;
 
-echo '<div class="pagehelp">'.$l['hp_result_user'].'</div>'.K_NEWLINE;
+echo '<div class="pagehelp">'.$l['hp_result_user'].'</div><br/>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 require_once('../code/tce_page_footer.php');

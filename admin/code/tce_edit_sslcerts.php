@@ -308,7 +308,7 @@ if (!isset($ssl_id) or ($ssl_id <= 0)) {
 echo getFormRowCheckBox('ssl_enabled', $l['w_enabled'], $l['h_enabled'], '', 1, $ssl_enabled, false, '');
 
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 
 // show buttons by case
 if (isset($ssl_id) and ($ssl_id > 0)) {

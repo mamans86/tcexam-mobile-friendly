@@ -73,11 +73,11 @@ if (!F_isAuthorizedEditorForGroup($group_id)) {
 
 echo '<form action="'.$_SERVER['SCRIPT_NAME'].'" method="post" enctype="multipart/form-data" id="form_userselect">'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row pr-25">'.K_NEWLINE;
 echo '<span class="label">'.K_NEWLINE;
 echo '<label for="group_id">'.$l['w_group'].'</label>'.K_NEWLINE;
 echo '</span>'.K_NEWLINE;
-echo '<span class="formw">'.K_NEWLINE;
+echo '<span class="formw d-block">'.K_NEWLINE;
 echo '<select name="group_id" id="group_id" size="0" onchange="document.getElementById(\'form_userselect\').submit()">'.K_NEWLINE;
 
 echo '<option value="0"';

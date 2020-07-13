@@ -30,12 +30,12 @@
 /**
  * database type (MYSQL, POSTGRESQL, ORACLE)
  */
-define('K_DATABASE_TYPE', '');
+define('K_DATABASE_TYPE', 'MYSQL');
 
 /**
  * database Host name (eg: localhost)
  */
-define('K_DATABASE_HOST', '');
+define('K_DATABASE_HOST', 'localhost');
 
 /**
  * database port (eg: 3306, 5432, 1521)
@@ -44,22 +44,22 @@ define('K_DATABASE_HOST', '');
  * mysqli.default_socket PHP value. For example, in Apache:
  * php_value mysqli.default_socket "/path/to/mysql.sock"
  */
-define('K_DATABASE_PORT', '');
+define('K_DATABASE_PORT', '3306');
 
 /**
  * database name (TCExam)
  */
-define('K_DATABASE_NAME', '');
+define('K_DATABASE_NAME', 'tmf');
 
 /**
  * database user name
  */
-define('K_DATABASE_USER_NAME', '');
+define('K_DATABASE_USER_NAME', 'root');
 
 /**
  * database user password
  */
-define('K_DATABASE_USER_PASSWORD', '');
+define('K_DATABASE_USER_PASSWORD', '123123123');
 
 /**
  * prefix for database tables names

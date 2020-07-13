@@ -65,7 +65,7 @@ if (isset($_POST['lock'])) {
 
 echo '<form action="'.$_SERVER['SCRIPT_NAME'].'" method="post" enctype="multipart/form-data" id="form_testselect">'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-iflex">'.K_NEWLINE;
 echo '<span class="formw">'.K_NEWLINE;
 echo '<input type="text" name="searchterms" id="searchterms" value="'.htmlspecialchars($searchterms, ENT_COMPAT, $l['a_meta_charset']).'" size="20" maxlength="255" title="'.$l['w_search'].'" />';
 F_submit_button('search', $l['w_search'], $l['w_search']);

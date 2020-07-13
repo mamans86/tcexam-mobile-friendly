@@ -224,7 +224,7 @@ echo getFormNoscriptSelect('selectrecord');
 
 echo '<div class="row"><hr /></div>'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 
 F_submit_button('backup', $l['w_backup'], $l['h_backup']);
 F_submit_button('restore', $l['w_restore'], $l['h_restore']);

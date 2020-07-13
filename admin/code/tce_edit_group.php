@@ -236,11 +236,11 @@ echo '<div class="row"><hr /></div>'.K_NEWLINE;
 
 echo getFormRowTextInput('group_name', $l['w_name'], $l['h_group_name'], '', $group_name, '', 255, false, false, false, '');
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-iflex">'.K_NEWLINE;
 
 // show buttons by case
 if (isset($group_id) and ($group_id > 0)) {
-    echo '<span style="background-color:#999999;">';
+    echo '<span class="d-iflex">';
     echo '<input type="checkbox" name="confirmupdate" id="confirmupdate" value="1" title="confirm &rarr; update" />';
     F_submit_button('update', $l['w_update'], $l['h_update']);
     echo '</span>';

@@ -899,7 +899,7 @@ echo '</select>'.K_NEWLINE;
 
 // link for user selection popup
 $jsaction = 'selectWindow=window.open(\'tce_select_tests_popup.php?cid=test_id\', \'selectWindow\', \'dependent, height=600, width=800, menubar=no, resizable=yes, scrollbars=yes, status=no, toolbar=no\');return false;';
-echo '<a href="#" onclick="'.$jsaction.'" class="xmlbutton" title="'.$l['w_select'].'">...</a>';
+echo '<a href="#" onclick="'.$jsaction.'" class="xmlbutton" title="'.$l['w_select'].'"><i class="fas fa-window-restore"></i></a>';
 
 echo '</span>'.K_NEWLINE;
 echo '<br /><br />'.K_NEWLINE;
@@ -1056,7 +1056,7 @@ echo getFormRowCheckBox('test_logout_on_timeout', $l['w_logout_on_timeout'], '',
 
 echo getFormRowTextInput('new_test_password', $l['w_password'], $l['h_test_password'], ' ('.$l['d_password_lenght'].')', '', K_USRREG_PASSWORD_RE, 255, false, false, true);
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 echo '<br />'.K_NEWLINE;
 echo '<input type="hidden" name="test_password" id="test_password" value="'.$test_password.'" />'.K_NEWLINE;
 
@@ -1064,7 +1064,7 @@ echo '<input type="hidden" name="test_password" id="test_password" value="'.$tes
 
 
 if (isset($test_id) and ($test_id > 0)) {
-    echo '<span style="background-color:#999999;">';
+    echo '<span>';
     echo '<input type="checkbox" name="confirmupdate" id="confirmupdate" value="1" title="confirm &rarr; update" />';
     F_submit_button('update', $l['w_update'], $l['h_update']);
     echo '</span>';
@@ -1274,7 +1274,7 @@ if (isset($test_id) and ($test_id > 0)) {
             $subjlist .= '</acronym> ';
             $subjlist .= '<acronym class="offbox" title="'.$l['h_question_difficulty'].'">'.$m['tsubset_difficulty'].'</acronym> ';
             $subjlist .= '<acronym class="offbox" title="'.$l['h_num_answers'].'">'.$m['tsubset_answers'].'</acronym> ';
-            $subjlist .= ' <a href="'.$_SERVER['SCRIPT_NAME'].'?menu_mode=deletesubject&amp;test_id='.$test_id.'&amp;tsubset_id='.$m['tsubset_id'].'" title="'.$l['h_delete'].'" class="deletebutton">'.$l['w_delete'].'</a>';
+            $subjlist .= ' <a href="'.$_SERVER['SCRIPT_NAME'].'?menu_mode=deletesubject&amp;test_id='.$test_id.'&amp;tsubset_id='.$m['tsubset_id'].'" title="'.$l['h_delete'].'" class="deletebutton"><i class="fas fa-times"></i> '.$l['w_delete'].'</a>';
             $subjlist .= '</li>'.K_NEWLINE;
 
             // update test_max_score
@@ -1315,7 +1315,7 @@ if (isset($test_id) and ($test_id > 0)) {
         echo '</span>'.K_NEWLINE;
         echo '<span class="formw">'.K_NEWLINE;
         echo '<input type="text" name="test_num" id="test_num" value="'.$test_num.'" size="4" maxlength="10" title="'.$l['h_pdf_offline_test'].'" />'.K_NEWLINE;
-        echo '<a href="tce_pdf_testgen.php?test_id='.$test_id.'&amp;num='.$test_num.'" title="'.$l['h_pdf_offline_test'].'" class="xmlbutton" onclick="pdfWindow=window.open(\'tce_pdf_testgen.php?test_id='.$test_id.'&amp;num=\' + document.getElementById(\'form_testeditor\').test_num.value + \'\',\'pdfWindow\',\'dependent,menubar=yes,resizable=yes,scrollbars=yes,status=yes,toolbar=yes\'); return false;">'.$l['w_generate'].'</a>';
+        echo '<a href="tce_pdf_testgen.php?test_id='.$test_id.'&amp;num='.$test_num.'" title="'.$l['h_pdf_offline_test'].'" class="xmlbutton" onclick="pdfWindow=window.open(\'tce_pdf_testgen.php?test_id='.$test_id.'&amp;num=\' + document.getElementById(\'form_testeditor\').test_num.value + \'\',\'pdfWindow\',\'dependent,menubar=yes,resizable=yes,scrollbars=yes,status=yes,toolbar=yes\'); return false;" style="flex:0 0 7em"><i class="fas fa-history"></i> '.$l['w_generate'].'</a>';
         echo '</span>&nbsp;'.K_NEWLINE;
         echo '</div>'.K_NEWLINE;
     }

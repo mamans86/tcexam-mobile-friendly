@@ -43,7 +43,9 @@ define('K_LANGUAGE', 'en');
  * If true, display a language selector.
  */
 define('K_LANGUAGE_SELECTOR', true);
-
+define('K_APP_DESC','Aplikasi Ujian Online');
+define('K_INSTITUTION_NAME','Xamzone School Universe');
+define('K_INSTITUTION_LOGO','xz-logo.png');
 /**
  * Defines a serialized array of available languages.
  * Each language is indexed using a 2-letters code (ISO 639).

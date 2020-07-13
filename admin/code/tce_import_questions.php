@@ -95,7 +95,7 @@ echo '</span>'.K_NEWLINE;
 echo '&nbsp;'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 echo '<span class="label">&nbsp;</span>'.K_NEWLINE;
 echo '<div class="formw">'.K_NEWLINE;
 echo '<fieldset class="noborder">'.K_NEWLINE;
@@ -129,7 +129,7 @@ echo '</fieldset>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 echo '<br />'.K_NEWLINE;
 
 // show upload button

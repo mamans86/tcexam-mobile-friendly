@@ -40,9 +40,9 @@ require_once('../code/tce_page_header.php');
 
 require_once('tce_page_header.php');
 
-echo '<div class="container">'.K_NEWLINE;
-
-echo ''.$l['d_tcexam_desc'].'<br />'.K_NEWLINE;
+echo '<div class="container mb-15 ta-left">'.K_NEWLINE;
+echo '<div class="d-block p-15">'.K_NEWLINE;
+echo '<span id="tcexam-desc">'.$l['d_tcexam_desc'].'</span>'.K_NEWLINE;
 
 echo '<ul class="credits">'.K_NEWLINE;
 echo '<li><strong>'.$l['w_author'].':</strong> Nicola Asuni</li>'.K_NEWLINE;
@@ -174,6 +174,7 @@ echo '<a href="http://www.tcexam.org/license.php"><img src="../../images/credits
 echo '<a href="http://validator.w3.org/check?uri='.K_PATH_HOST.$_SERVER['SCRIPT_NAME'].'" title="This Page Is Valid XHTML 1.0 Strict!"><img src="../../images/credits/w3c_xhtml10_88x31.png" alt="Valid XHTML 1.0!" height="31" width="88" style="border:none;" /></a>'.K_NEWLINE;
 echo '<a href="http://jigsaw.w3.org/css-validator/" title="This document validates as CSS!"><img src="../../images/credits/w3c_css_88x31.png" alt="Valid CSS1!" height="31" width="88" style="border:none;" /></a>'.K_NEWLINE;
 echo '<a href="http://www.w3.org/WAI/WCAG1AAA-Conformance" title="Explanation of Level Triple-A Conformance"><img src="../../images/credits/w3c_wai_aaa_88x31.png" alt="Level Triple-A conformance icon, W3C-WAI Web Content Accessibility Guidelines 1.0" width="88" height="31" style="border:none;" /></a>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 require_once('tce_page_footer.php');

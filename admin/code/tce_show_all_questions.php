@@ -456,7 +456,7 @@ function F_show_select_questions($wherequery, $subject_module_id, $subject_id, $
                 $questlist .= ' <acronym class="offbox" title="'.$l['h_question_timer'].'">&nbsp;</acronym>';
             }
 
-            $questlist .= ' <a href="tce_edit_question.php?subject_module_id='.$subject_module_id.'&amp;question_subject_id='.$subject_id.'&amp;question_id='.$m['question_id'].'" title="'.$l['t_questions_editor'].' [ID = '.$m['question_id'].']" class="xmlbutton">'.$l['w_edit'].'</a>';
+            $questlist .= ' <a href="tce_edit_question.php?subject_module_id='.$subject_module_id.'&amp;question_subject_id='.$subject_id.'&amp;question_id='.$m['question_id'].'" title="'.$l['t_questions_editor'].' [ID = '.$m['question_id'].']" class="xmlbutton btn-edit"><i class="fas fa-edit"></i>'.$l['w_edit'].'</a>';
 
             $questlist .= '<br /><br />'.K_NEWLINE;
             $questlist .=  '<div class="paddingleft">'.F_decode_tcecode($m['question_description']).'</div>'.K_NEWLINE;
@@ -496,7 +496,7 @@ function F_show_select_questions($wherequery, $subject_module_id, $subject_id, $
                             $answlist .= ' <acronym class="offbox" title="'.$l['h_answer_keyboard_key'].'">&nbsp;</acronym>';
                         }
 
-                        $answlist .= ' <a href="tce_edit_answer.php?subject_module_id='.$subject_module_id.'&amp;question_subject_id='.$subject_id.'&amp;answer_question_id='.$m['question_id'].'&amp;answer_id='.$ma['answer_id'].'" title="'.$l['t_answers_editor'].' [ID = '.$ma['answer_id'].']" class="xmlbutton">'.$l['w_edit'].'</a>';
+                        $answlist .= ' <a href="tce_edit_answer.php?subject_module_id='.$subject_module_id.'&amp;question_subject_id='.$subject_id.'&amp;answer_question_id='.$m['question_id'].'&amp;answer_id='.$ma['answer_id'].'" title="'.$l['t_answers_editor'].' [ID = '.$ma['answer_id'].']" class="xmlbutton btn-edit"><i class="fas fa-edit"></i>'.$l['w_edit'].'</a>';
                         //$answlist .= " ";
                         //$answlist .= "".F_decode_tcecode($ma['answer_description'])."";
                         $answlist .= '<br /><br />'.K_NEWLINE;

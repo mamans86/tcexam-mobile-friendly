@@ -300,7 +300,7 @@ function F_getDirTable($dir, $selected = '', $params = '', $rootdir = K_PATH_CAC
     require_once('../config/tce_config.php');
     $allowed_extensions = unserialize(K_ALLOWED_UPLOAD_EXTENSIONS);
     $out = ''; // html string to be returned
-    $out .= '<table class="filemanager">'.K_NEWLINE;
+    $out .= '<table>'.K_NEWLINE;
     // header
     $out .= '<tr>';
     $out .= '<th>'.$l['w_name'].'</th>';

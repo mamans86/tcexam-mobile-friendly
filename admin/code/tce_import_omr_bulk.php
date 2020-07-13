@@ -163,7 +163,7 @@ echo getFormRowCheckBox('overwrite', $l['w_overwrite'], $l['h_omr_overwrite'], '
 
 // -----------------------------------------------------------------------------
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 echo '<br />'.K_NEWLINE;
 // show upload button
 F_submit_button('upload', $l['w_upload'], $l['h_submit_file']);

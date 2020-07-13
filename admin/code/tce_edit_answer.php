@@ -761,7 +761,7 @@ echo '<br />'.K_NEWLINE;
 echo '<a href="#" title="'.$l['h_preview'].'" class="xmlbutton" onclick="previewWindow=window.open(\'tce_preview_tcecode.php?tcexamcode=\'+encodeURIComponent(document.getElementById(\'form_answereditor\').answer_description.value),\'previewWindow\',\'dependent,height=500,width=500,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no\'); return false;">'.$l['w_preview'].'</a>'.K_NEWLINE;
 
 echo '</span>'.K_NEWLINE;
-echo '<span class="formw" style="border:1px solid #808080;">'.K_NEWLINE;
+echo '<span class="formw d-block" style="border:1px solid #808080;">'.K_NEWLINE;
 echo '<textarea cols="50" rows="10" name="answer_description" id="answer_description" onselect="FJ_update_selection(document.getElementById(\'form_answereditor\').answer_description)" title="'.$l['h_answer'].'"';
 if (K_ENABLE_VIRTUAL_KEYBOARD) {
     echo ' class="keyboardInput"';
@@ -773,7 +773,7 @@ echo '</span>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 if (K_ENABLE_ANSWER_EXPLANATION) {
-    echo '<div class="row">'.K_NEWLINE;
+    echo '<div class="row d-block ta-left">'.K_NEWLINE;
     echo '<span class="label">'.K_NEWLINE;
     echo '<label for="answer_explanation">'.$l['w_explanation'].'</label>'.K_NEWLINE;
     echo '<br />'.K_NEWLINE;
@@ -849,12 +849,12 @@ echo '</select>'.K_NEWLINE;
 echo '</span>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 
 // show buttons by case
 
 if (isset($answer_id) and ($answer_id > 0)) {
-    echo '<span style="background-color:#999999;">';
+    echo '<span>';
     echo '<input type="checkbox" name="confirmupdate" id="confirmupdate" value="1" title="confirm &rarr; update" />';
     F_submit_button('update', $l['w_update'], $l['h_update']);
     echo '</span>';
@@ -867,7 +867,7 @@ F_submit_button('clear', $l['w_clear'], $l['h_clear']);
 
 echo '</div>'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 echo '<span class="left">'.K_NEWLINE;
 echo '&nbsp;'.K_NEWLINE;
 

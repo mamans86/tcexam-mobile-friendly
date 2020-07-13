@@ -376,11 +376,11 @@ echo '</div>'.K_NEWLINE;
 
 echo getFormRowCheckBox('module_enabled', $l['w_enabled'], $l['h_enabled'], '', 1, $module_enabled, false, '');
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 
 // show buttons by case
 if (isset($module_id) and ($module_id > 0)) {
-    echo '<span style="background-color:#999999;">';
+    echo '<span>';
     echo '<input type="checkbox" name="confirmupdate" id="confirmupdate" value="1" title="confirm &rarr; update" />';
     F_submit_button('update', $l['w_update'], $l['h_update']);
     echo '</span>';
@@ -393,7 +393,7 @@ F_submit_button('clear', $l['w_clear'], $l['h_clear']);
 
 echo '</div>'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-block">'.K_NEWLINE;
 echo '<span class="right">'.K_NEWLINE;
 
 if (isset($module_id) and ($module_id > 0)) {

@@ -42,7 +42,14 @@ echo '</div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 // display menu
+echo '<div id="menuBody">'.K_NEWLINE;
 echo '<div id="scrollayer" class="scrollmenu">'.K_NEWLINE;
+echo '<div id="menuContent">'.K_NEWLINE;
+echo '<p id="logoIMG"><img width="77px" height="77px" src="'.K_PATH_HOST.K_PATH_TCEXAM.'cache/logo/'.K_INSTITUTION_LOGO.'" /></p>'.K_NEWLINE;
+echo '<p id="appDesc">'.K_APP_DESC.'</p>'.K_NEWLINE;
+echo '<p id="insName">'.K_INSTITUTION_NAME.'</p>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
+
 // CSS changes for old browsers
 echo '<!--[if lte IE 7]>'.K_NEWLINE;
 echo '<style type="text/css">'.K_NEWLINE;
@@ -59,7 +66,9 @@ echo '<div class="body">'.K_NEWLINE;
 
 echo '<div class="content">'.K_NEWLINE;
 echo '<a name="topofdoc" id="topofdoc"></a>'.K_NEWLINE;
-echo '<h1>'.htmlspecialchars($thispage_title, ENT_NOQUOTES, $l['a_meta_charset']).'</h1>'.K_NEWLINE;
+echo '<div class="h-title d-iflex">'.K_NEWLINE;
+echo '<span id="mmCloseBtn"><i class="fas fa-bars"></i></span><h1>'.htmlspecialchars($thispage_title, ENT_NOQUOTES, $l['a_meta_charset']).'</h1>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
 
 //============================================================+
 // END OF FILE
