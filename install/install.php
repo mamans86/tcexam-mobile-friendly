@@ -53,21 +53,27 @@ echo '<head>'."\n";
   
   echo '<link rel="stylesheet" href="../public/styles/normalize.css">'."\n";
   echo '<link rel="stylesheet" href="../public/styles/main.css">'."\n";
-  echo '<link rel="stylesheet" href="../public/styles/default.css">'."\n";
+  echo '<link rel="stylesheet" href="../admin/styles/default.css">'."\n";
   echo '<meta name="theme-color" content="#fafafa">'."\n";
+  ?>
+  <style>
+	b{overflow:hidden}
+  </style>
+  <?php
 echo '</head>'."\n";
 /////////////////////////////////////////////////////////
-echo '<body>'."\n";
+echo '<body><center>'."\n";
 if (!F_are_files_writable(array($progress_log))) {
 	echo '</body></html>'."\n";
 	exit();
 }
 ?>
-<div class="container">
+
+<div class="container" style="padding:0 !important">
 
 <div class="tceformbox">
-<h1>TCExam - Installation</h1>
-
+<h1 style="background:#336799;color:#fff;text-align:center;padding:1em;box-shadow:0px 7px 7px 0px rgba(0,0,0,0.15)"><img style="box-shadow:0px 7px 7px 0px rgba(0,0,0,0.15)" src="../images/logo_tcexam_118x25.png"><br/><br/>TCExam - Installation</h1>
+<div style="padding:5px;display:block;margin:10px;border:1px solid #aaa;background:#fff;border-radius:5px;box-shadow:0px 7px 7px 0px rgba(0,0,0,0.15)">
 <p>
 <strong>This is the <a href="index.htm" title="installation manual">installation</a> script of <a href="http://www.tcexam.org" title="TCExam website">TCExam</a> by <a href="http://www.tecnick.com">Tecnick.com LTD</a></strong>
 </p>
@@ -75,7 +81,7 @@ if (!F_are_files_writable(array($progress_log))) {
 <p>
 <strong>DO NOT USE THIS SCRIPT FOR UPGRADING AN EXISTING INSTALLATION, INSTEAD READ <a href="../UPGRADE.TXT" title="upgrading instructions">UPGRADE.TXT</a></strong>
 </p>
-
+</div>
 <?php
 
 // initialize some variables
@@ -198,12 +204,15 @@ if (isset($_REQUEST['forceinstall']) AND ($_REQUEST['forceinstall'] == 1)) {
 // display an input form to collect installation data
 ?>
 
+<div style="padding:5px;display:block;margin:10px;border:1px solid #F9A825;background:#FFF59D;border-radius:5px;box-shadow:0px 7px 7px 0px rgba(0,0,0,0.15)">
 <p>
 <b>WARNING:</b> The installation process may take a while, so please be patient and do not hit reload button on browser.<br />
 To start installation fill the form below and click the INSTALL button.<br />
 </p>
+</div>
 
-<form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post" enctype="multipart/form-data" id="form_TCExam_installer">
+
+<form style="padding:5px;display:block;margin:10px;border:1px solid #BDBDBD;background:#fafafa;border-radius:5px;box-shadow:0px 7px 7px 0px rgba(0,0,0,0.15);padding:1em 0.15em 1em 1em" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post" enctype="multipart/form-data" id="form_TCExam_installer">
 
 <div class="row">
 <span class="label">
@@ -336,7 +345,7 @@ To start installation fill the form below and click the INSTALL button.<br />
 <div class="row">
 <input type="hidden" name="forceinstall" id="forceinstall" value="" />
 <input type="hidden" name="startinstall" id="startinstall" value="" />
-<input type="button" name="install" id="install" value="INSTALL" onclick="document.getElementById('form_TCExam_installer').startinstall.value=1; document.getElementById('form_TCExam_installer').submit()" title="click here to install TCExam"/>
+<input type="button" name="install" id="install" value="INSTALL" onclick="document.getElementById('form_TCExam_installer').startinstall.value=1; document.getElementById('form_TCExam_installer').submit()" title="click here to install TCExam" class="d-iblock"/>
 </div>
 
 </form>
