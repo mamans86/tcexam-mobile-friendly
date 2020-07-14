@@ -1,7 +1,6 @@
 # TCExam Mobile Friendly Version
 
-TCExam Mobile Friendly version created from HTML5 Boiler Plate Template started by forking TCExam v14.3.0. This version applied only to Public Area (test taker page) of TCExam. Mobile Friendly version for Admin Area will be applied soon if possible :)
-No Additional JS or CSS Framework for User Interface just Modernizr.
+TCExam Mobile Friendly version created from HTML5 Boiler Plate Template started by forking TCExam v14.3.0. TCExam Mobile Friendly version applied to Public Area (test taker page) and Admin Area Page too :)
 
 If there are any update from tecnickcom/tcexam i will update this version too if possible.
 
@@ -22,12 +21,15 @@ If there are any update from tecnickcom/tcexam i will update this version too if
 ###### Public Area Main Menu
 ![Public Area Main Menu](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/TMF-MainMenu-v20.07.12.png?raw=true)
 
+###### Admin Area UI
+![Admin Area UI](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Admin%20Area%20UI.jpg?raw=true)
+
 ## TO DO LIST
 - [ ] Add unsure answer mark in test page
 - [ ] Add text zooming in test page
 - [x] Add question number on top of question description
 - [x] Create button to toggle question list on top of question description
-- [ ] Create mobile friendly Admin Area
+- [x] Create mobile friendly Admin Area
 - [ ] Add HTML WYSIWFG Editor switcher to Questions/answers
 - [ ] Word Format Import Question
 

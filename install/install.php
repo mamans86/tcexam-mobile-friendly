@@ -212,7 +212,7 @@ To start installation fill the form below and click the INSTALL button.<br />
 </div>
 
 
-<form style="padding:5px;display:block;margin:10px;border:1px solid #BDBDBD;background:#fafafa;border-radius:5px;box-shadow:0px 7px 7px 0px rgba(0,0,0,0.15);padding:1em 0.15em 1em 1em" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post" enctype="multipart/form-data" id="form_TCExam_installer">
+<form style="padding:5px !important;display:block;margin:10px;border:1px solid #BDBDBD;background:#fafafa;border-radius:5px;box-shadow:0px 7px 7px 0px rgba(0,0,0,0.15);padding:1em 0.15em 1em 1em" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post" enctype="multipart/form-data" id="form_TCExam_installer">
 
 <div class="row">
 <span class="label">
