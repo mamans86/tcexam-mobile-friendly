@@ -1,7 +1,6 @@
 # TCExam Mobile Friendly Version
 
-TCExam Mobile Friendly version created from HTML5 Boiler Plate Template started by forking TCExam v14.3.0. This version applied only to Public Area (test taker page) of TCExam. Mobile Friendly version for Admin Area will be applied soon if possible :)
-No Additional JS or CSS Framework for User Interface just Modernizr.
+TCExam Mobile Friendly version created from HTML5 Boiler Plate Template started by forking TCExam v14.3.0. TCExam Mobile Friendly version applied to Public Area (test taker page) and Admin Area Page too :)
 
 If there are any update from tecnickcom/tcexam i will update this version too if possible.
 
