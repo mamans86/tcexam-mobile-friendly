@@ -22,12 +22,15 @@ If there are any update from tecnickcom/tcexam i will update this version too if
 ###### Public Area Main Menu
 ![Public Area Main Menu](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/TMF-MainMenu-v20.07.12.png?raw=true)
 
+###### Admin Area UI
+![Admin Area UI](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Admin Area UI.jpg?raw=true)
+
 ## TO DO LIST
 - [ ] Add unsure answer mark in test page
 - [ ] Add text zooming in test page
 - [x] Add question number on top of question description
 - [x] Create button to toggle question list on top of question description
-- [ ] Create mobile friendly Admin Area
+- [x] Create mobile friendly Admin Area
 - [ ] Add HTML WYSIWFG Editor switcher to Questions/answers
 - [ ] Word Format Import Question
 
