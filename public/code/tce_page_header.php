@@ -45,6 +45,11 @@ echo '</div>'.K_NEWLINE;
 // display menu
 echo '<div id="scrollayer" class="scrollmenu">'.K_NEWLINE;
 echo '<p id="menu_close" onclick="menuClose()">&times;</p>'.K_NEWLINE;
+echo '<div id="insCont" class="ta-center">'.K_NEWLINE;
+echo '	<div id="insLogo"><img width="77px" height="77px" src="'.K_PATH_HOST.K_PATH_TCEXAM.'cache/logo/'.K_INSTITUTION_LOGO.'"/></div>'.K_NEWLINE;
+echo '	<div id="appDesc"><p class="txt-small m-0 mt-10 px-5 c-gray1">'.K_APP_DESC.'</p></div>'.K_NEWLINE;
+echo '	<div id="insName"><p class="ft-bold m-0 px-5 mt-5">'.K_INSTITUTION_NAME.'</p></div>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
 // CSS changes for old browsers
 echo '<!--[if lte IE 7]>'.K_NEWLINE;
 echo '<style type="text/css">'.K_NEWLINE;

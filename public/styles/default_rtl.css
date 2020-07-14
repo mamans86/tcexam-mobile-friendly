@@ -271,6 +271,36 @@ i#i_qdisplayed{font-weight:unset}
 input.q_notdisplayed{background:#fff !important;color:#333 !important;border:1px solid #90A4AE}
 input.q_displayed{background:#78909C !important}
 input.q_answered{background:#000 !important}
+
+div#insCont {
+    padding: 1em 0;
+    border-top: 1px solid #ffffff40;
+    border-bottom: 1px solid #ffffff40;
+}
+
+div#insName p {
+    border-right: 5px solid #FFEB3B;
+    border-left: 5px solid #FFEB3B;
+}
+
+div#notest{display:block;background:#F44336;color:#fff;padding:1em 1.5em;border-left:5px solid red;border-left:8px solid #D32F2F}
+
+.c-gray1{color:#aaa !important}
+
+.ta-center{text-align:center !important}
+.ft-bold{font-weight:bold !important}
+
+.txt-small{font-size:small !important}
+.txt-xsmall{font-size:x-small !important}
+.txt-lg{font-size:large !important}
+
+.p-0{padding:0 !important}
+.px-5{padding-left:5px !important;padding-right:5px !important}
+.px-10{padding-left:10px !important;padding-right:10px !important}
+
+.m-0{margin:0 !important}
+.mt-5{margin-top:5px !important}.mt-10{margin-top:10px !important}
+
 @media (min-width: 768px) {
 	div.navlink input{margin-top:0;margin-bottom:0}
 	form#form_resultallusers div.row span.label {color:unset;background:unset;text-align:right}

@@ -159,7 +159,7 @@ function F_getUserTests()
         $out .= $str;
         $out .= '</table>'.K_NEWLINE;
     } else {
-        $out = $l['m_no_test_available'];
+        $out = '<div id="notest"><span id="notest-icon"><i class="fas fa-ban"></i></span> '.$l['m_no_test_available'].'</div>';
     }
     return $out;
 }
