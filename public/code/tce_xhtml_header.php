@@ -113,6 +113,11 @@ echo '<!-- '.'T'.'C'.'E'.'x'.'a'.'m'.'19'.'73'.'01'.'04'.' -->'.K_NEWLINE;
   <link rel="stylesheet" href="<?php echo $thispage_style; ?>">
   <link rel="stylesheet" href="<?php echo K_PATH_HOST.K_PATH_TCEXAM; ?>public/styles/fontawesome/css/all.min.css" type="text/css" />
   <meta name="theme-color" content="#fafafa">
+  <?php
+  //echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/jquery.min.js"></script>'.K_NEWLINE;
+  echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/wysibb/jquery-1.11.0.min.js"></script>'.K_NEWLINE;
+  echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/modernizr-3.11.2.min.js"></script>'.K_NEWLINE;
+  ?>
 </head>
 <?php
 echo '<body>'.K_NEWLINE;

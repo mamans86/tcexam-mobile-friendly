@@ -693,6 +693,15 @@ function bcdechex($dec)
     }
 }
 
+function f_sc_name($str){
+	$this_scn_arr = explode('/', $_SERVER["SCRIPT_NAME"]);
+	$this_scn = end($this_scn_arr);
+	if($str==$this_scn){
+		return true;
+	}else{
+		return false;
+	}
+}
 //============================================================+
 // END OF FILE
 //============================================================+

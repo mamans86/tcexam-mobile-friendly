@@ -6,10 +6,6 @@ function menuClose(){
 	$("#scrollayer").animate({left:"-300px"});
 }
 
-function msgClose(){
-	$("#msg-modal").hide();
-}
-
 function qlistOpen(){
 	$(".qlistCont").animate({right:"0px"});
 }
@@ -29,5 +25,19 @@ function infoToggle(){
 	$("h1#h1_testpage").toggle();
 	$("div#infolinkCont").toggle();
 }
-
+$("span#close_btn").click(function(){
+	$(this).parent().hide();
+});
 $("span.infolink a").append('&nbsp;&nbsp;<i class="fas fa-window-restore"></i>');
+
+var answTxt = $("div#hiddenAnswerText").html();
+$("textarea#answertext").val(answTxt);
+
+$("a#btn_uploadFile").click(function(){
+	$("a#imgProblem").removeClass("hidden");
+	
+});
+
+$("a#imgProblem").click(function(){
+	$(this).addClass("hidden");
+});

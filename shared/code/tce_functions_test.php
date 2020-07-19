@@ -1711,6 +1711,13 @@ function F_questionForm($test_id, $testlog_id, $formname)
             $str .= '</div>'.K_NEWLINE;
             $str .= '<div class="rowl">'.K_NEWLINE;
             if ($m['question_type'] == 3) {
+				$str .= '<div id="hiddenAnswerText" class="hidden">'.$m['testlog_answer_text'].'</div>'.K_NEWLINE;
+				if(K_WYSIWYG_BBCODE){
+					$str .= '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/wysibb/jquery.wysibb.min.js"></script>'.K_NEWLINE;
+					$str .= '<link rel="stylesheet" href="'.K_PATH_SHARED_JSCRIPTS.'vendor/wysibb/theme/default/wbbtheme.css" />'.K_NEWLINE;
+
+					$str .= '<script>$(document).ready(function() {$("#answertext").wysibb()})</script>'.K_NEWLINE;
+				}
                 // TEXT - free text question
                 if (K_ENABLE_VIRTUAL_KEYBOARD) {
                     $str .= '<script src="'.K_PATH_SHARED_JSCRIPTS.'vk/vk_easy.js?vk_skin=default" type="text/javascript"></script>'.K_NEWLINE;
@@ -1720,8 +1727,15 @@ function F_questionForm($test_id, $testlog_id, $formname)
                     $str .= 'keyboardInput ';
                 }
                 $str .= 'answertext">';
-                $str .= $m['testlog_answer_text'];
+                //$str .= $m['testlog_answer_text'];
                 $str .= '</textarea>'.K_NEWLINE;
+				if(K_PUBLIC_FILE_UPLOAD){
+					$str .= '<a onclick="window.open(\'tce_select_userphoto.php?frm=testform&amp;fld=answertext,\',\'mediaselect\',\'height=600,width=680,resizable=yes,menubar=no,scrollbars=yes,toolbar=no,status=no,modal=yes\');" id="btn_uploadFile" class="buttonblue" style="cursor:pointer"><i class="fas fa-upload"></i> '.$l['w_upload_file'].' / '.$l['b_media_insert'].'</a><a class="hidden" id="imgProblem" href="#imgProblem">'.$l['a_img_ifnodisplay'].'</a>'.K_NEWLINE;
+				}
+				/**********************$str .= '<div id="answerTxt_preview" style="max-width:100%;overflow:auto">'.K_NEWLINE;
+				$str .= $m['testlog_answer_text'].K_NEWLINE;
+				$str .= '</div>'.K_NEWLINE;************************/
+				//echo getFormRowTextInput('foto', '<div>Foto User</div><div id="fotoprev"></div>', 'foto', '<a onclick="window.open(\'tce_select_userphoto.php?frm=testform&amp;fld=answertext,\',\'mediaselect\',\'height=600,width=680,resizable=yes,menubar=no,scrollbars=yes,toolbar=no,status=no,modal=yes\');" class="usersel" style="cursor:pointer">...</a>', '', '', 255, false, false, false);
             } else {
                 // multiple-choice question
                 $checked = false;

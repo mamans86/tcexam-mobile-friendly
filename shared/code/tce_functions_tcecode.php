@@ -352,13 +352,21 @@ function F_objects_replacement($name, $extension, $width = 0, $height = 0, $alt 
         case 'jpeg':
         case 'png':
         case 'svg': { // images
-            $htmlcode = '<img src="'.K_PATH_URL_CACHE.$filename.'"';
+		if(f_sc_name('tce_edit_rating.php')){
+			$htmlcode = '<img src="'.$filename.'"';			
+		}else{
+			$htmlcode = '<img src="'.K_PATH_URL_CACHE.$filename.'"';
+		}
             if (!empty($alt)) {
                 $htmlcode .= ' alt="'.$alt.'"';
             } else {
                 $htmlcode .= ' alt="image:'.$filename.'"';
             }
-            $imsize = @getimagesize(K_PATH_CACHE.$filename);
+			if(f_sc_name('tce_edit_rating.php')){
+				$imsize = @getimagesize($filename);
+			}else{
+				$imsize = @getimagesize(K_PATH_CACHE.$filename);				
+			}
             if ($imsize !== false) {
                 list($pixw, $pixh) = $imsize;
                 if (($width <= 0) and ($height <= 0)) {

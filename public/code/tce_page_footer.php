@@ -37,8 +37,6 @@ include('../../shared/code/tce_page_userbar.php'); // display user bar
 echo '</div>'.K_NEWLINE; //close div#footer
 echo '<!-- '.base64_decode(K_KEY_SECURITY).' -->'.K_NEWLINE;
 
-echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/jquery.min.js"></script>'.K_NEWLINE;
-echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/modernizr-3.11.2.min.js"></script>'.K_NEWLINE;
 echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'plugins.js"></script>'.K_NEWLINE;
 echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'main.js"></script>'.K_NEWLINE;
 echo '</body>'.K_NEWLINE;

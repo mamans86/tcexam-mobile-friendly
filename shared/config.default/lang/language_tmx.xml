@@ -50133,5 +50133,245 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>گراف</seg>
          </tuv>
       </tu>
+	  <tu tuid="a_img_ifnodisplay" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>Apabila gambar tidak tampil pada editor, silakan klik disini</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>If image doestn't appear on editor, click here</seg>
+         </tuv>
+      </tu>
+	  <tu tuid="b_media_insert" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>Sisipkan media</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>Insert media</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>Insert media</seg>
+         </tuv>
+      </tu>
+	  <tu tuid="p_testpage_broken" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>Oops! Halaman ujian rusak, Jangan risau, Anda masih dapat melanjutkan ujian. Silakan &lt;a href=&quot;../&quot;&gt;klik disini&lt;/a&gt; untuk kembali ke daftar ujian</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
+         </tuv>
+      </tu>
    </body>
 </tmx>

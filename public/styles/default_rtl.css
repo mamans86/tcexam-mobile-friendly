@@ -74,7 +74,7 @@ div.btn-action{text-align:center}
 div#menu_open span {cursor:pointer}
 form#form_resultallusers{overflow:hidden;padding: 1em}
 form#form_resultallusers div.rowl{overflow:auto}
-.gsoformbox,.tceformbox,.popupcontainer,form#testform,table.testlist,table.userselect{background:#fff;box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);border-top: 1px solid #7593bb;border-bottom: 1px solid #d2d2d2}
+.gsoformbox,.tceformbox,.popupcontainer,form#testform,table.testlist,table.userselect{background:#fff;box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.15);/*border-top: 1px solid #7593bb;*/border-bottom: 1px solid #d2d2d2}
 form#testform{padding:0;border-top: 1px solid #455A64}
 form#testform div div.tcecontentbox {padding:1em 1.3em}
 form#testform div input#terminatetest {display:block !important; margin: 0.5em auto 0.6em auto}
@@ -131,13 +131,13 @@ span#commentClose{float:unset;margin:unset;position: absolute;top: 12px;right: 1
 div.pagehelp{background:#BBDEFB;border:1px solid #90CAF9;padding:0.5em;margin-top:1em}
 /*div.pagehelp:before{content:"i";background:#90caf9;padding:0.3em 0.7em;font-family:serif;font-style:italic;margin:0 0.5em 0 0;font-weight:bold;font-size:large;color:#fff}*/
 h1{color:#ffffffc2;text-align:center;padding:0.3em 0;margin:0;background:#263238;font-size: 1.15em}
-a{text-decoration:none;color:#0065ea}
+a{text-decoration:none;color:#2196f3}
 label{text-transform:capitalize}
 label,input{display:block;width:100%;border:none}
 select,input[type=text],input[type=password]{padding:0.65em 1em; border:1px solid #CFD8DC;box-sizing: border-box;}
 input#install,input[type=submit],input#wclose{background:#4CAF50;border:none;padding:0.75em;color:#fff;text-transform:uppercase;font-weight:bold;margin-top:1em;cursor:pointer}
 input[type=submit]#prevquestion{background: #ffffff;color: #444;border: 1px solid #aaa}
-input#install,input[type=submit]#nextquestion{background:#0065ea}
+input#install,input[type=submit]#nextquestion{background:#2196f3}
 input[type=submit]#terminatetest,input#wclose{background:#ff5722}
 ol.qlist li {margin:0.5em 0.95em;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
 ol.qlist li input[type=submit],ol.qlist li input[type=button][disabled=disabled]{background:#78909C;display:inline-block;width:auto;padding:0.5em 0.8em;margin:0}
@@ -154,7 +154,7 @@ div.minibutton span.langselector{background:#fff;display:block;padding:0 0.5em;t
 .langselector span.selected{background:#4CAF50;padding:0.3em 0.5em;color:#fff;font-weight:bold;font-size:x-small;color:#fff !important}
 div.minibutton span.copyright {color:#333 !important;display:block;padding:1.1em 0 0 0;font-size:0.80em}
 div.minibutton span.copyright a {display:inline}
-div.minibutton a span {color:#fff !important;background:#0065ea;padding:0.3em 0.5em;font-size:0.75em}
+div.minibutton a span {color:#fff !important;background:#2196f3;padding:0.3em 0.5em;font-size:0.75em}
 .userbar{background:#263238;padding:0.5em 1em;color:#fff;text-align:right}
 .userbar span{color:#ffffffc7}
 .userbar a{margin-left:0.5em;background:#fff;padding:0.2em 0.5em;color:#263238;font-weight:bold}
@@ -175,7 +175,7 @@ div.minibutton a span {color:#fff !important;background:#0065ea;padding:0.3em 0.
 	text-overflow: ellipsis;
     overflow: hidden
 }
-.error{background:#FF5722;border-left-color: #BF360C}.message{background:#0065ea;border-left-color: #0D47A1;}
+.error{background:#FF5722;border-left-color: #BF360C}.message{background:#2196f3;border-left-color: #0D47A1;}
 div.tcecontentbox{overflow:auto}
 div.question-block *{text-transform:unset}
 /*a.buttongreen,a.buttonblue,textarea,.gsoformbox,.tceformbox,input,.userbar a,.langselector span.selected,div.minibutton a span,.langselector a:hover,.tcecontentbox,.popupcontainer,.xmlbutton,table.testlist,table.userselect,ol.qlist li acronym,ol.qlist li,div.rowl ol.answer li span,div.popupcontainer div.tceformbox div.row,div.test_result div.row,form#form_test_terminate{border-radius:0.25em}*/
@@ -194,12 +194,12 @@ div.popupcontainer div.tcecontentbox{border-left: 1px solid #CFD8DC;
     border-top: none;
     padding: 0.5em 1em}
 div.popupcontainer h1 {
-    background: #0065ea;
+    background: #2196f3;
     color: #fff;
 }
 a.buttongreen{background:#4CAF50}
-a.buttonblue{background:#0065ea}
-textarea{width:100%;background:#E3F2FD;border:1px solid #0065ea;box-sizing:border-box}
+a.buttonblue{background:#2196f3}
+textarea{width:100%;background:#E3F2FD;border:1px solid #2196f3;box-sizing:border-box}
 table.testlist,table.userselect {
         width: 95%;
     text-align: center;
@@ -210,7 +210,7 @@ table.testlist th, table.userselect th {text-transform:uppercase}
 table.testlist tr td{width: 7em;padding: 0.75em}
 table.testlist tr td, table.userselect tr td{border:1px solid #ddd;height:3.75em}
 table.testlist tr td a, table.userselect tr td a{display:inline-block}
-table.testlist tbody tr th, table.userselect tbody tr th{background:#263238;color:#fff;padding:0.75em 1em}
+table.testlist tbody tr th, table.userselect tbody tr th{box-shadow:0px 5px 0px 0px rgba(33, 150, 243, 0.17);background:#fff;padding:0.75em 1em;border: 1px solid #ddd;border-bottom: 2px solid #2196F3}
 table.testlist tbody tr:nth-child(odd), table.userselect tbody tr:nth-child(odd){background:#fafafa}
 table.userselect tbody tr td input[type=checkbox]{display:none}
 
@@ -241,7 +241,7 @@ div.test_result div.rowl ol.question li ol.answer li{list-style-type:upper-alpha
 div.test_result div.rowl ol.question li ol.answer li acronym{padding:0.2em;width:1.3em;display:inline-block;text-align:center;text-decoration:none;color:#fff;font-weight:bold}
 div.test_result div.rowl ol.question li ol.answer li acronym.okbox{background:#4CAF50}
 div.test_result div.rowl ol.question li ol.answer li acronym.nobox{background:#FF5722}
-div.test_result div.rowl ol.question li ol.answer li acronym.onbox{background:#0065ea}
+div.test_result div.rowl ol.question li ol.answer li acronym.onbox{background:#2196f3}
 div.test_result div.rowl ol.question li ol.answer li acronym.offbox{background:#ddd}
 span#close_btn {
     display: inline-block;
@@ -283,7 +283,8 @@ div#insName p {
     border-left: 5px solid #FFEB3B;
 }
 
-div#notest{display:block;background:#F44336;color:#fff;padding:1em 1.5em;border-left:5px solid red;border-left:8px solid #D32F2F}
+div#notest,div#broken_testpage{display:block;background:#F44336;color:#fff;padding:1em 1.5em;border-left:5px solid red;border-left:8px solid #D32F2F}
+div#broken_testpage p a{background: #FFCDD2;color: #C62828;padding: 3px 7px;border-radius: 3px}
 
 .c-gray1{color:#aaa !important}
 

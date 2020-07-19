@@ -240,7 +240,9 @@ if (isset($_REQUEST['testid']) and ($_REQUEST['testid'] > 0)) {
 } else {
     require_once('../code/tce_page_header.php');
     echo '<div class="container">'.K_NEWLINE;
-	header('Location: index.php');
+	echo '<div id="broken_testpage">'.K_NEWLINE;
+	echo '<p>'.$l['p_testpage_broken'].'</p>'.K_NEWLINE;
+	echo '</div>'.K_NEWLINE;
 }
 
 echo '<div class="pagehelp">'.$l['hp_test_execute'].'</div>'.K_NEWLINE;

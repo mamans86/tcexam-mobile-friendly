@@ -111,6 +111,16 @@ define('K_ENABLE_PUBLIC_PDF', true);
  */
 define('K_HIDE_EXPIRED_TESTS', false);
 
+/**
+ * If true enable WYSIWYG BBCode editor in Public Area.
+ */
+define('K_WYSIWYG_BBCODE',true);
+
+/**
+ * If true enable file upload feature in textarea on Public Area.
+ */
+define('K_PUBLIC_FILE_UPLOAD',true);
+
 // --- INCLUDE FILES -----------------------------------------------------------
 
 require_once('../../shared/config/tce_db_config.php');

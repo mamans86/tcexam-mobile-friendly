@@ -85,6 +85,8 @@ function FJ_insert_tag(editText, tag) {
 			if (closetag.charAt(closetag.length-1)!='>') {
 				closetag += '>';
 			}
+		} else if (opentag.charAt(0) == '&'){
+			var closetag = '';
 		} else {
 			//custom tag
 			tmpstr = tmpstr[0].split('=');
@@ -105,6 +107,11 @@ function FJ_insert_tag(editText, tag) {
  */
 function FJ_insert_text(editText, newtext) {
 	FJ_display_tag(editText, newtext, '');
+	return;
+}
+
+function FJ_replace_text(editText, newtext) {
+	FJ_replace_tag(editText, newtext, '');
 	return;
 }
 
@@ -144,6 +151,50 @@ function FJ_display_tag(editText, opentag, closetag) {
 		editText.setSelectionRange(posStart, (opentag.length * 2 + 1 + posEnd));
 	} else { //text has not been selected or incompatible browser
 		editText.value = editText.value + '' + opentag + '' + closetag;
+	}
+	// save current text on history
+	text_history[thid] = editText.value;
+	maxthid = thid;
+	editText.focus();
+	return;
+}
+
+
+function FJ_replace_tag(editText, opentag, closetag) {
+	// save previous text on history
+	text_history[thid] = editText.value;
+	thid++;
+	if (editText.createTextRange && document.selection) { // if text has been selected (only IE browser)
+		if (txtsel != null) {
+			// uses always the last selection...
+			txtsel = txtsel.duplicate();
+			var sellen = 0; // selection length
+			if (txtsel.text.length > 0) {
+				sellen = txtsel.text.length + opentag.length + closetag.length;
+				//txtsel.text = opentag + '' + txtsel.text + '' + closetag;
+				txtsel.text = opentag;
+			} else {
+				//editText.value = editText.value + '' + opentag + '' + closetag;
+				editText.value = opentag;
+			}
+
+			// restore selection
+			txtsel.moveStart("character", - sellen);
+			txtsel.select();
+		} else {
+			//editText.value = editText.value + '' + opentag + '' + closetag;
+			editText.value = opentag;
+		}
+	} else if (window.getSelection && editText.setSelectionRange) { // MOZ
+		posStart = editText.selectionStart;
+		posEnd = editText.selectionEnd;
+		//editText.value = editText.value.substr(0, posStart) + '' + opentag + '' + editText.value.substr(posStart, posEnd-posStart) + '' + closetag + '' + editText.value.substr(posEnd);
+		editText.value = opentag;
+		// renew selection range
+		editText.setSelectionRange(posStart, (opentag.length * 2 + 1 + posEnd));
+	} else { //text has not been selected or incompatible browser
+		//editText.value = editText.value + '' + opentag + '' + closetag;
+		editText.value = opentag;
 	}
 	// save current text on history
 	text_history[thid] = editText.value;
