@@ -702,6 +702,12 @@ function f_sc_name($str){
 		return false;
 	}
 }
+
+function F_getFirstName($str){
+	$firstname = str_replace("+", " ", $str);
+	$firstname = str_replace("%27", " ", $firstname);
+	return $firstname;
+}
 //============================================================+
 // END OF FILE
 //============================================================+
