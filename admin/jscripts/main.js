@@ -11,3 +11,28 @@ $("ul.menu li a").click(function(){
 });
 
 $("div.pagehelp").prepend("<i class='fas fa-info info-icon'></i>");
+
+$str = $("span#user-answer").text();
+//$str = 'this is a [b]bolded[/b] and [i]italic[/i] string';
+
+// The array of regex patterns to look for
+$format_search =  [
+    /\[img\](.*?)\[\/img\]/ig,
+	/\[b\](.*?)\[\/b\]/ig,
+    /\[i\](.*?)\[\/i\]/ig,
+    /\[u\](.*?)\[\/u\]/ig
+]; // note: NO comma after the last entry
+
+// The matching array of strings to replace matches with
+$format_replace = [
+    '<img src="$1" />',
+	'<strong>$1</strong>',
+    '<em>$1</em>',
+    '<span style="text-decoration: underline;">$1</span>'
+];
+
+// Perform the actual conversion
+for (var i =0;i<$format_search.length;i++) {
+  $str = $str.replace($format_search[i], $format_replace[i]);
+}
+$("span#user-answer").html($str);

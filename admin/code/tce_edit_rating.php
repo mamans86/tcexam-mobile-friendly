@@ -184,7 +184,8 @@ if ($sql) {
             $test_score_unanswered = round(($m['test_score_unanswered'] * $m['question_difficulty']), 3);
             $question = F_decode_tcecode($m['question_description']);
             $explanation =  F_decode_tcecode($m['question_explanation']);
-            $answer = F_decode_tcecode($m['testlog_answer_text']);
+            //$answer = F_decode_tcecode($m['testlog_answer_text']);
+            $answer = $m['testlog_answer_text'];
         } else {
             $testlog_id = '';
             $testlog_score = '';
@@ -337,7 +338,7 @@ echo '<div class="row">'.K_NEWLINE;
 echo '<span class="label">'.K_NEWLINE;
 echo '<span title="'.$l['h_answer'].'">'.$l['w_answer'].'</span>'.K_NEWLINE;
 echo '</span>'.K_NEWLINE;
-echo '<span class="formw">'.K_NEWLINE;
+echo '<span class="formw" id="user-answer">'.K_NEWLINE;
 echo $answer.'&nbsp;<br />&nbsp;'.K_NEWLINE;
 echo '</span>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
