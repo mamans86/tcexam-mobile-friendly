@@ -800,9 +800,9 @@ function F_printTestResultStat($data, $nextorderdir, $order_field, $filter, $pub
         $ret .= '<td style="text-align:center;">'.$tu['time_diff'].'</td>'.K_NEWLINE;
         $passmsg = '';
         if ($tu['passmsg'] === true) {
-            $passmsg = ' title="'.$l['w_passed'].'" style="background-color:#BBFFBB;"';
+            $passmsg = ' title="'.$l['w_passed'].'" class="w_passed"';
         } elseif ($tu['passmsg'] === false) {
-            $passmsg = ' title="'.$l['w_not_passed'].'" style="background-color:#FFBBBB;"';
+            $passmsg = ' title="'.$l['w_not_passed'].'" class="w_not_passed"';
         }
         if ($pubmode) {
             $ret .= '<td style="text-align:'.$tdalign.';">'.$tu['test']['test_name'].'</td>'.K_NEWLINE;
@@ -812,7 +812,7 @@ function F_printTestResultStat($data, $nextorderdir, $order_field, $filter, $pub
             $ret .= '<td style="text-align:'.$tdalign.';">&nbsp;'.$tu['user_lastname'].'</td>'.K_NEWLINE;
             $ret .= '<td style="text-align:'.$tdalign.';">&nbsp;'.$tu['user_firstname'].'</td>'.K_NEWLINE;
         }
-        $ret .= '<td'.$passmsg.' class="numeric">'.F_formatFloat($tu['total_score']).'&nbsp;'.F_formatPercentage($tu['total_score_perc'], false).'</td>'.K_NEWLINE;
+        $ret .= '<td class="numeric"><span '.$passmsg.'>'.F_formatFloat($tu['total_score']).'&nbsp;'.F_formatPercentage($tu['total_score_perc'], false).'</span></td>'.K_NEWLINE;
         if ($stats > 0) {
             $ret .= '<td class="numeric">'.$tu['right'].'&nbsp;'.F_formatPercentage($tu['right_perc'], false).'</td>'.K_NEWLINE;
             $ret .= '<td class="numeric">'.$tu['wrong'].'&nbsp;'.F_formatPercentage($tu['wrong_perc'], false).'</td>'.K_NEWLINE;
@@ -821,14 +821,14 @@ function F_printTestResultStat($data, $nextorderdir, $order_field, $filter, $pub
             $ret .= '<td class="numeric">'.$tu['unrated'].'&nbsp;'.F_formatPercentage($tu['unrated_perc'], false).'</td>'.K_NEWLINE;
         }
         if ($tu['locked']) {
-            $ret .= '<td style="background-color:#FFBBBB;">'.$l['w_locked'];
+            $ret .= '<td><span class="w_not_passed">'.$l['w_locked'];
         } else {
-            $ret .= '<td style="background-color:#BBFFBB;">'.$l['w_unlocked'];
+            $ret .= '<td><span class="w_passed">'.$l['w_unlocked'];
         }
         if ($tu['remaining_time'] < 0) {
             $ret .= ' ('.$tu['remaining_time'].')';
         }
-        $ret .= '</td>'.K_NEWLINE;
+        $ret .= '</span></td>'.K_NEWLINE;
         if (!empty($tu['user_comment'])) {
             $ret .= '<td title="'.substr(F_compact_string(htmlspecialchars($tu['user_comment'], ENT_NOQUOTES, $l['a_meta_charset'])), 0, 255).'">'.$l['w_yes'].'</td>'.K_NEWLINE;
         } else {
@@ -846,11 +846,11 @@ function F_printTestResultStat($data, $nextorderdir, $order_field, $filter, $pub
     }
     $ret .= '<td colspan="'.$colspan.'" style="text-align:'.$tdalign.';font-weight:bold;padding-right:10px;padding-left:10px;';
     if ($data['passed_perc'] > 50) {
-        $ret .= ' background-color:#BBFFBB;"';
+        $bg = 'class="w_passed"';
     } else {
-        $ret .= ' background-color:#FFBBBB;"';
+        $bg = 'class="w_not_passed"';
     }
-    $ret .= '>'.$l['w_passed'].': '.$data['passed'].' '.F_formatPercentage($data['passed_perc'], false).'</td>'.K_NEWLINE;
+    $ret .= '"><span '.$bg.'>'.$l['w_passed'].': '.$data['passed'].' '.F_formatPercentage($data['passed_perc'], false).'</span></td>'.K_NEWLINE;
     $ret .= '</tr>';
     // print statistics
     $printstat = array('mean', 'median', 'mode', 'standard_deviation', 'skewness', 'kurtosi');

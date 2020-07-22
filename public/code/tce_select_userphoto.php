@@ -284,8 +284,10 @@ echo '<input type="hidden" name="d" id="d" value="'.$dir.'" />'.K_NEWLINE;
 
 echo '<fieldset>'.K_NEWLINE;
 echo '<legend title="'.$l['w_action'].'">'.$l['w_action'].'</legend>'.K_NEWLINE;
-
+echo '<div>'.K_NEWLINE;
+$preview=0;
 if (!empty($file)) {
+	$preview=1;
     // file mode
     // preview
     $filedata = F_getFileInfo($file);
@@ -294,18 +296,29 @@ if (!empty($file)) {
     echo F_objects_replacement($filedata['tcename'], $filedata['extension'], 0, 0, $l['w_preview'], $w, $h);
     echo '<br />'.K_NEWLINE;
     // display basic info
-    echo '<span style="font-size:80%;color:#333333;">'.$w.' x '.$h.' px ( '.F_formatFileSize($filedata['size']).' ) '.$filedata['lastmod'].'</span>';
+    echo '<span style="display:block;width:100%;text-align:left;font-size:80%;color:#333333;">'.$w.' x '.$h.' px ( '.F_formatFileSize($filedata['size']).' ) '.$filedata['lastmod'].'</span>';
     echo '<br />'.K_NEWLINE;
     // action buttons
     echo '<input type="hidden" name="file" id="file" value="'.$file.'" />'.K_NEWLINE;
     echo '<input type="hidden" name="tcefile" id="tcefile" value="'.$filedata['tcefile'].'" />'.K_NEWLINE;
-    echo '<input type="text" name="newname" id="newname" value="'.basename($file).'" size="30" maxlength="255" title="'.$l['w_name'].'" />'.K_NEWLINE;
+    
+	//echo '<div id="h_fileAction">'.K_NEWLINE;	
+	//echo $l['w_rename'].' / '.$l['w_delete'].K_NEWLINE;	
+	//echo '</div>'.K_NEWLINE;	
+	echo '<div id="fileAction">'.K_NEWLINE;
+	echo '<div id="h_fileAction"><i class="fas fa-trash-alt"></i>&nbsp;'.$l['w_rename'].' / '.$l['w_delete'].'</div>'.K_NEWLINE;	
+	echo '<div id="c_fileAction">'.K_NEWLINE;
+	echo '<input type="text" name="newname" id="newname" value="'.basename($file).'" size="30" maxlength="255" title="'.$l['w_name'].'" />'.K_NEWLINE;
+	echo '<div id="btn_fileAction">'.K_NEWLINE;
     if ($_SESSION['session_user_level'] > 0) {
         F_submit_button('rename', $l['w_rename'], $l['w_rename']);
     }
     if ($_SESSION['session_user_level'] > 0) {
         F_submit_button('hapus', $l['w_delete'], $l['w_delete']);
     }
+	echo '</div>'.K_NEWLINE;
+	echo '</div>'.K_NEWLINE;
+	echo '</div>'.K_NEWLINE;
     
     // description fields
     // --- insert image/object
@@ -313,12 +326,12 @@ if (!empty($file)) {
     
     echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'inserttag.js" type="text/javascript"></script>'.K_NEWLINE;
 
+	echo '<div id="mediaTable">'.K_NEWLINE;		
     echo '<table>'.K_NEWLINE;
     echo '<tr>';
     echo '<th><label for="object_width">'.$l['w_width'].'</label></th>';
     echo '<th><label for="object_height">'.$l['w_height'].'</label></th>';
     echo '<th><label for="object_alt">'.$l['w_description'].'</label></th>';
-    echo '<th>&nbsp;</th>';
     echo '</tr>'.K_NEWLINE;
     echo '<tr>';
     echo '<td><input type="text" name="object_width" id="object_width" value="'.$w.'" size="3" maxlength="5" title="'.$l['h_object_width'].'"/></td>';
@@ -340,45 +353,57 @@ if (!empty($file)) {
 
 	
     //$onclick = 'FJ_insert_text(window.opener.document.getElementById(\''.$callingform.'\').'.$callingfield.', \'<img src=&quot;'.K_PATH_HOST.K_PATH_URL_CACHE.'\'+document.getElementById(\'tcefile\').value+\'&quot; width=&quot;\'+document.getElementById(\'object_width\').value+\'px&quot; height=&quot;\'+document.getElementById(\'object_height\').value+\'px&quot; alt=&quot;\'+document.getElementById(\'object_alt\').value+\'&quot; /> \');';
-    echo '<td><input type="button" name="addobject" id="addobject" value="'.$l['w_add'].'" title="'.$l['h_add_object'].'" onclick="'.$onclick.'self.close();" /></td>';
+    //echo '<td></td>';
     echo '</tr>'.K_NEWLINE;
+	echo '<tr>'.K_NEWLINE;
+	echo '<td colspan=3>'.K_NEWLINE;
+	echo '<input type="button" name="addobject" id="addobject" value="'.$l['w_add'].'" title="'.$l['h_add_object'].'" onclick="'.$onclick.'self.close();" />'.K_NEWLINE;
+	echo '</td>'.K_NEWLINE;
+	echo '</tr>'.K_NEWLINE;
     echo '</table>'.K_NEWLINE;
+	echo '</div>'.K_NEWLINE;
 } else {
     // upload a new file
     echo '<label for="userfile">'.$l['w_upload_file'].'</label>'.K_NEWLINE;
     echo '<input type="hidden" name="MAX_FILE_SIZE" value="'.K_MAX_UPLOAD_SIZE.'" />'.K_NEWLINE;
     echo '<input type="file" name="userfile" id="userfile" size="20" title="'.$l['h_upload_file'].'" />'.K_NEWLINE;
-    echo '<input type="submit" name="sendfile" id="sendfile" value="'.$l['w_upload'].'" title="'.$l['h_upload_file'].'" />'.K_NEWLINE;
+}
+echo '</div>'.K_NEWLINE;
+if($preview==0){
+	echo '<input type="submit" name="sendfile" id="sendfile" value="'.$l['w_upload'].'" title="'.$l['h_upload_file'].'" />'.K_NEWLINE;
 }
 echo '</fieldset>'.K_NEWLINE;
 
 // change view mode
-echo '<div style="text-align:'.($l['a_meta_dir']=='ltr'?'right':'left').';font-size:75%;">';
+//echo '<div style="text-align:'.($l['a_meta_dir']=='ltr'?'right':'left').';font-size:75%;">';
+echo '<div class="txt-xsmall" id="divVMode">';
 if ($viewmode) {
     // table mode
-    echo '<label for="viewmodev">'.$l['w_mode'].': </label>';
+    echo '<label for="viewmodev">'.$l['w_mode'].'&nbsp;&nbsp;</label>';
     F_submit_button('viewmodev', $l['w_visual'], $l['w_mode']);
 } else {
     // visual mode
-    echo '<label for="viewmodet">'.$l['w_mode'].': </label>';
+    echo '<label for="viewmodet">'.$l['w_mode'].'&nbsp;&nbsp;</label>';
     F_submit_button('viewmodet', $l['w_table'], $l['w_mode']);
 }
 echo '</div>'.K_NEWLINE;
 
 // directory link path
-echo '<br />'.K_NEWLINE;
+//echo '<br />'.K_NEWLINE;
 //echo '<strong>'.$l['w_position'].': '.F_getMediaDirPathLink($dir, $viewmode).'</strong>';
 
 if ($_SESSION['session_user_level'] > 9) {
+	echo '<div id="createDir">'.K_NEWLINE;
     // directory mode
     echo ' <input type="text" name="newdirname" id="newdirname" value="" size="15" maxlength="255" title="'.$l['w_new_directory'].'" />'.K_NEWLINE;
     F_submit_button('newdir', $l['w_create_directory'], $l['w_new_directory']);
     if (count(scandir($dir)) <= 2) {
         F_submit_button('deldir', $l['w_delete'], $l['w_delete']);
     }
+	echo '</div>'.K_NEWLINE;
 }
 
-echo '<br />'.K_NEWLINE;
+//echo '<br />'.K_NEWLINE;
 
 // list files
 if ($viewmode) {

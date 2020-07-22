@@ -670,11 +670,15 @@ table{
     width: 95%;
     text-align: center;
     margin: 1em auto;
-	background:#fff
+	background:#fff;
+	border:2px solid #607D8B
 }
-table th {text-transform:uppercase;background:#263238;color:#fff;padding:0.75em 1em}
+table th {text-transform:uppercase;padding:0.75em 1em}
+table tr {border:1px solid #ddd}
 table th a{color:#fff}
 table tr td{width: 7em;padding: 0.55em; border:1px solid #ddd;height:0.75em}
+table tr:first-child{color:#fff;background:linear-gradient(360deg, #455A64, #607D8B);border-bottom:3px solid #607D8B}
+table tr:first-child th{border:1px solid #607D8B}
 textarea {
 	width: 100%;
 }
@@ -1079,6 +1083,9 @@ form#form_delete div {
 div.content form {margin-top:2em}
 
 #form_userselect {text-align:left}
+.w_not_passed,.w_passed{display:inline-block;color:#fff;font-weight:bold;padding:5px 10px;border-radius:3px}
+.w_passed{background:green}
+.w_not_passed{background:#F44336}
 
 .d-flex{display:flex !important}
 .d-iflex{display:inline-flex !important}

@@ -41,3 +41,13 @@ $("a#btn_uploadFile").click(function(){
 $("a#imgProblem").click(function(){
 	$(this).addClass("hidden");
 });
+
+$("input#cancel").click(function(){
+	event.preventDefault();
+	$("div.confirmbox").hide();
+	$("div.warning").hide();
+});
+
+$("div#h_fileAction").click(function(){
+	$("div#c_fileAction").toggle();
+});
