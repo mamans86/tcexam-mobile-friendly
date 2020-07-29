@@ -913,10 +913,14 @@ function F_printUserTestStat($testuser_id)
 			AND subject_module_id=module_id
 		ORDER BY testlog_id';
     if ($r = F_db_query($sql, $db)) {
+		$no=0;
         $ret .= '<ol class="question">'.K_NEWLINE;
         while ($m = F_db_fetch_array($r)) {
+			$no++;
             $ret .= '<li>'.K_NEWLINE;
             // display question stats
+			$ret .= '<div id="qstat">'.K_NEWLINE;
+			$ret .= '<div id="q-num">'.$no.'</div>'.K_NEWLINE;
             $ret .= '<strong>['.$m['testlog_score'].']'.K_NEWLINE;
             $ret .= ' (';
             $ret .= 'IP:'.getIpAsString($m['testlog_user_ip']).K_NEWLINE;
@@ -941,7 +945,7 @@ function F_printUserTestStat($testuser_id)
                 $ret .= ' | ------'.K_NEWLINE;
             }
             $ret .= ')</strong>'.K_NEWLINE;
-            $ret .= '<br />'.K_NEWLINE;
+            $ret .= '</div>'.K_NEWLINE;
             // display question description
             $ret .= F_decode_tcecode($m['question_description']).K_NEWLINE;
             if (K_ENABLE_QUESTION_EXPLANATION and !empty($m['question_explanation'])) {
@@ -949,8 +953,9 @@ function F_printUserTestStat($testuser_id)
             }
             if ($m['question_type'] == 3) {
                 // TEXT
-                $ret .= '<ul class="answer"><li>'.K_NEWLINE;
-                $ret .= F_decode_tcecode($m['testlog_answer_text']);
+                $ret .= '<ul class="answer" id="qtype3"><li>'.K_NEWLINE;
+                //$ret .= F_decode_tcecode($m['testlog_answer_text']);
+                $ret .= $m['testlog_answer_text'];
                 $ret .= '&nbsp;</li></ul>'.K_NEWLINE;
             } else {
                 $ret .= '<ol class="answer">'.K_NEWLINE;

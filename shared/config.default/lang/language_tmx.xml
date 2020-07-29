@@ -50373,5 +50373,85 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Oops! Test page is broken. Don't worry, you can continue the test. Please &lt;a href=&quot;../&quot;&gt;click here&lt;/a&gt; to return to test list</seg>
          </tuv>
       </tu>
+	  <tu tuid="b_print" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>Cetak</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>Print</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>Print</seg>
+         </tuv>
+      </tu>
    </body>
 </tmx>

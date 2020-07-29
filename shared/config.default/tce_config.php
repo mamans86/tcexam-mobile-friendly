@@ -46,6 +46,9 @@ define('K_LANGUAGE_SELECTOR', true);
 define('K_APP_DESC','Computer Based Test Application');
 define('K_INSTITUTION_NAME','Xamzone School Universe');
 define('K_INSTITUTION_LOGO','xz-logo.png');
+define('K_ADDRESS_LINE1','Pegaden Tengah Street, Wonopringgo');
+define('K_ADDRESS_LINE2','Pekalongan Regency');
+define('K_ADDRESS_LINE3','Province Central Java');
 /**
  * Defines a serialized array of available languages.
  * Each language is indexed using a 2-letters code (ISO 639).

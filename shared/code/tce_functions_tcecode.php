@@ -353,7 +353,7 @@ function F_objects_replacement($name, $extension, $width = 0, $height = 0, $alt 
         case 'png':
         case 'svg': { // images
 		if(f_sc_name('tce_edit_rating.php')){
-			$htmlcode = '<img src="'.$filename.'"';			
+			$htmlcode = '<img src="'.K_PATH_URL_CACHE.$filename.'"';			
 		}else{
 			$htmlcode = '<img src="'.K_PATH_URL_CACHE.$filename.'"';
 		}
@@ -363,7 +363,7 @@ function F_objects_replacement($name, $extension, $width = 0, $height = 0, $alt 
                 $htmlcode .= ' alt="image:'.$filename.'"';
             }
 			if(f_sc_name('tce_edit_rating.php')){
-				$imsize = @getimagesize($filename);
+				$imsize = @getimagesize(K_PATH_CACHE.$filename);
 			}else{
 				$imsize = @getimagesize(K_PATH_CACHE.$filename);				
 			}

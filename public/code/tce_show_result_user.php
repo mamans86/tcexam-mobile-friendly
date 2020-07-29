@@ -90,7 +90,7 @@ F_lockUserTest($test_id, $_SESSION['session_user_id']);
 echo '<div class="container">'.K_NEWLINE;
 
 echo '<div class="tceformbox test_result">'.K_NEWLINE;
-
+require_once('../../shared/code/tmf_print_header.php');
 $usr_all = htmlspecialchars($userdata['user_lastname'].' '.$userdata['user_firstname'].' - '.$userdata['user_name'].'', ENT_NOQUOTES, $l['a_meta_charset']);
 echo getFormDescriptionLine($l['w_user'].':', $l['w_user'], $usr_all);
 
@@ -134,7 +134,7 @@ if (F_getBoolean($teststat['testinfo']['test_report_to_users'])) {
     echo '</div>'.K_NEWLINE;
 
     // print statistics for modules and subjects
-    echo '<div class="rowl">'.K_NEWLINE;
+    echo '<div class="rowl" id="row-stat">'.K_NEWLINE;
     echo '<hr />'.K_NEWLINE;
     echo '<h2>'.$l['w_stats'].'</h2>';
     echo F_printTestStat($test_id, 0, $user_id, 0, 0, $testuser_id, $teststat, 1, true);
@@ -142,8 +142,9 @@ if (F_getBoolean($teststat['testinfo']['test_report_to_users'])) {
     echo '</div>'.K_NEWLINE;
 
     if (K_ENABLE_PUBLIC_PDF) {
-        echo '<div class="row">'.K_NEWLINE;
+        echo '<div class="row" id="pdf-button">'.K_NEWLINE;
         // PDF button
+		echo '<a name="print" href="#print" class="xmlbutton" title="'.$l['b_print'].'" onclick="window.print()">'.$l['b_print'].'</a> ';
         echo '<a href="tce_pdf_results.php?mode=3&amp;test_id='.$test_id.'&amp;user_id='.$user_id.'&amp;testuser_id='.$testuser_id.'" class="xmlbutton" title="'.$l['h_pdf'].'">'.$l['w_pdf'].'</a> ';
         echo '</div>'.K_NEWLINE;
     }
@@ -151,13 +152,40 @@ if (F_getBoolean($teststat['testinfo']['test_report_to_users'])) {
 
 echo '</div>'.K_NEWLINE;
 
-echo '<a href="index.php" title="'.$l['h_index'].'">&lt; '.$l['w_index'].'</a>'.K_NEWLINE;
+echo '<a href="index.php" id="index-link" title="'.$l['h_index'].'">&lt; '.$l['w_index'].'</a>'.K_NEWLINE;
 
 echo '<div class="pagehelp">'.$l['hp_result_user'].'</div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 require_once('../code/tce_page_footer.php');
+?>
+<script>
+$str2 = $("ol.question").html();
 
+
+// The array of regex patterns to look for
+$format_search =  [
+    /\[img\](.*?)\[\/img\]/ig,
+	/\[b\](.*?)\[\/b\]/ig,
+    /\[i\](.*?)\[\/i\]/ig,
+    /\[u\](.*?)\[\/u\]/ig
+]; // note: NO comma after the last entry
+
+// The matching array of strings to replace matches with
+$format_replace = [
+    '<img src="$1" />',
+	'<strong>$1</strong>',
+    '<em>$1</em>',
+    '<span style="text-decoration: underline;">$1</span>'
+];
+
+// Perform the actual conversion
+for (var i =0;i<$format_search.length;i++) {
+  $str2 = $str2.replace($format_search[i], $format_replace[i]);
+}
+$("ol.question").html($str2);
+</script>
+<?php
 //============================================================+
 // END OF FILE
 //============================================================+

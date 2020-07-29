@@ -32,17 +32,17 @@
 /**
  * Header title.
  */
-define('PDF_HEADER_TITLE', "School name");
+define('PDF_HEADER_TITLE', K_INSTITUTION_NAME);
 
 /**
  * Header description string.
  */
-define('PDF_HEADER_STRING', "first row\nsecond row\nthird row");
+define('PDF_HEADER_STRING', K_ADDRESS_LINE1."\n".K_ADDRESS_LINE2."\n".K_ADDRESS_LINE3);
 
 /**
  * Image logo.
  */
-define('PDF_HEADER_LOGO', 'logo_example.png');
+define('PDF_HEADER_LOGO', '../cache/logo/'.K_INSTITUTION_LOGO);
 
 /**
  * Header logo image width [mm].

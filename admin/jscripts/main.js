@@ -11,8 +11,9 @@ $("ul.menu li a").click(function(){
 });
 
 $("div.pagehelp").prepend("<i class='fas fa-info info-icon'></i>");
-
+/**
 $str = $("span#user-answer").text();
+$str2 = $("ol.question").html();
 //$str = 'this is a [b]bolded[/b] and [i]italic[/i] string';
 
 // The array of regex patterns to look for
@@ -35,4 +36,8 @@ $format_replace = [
 for (var i =0;i<$format_search.length;i++) {
   $str = $str.replace($format_search[i], $format_replace[i]);
 }
+for (var i =0;i<$format_search.length;i++) {
+  $str2 = $str2.replace($format_search[i], $format_replace[i]);
+}
 $("span#user-answer").html($str);
+$("ol.question").html($str2);**/

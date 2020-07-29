@@ -125,7 +125,7 @@ table.userselect tbody tr td input[type=checkbox]{display:none}
 
 table.userselect tbody tr:nth-last-child(1),table.userselect tbody tr:nth-last-child(2),table.userselect tbody tr:nth-last-child(3),table.userselect tbody tr:nth-last-child(4),table.userselect tbody tr:nth-last-child(5),table.userselect tbody tr:nth-last-child(6){border-bottom:1px solid #555}
 
-table.userselect tbody tr:nth-last-child(1) th,table.userselect tbody tr:nth-last-child(2) th,table.userselect tbody tr:nth-last-child(3) th,table.userselect tbody tr:nth-last-child(4) th,table.userselect tbody tr:nth-last-child(5) th,table.userselect tbody tr:nth-last-child(6) th{padding-right:1em}
+table.userselect tbody tr:nth-last-child(1) th,table.userselect tbody tr:nth-last-child(2) th,table.userselect tbody tr:nth-last-child(3) th,table.userselect tbody tr:nth-last-child(4) th,table.userselect tbody tr:nth-last-child(5) th,table.userselect tbody tr:nth-last-child(6) th{padding-right: 1em;border-bottom: 1px solid #ddd;box-shadow: none;border-right: 3px solid #2196F3}
 
 div.rowl ol.answer {padding-left:0}
 div.rowl ol.answer li span label,div.rowl ol.answer li span input,div.rowl ol.answer li input,div.rowl ol.answer li label {display:inline-block;width:auto}
@@ -144,6 +144,12 @@ div.container form#form_login div.row span.formw {padding:0 !important}
 form#form_resultallusers div.row span.label {color:unset;background:unset}
 
 div.test_result div.row{border:1px solid #CFD8DC; padding:0.3em}
+
+div.test_result div.rowl ol.question{list-style-type:none;padding:5px}
+
+div#qstat{border: 1px solid #333;background: #333;color: #fff;padding:2px}
+div#qstat div#q-num{background: #2196F3;padding: 5px 8px;border: 1px solid #333;display:inline-block}
+ul#qtype3{border: 1px solid #aaa;list-style: none;padding: 10px;margin-top: 10px}
 
 div.test_result div.rowl ol.question li ol.answer {padding-left:1em}
 div.test_result div.rowl ol.question li ol.answer li{list-style-type:upper-alpha !important}
@@ -198,7 +204,7 @@ input#addobject{cursor:pointer;text-transform: uppercase;border-color: white;bac
 div#btn_fileAction input#rename{background:#2196f3;margin:0}
 input#cancel{background: #FFC107;margin: 0;color: #EF6C00}
 div#btn_fileAction input#hapus, input#hapuspaksa{background:#F44336;margin:0}
-
+div#print-header{align-items: center;display:none}div#print-header div#instData{width:100%;line-height:1;text-align:center}div#print-header div#instLogo {width:125px}div#print-header div#instLogo img {width:100px}
 .confirmbox{text-align: center;background: #FFB300;padding: 15px}
 .c-gray1{color:#aaa !important}
 .ta-center{text-align:center !important}
@@ -239,4 +245,12 @@ div#btn_fileAction input#hapus, input#hapuspaksa{background:#F44336;margin:0}
 
 @media (min-width: 1200px) {
 	/***/
+}
+
+@media print {
+	h1,div.scrollmenu,div.h-title,div.header,div#row-stat,div#btn-action,div.minibutton,div.userbar,div.pagehelp,input#extendtime,div#pdf-button,a#index-link{display:none !important}
+	div#print-header{display:flex}
+	div.test_result div.row{border:none;padding:0 !important;margin:0 !important;display:flex}
+	div.test_result div.row span.label{width:70px;text-align:right}
+	div.row span.formw{margin:0 !important}
 }

@@ -21,19 +21,18 @@
 */
 * {font-family:Helvetica,Arial,FreeSans,sans-serif;font-size:0.97em}
 
+a,a:visited,a:hover{text-decoration: none}
+
 a {
 	color: #0060BF;
-	text-decoration: none;
 }
 
 a:visited {
 	color: #0060BF;
-	text-decoration: none;
 }
 
 a:hover {
-	color: #FF8000;
-	text-decoration: underline;
+	color: #FFEB3B;
 }
 
 /* delete link ------------ */
@@ -676,6 +675,8 @@ table{
 table th {text-transform:uppercase;padding:0.75em 1em}
 table tr {border:1px solid #ddd}
 table th a{color:#fff}
+table th a:hover{color:#FFEB3B !important}
+table th a:visited{color:#fff !important}
 table tr td{width: 7em;padding: 0.55em; border:1px solid #ddd;height:0.75em}
 table tr:first-child{color:#fff;background:linear-gradient(360deg, #455A64, #607D8B);border-bottom:3px solid #607D8B}
 table tr:first-child th{border:1px solid #607D8B}
@@ -1080,11 +1081,21 @@ form#form_delete div {
 	padding:0 0.85em
 }
 
+div#headerSum{border: 1px solid #aaa;padding: 10px;text-transform: capitalize}
+ul#qtype3{border: 1px solid #aaa;list-style: none;padding: 10px;margin-top: 10px}
+div#print-header{align-items: center;display:none}div#print-header div#instData{width:100%;line-height:0.5}div#print-header div#instLogo {width:125px}div#print-header div#instLogo img {width:100px}div#print-header div#instData h2{width:unset;font-size:1.25em}
+div#testname_print,div#username_print{display:none}
+hr#hr-print-header{display:none}
+ol.question {list-style-position:inside;padding:0;list-style-type:none}
+div#qstat{border: 1px solid #333;background: #333;color: #fff;padding:2px}
+div#qstat div#q-num{background: #2196F3;padding: 5px 8px;border: 1px solid #333;display:inline-block}
+
+
 div.content form {margin-top:2em}
 
 #form_userselect {text-align:left}
 .w_not_passed,.w_passed{display:inline-block;color:#fff;font-weight:bold;padding:5px 10px;border-radius:3px}
-.w_passed{background:green}
+.w_passed{background:#4CAF50}
 .w_not_passed{background:#F44336}
 
 .d-flex{display:flex !important}
@@ -1125,4 +1136,12 @@ div#menuContent p#insName{font-weight:bold;color:#ccc}
 	fieldset {
 		padding: 0.5em 1.2em 0.5em 1.2em;
 	}
+}
+
+@media print {
+	div.scrollmenu,div.h-title,div.header,div#row-stat,div#btn-action,div.minibutton,div.userbar,div.pagehelp,input#extendtime{display:none !important}
+	div#testname_print,div#username_print{display:unset}
+	div#print-header{display:flex}
+	hr#hr-print-header{display:unset !important}
+	.print-hidden{display:none !important}
 }
