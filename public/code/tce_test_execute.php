@@ -148,10 +148,19 @@ if (isset($_REQUEST['testid']) and ($_REQUEST['testid'] > 0)) {
             // check if some questions were omitted (undisplayed or unanswered).
             $num_omitted_questions = F_getNumOmittedQuestions($test_id);
             $omitted_msg = '';
+			$forceTerminate=1;
             if ($num_omitted_questions > 0) {
-                $omitted_msg = '<br /><span style="color:#990000;font-size:120%;">[ '.$l['h_questions_unanswered'].': '.$num_omitted_questions.' ]</span><br />';
+				if(K_FORCE_ANSWER_ALL==false){
+					$forceTerminate=1;
+					$addMsg='';
+				}else{
+					$forceTerminate=0;
+					$addMsg=$l['m_addMsg'];
+				}
+                $omitted_msg = '<span style="color:#990000;font-size:120%">[ '.$l['h_questions_unanswered'].': '.$num_omitted_questions.' ] '.$addMsg.'</span>';
             }
-            F_print_error('WARNING', $omitted_msg.''.$l['m_confirm_test_termination']);
+            //F_print_error('WARNING', $omitted_msg.''.$l['m_confirm_test_termination']);
+            F_print_error('WARNING', $l['m_confirm_test_termination'].' '.$omitted_msg);
             ?>
             <div class="confirmbox">
             <form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post" enctype="multipart/form-data" id="form_test_terminate">
@@ -162,8 +171,10 @@ if (isset($_REQUEST['testid']) and ($_REQUEST['testid'] > 0)) {
             <input type="hidden" name="display_time" id="display_time" value="" />
             <input type="hidden" name="reaction_time" id="reaction_time" value="" />
             <?php
-            F_submit_button('forceterminate', $l['w_terminate'], $l['w_terminate_exam']);
-            F_submit_button('cancel', $l['w_cancel'], $l['h_cancel']);
+			if($forceTerminate==1){
+				F_submit_button('forceterminate', $l['w_terminate'], $l['w_terminate_exam']);
+			}
+            F_submit_button('cancel', $l['w_back'], $l['w_back']);
             echo F_getCSRFTokenField().K_NEWLINE;
             ?>
             </div>

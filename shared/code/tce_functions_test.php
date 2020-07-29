@@ -2023,7 +2023,7 @@ function F_questionsMenu($testdata, $testuser_id, $testlog_id = 0, $disable = fa
         $navlink .= ' />';
         // button for confirm current question
         //$navlink .= '<input type="submit" name="confirmanswer" id="confirmanswer" value="('.$qsel.') '.$l['w_confirm'].'" />';
-		$navlink .= '<input type="submit" name="confirmanswer" id="confirmanswer" value="'.$l['w_confirm'].'" />';
+		$navlink .= '<input type="submit" name="confirmanswer" id="confirmanswer" value="'.$l['w_save'].'" />';
     }
 	
 	echo '<div id="nosoalCont"><div id="ns1"><span id="nosoal">#'.$qsel.'</span></div><div id="ns2"><span id="information" onclick="infoToggle()"><i class="fas fa-info"></i> <span id="txtInfo">'.$l['w_info'].'</span></span>';

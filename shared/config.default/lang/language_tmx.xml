@@ -50453,5 +50453,245 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>Print</seg>
          </tuv>
       </tu>
+	  <tu tuid="m_addMsg" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>Anda tidak bisa menghentikan ujian, mohon jawab semua pertanyaan</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>You can't terminate the test, please answer all question</seg>
+         </tuv>
+      </tu>
+	  <tu tuid="w_back" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>kembali</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>kembali</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>back</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>back</seg>
+         </tuv>
+      </tu>
+	  <tu tuid="w_save" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>simpan</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>simpan</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>save</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>save</seg>
+         </tuv>
+      </tu>
    </body>
 </tmx>

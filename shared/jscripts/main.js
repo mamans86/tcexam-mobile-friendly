@@ -44,8 +44,9 @@ $("a#imgProblem").click(function(){
 
 $("input#cancel").click(function(){
 	event.preventDefault();
-	$("div.confirmbox").hide();
-	$("div.warning").hide();
+	//$("div.confirmbox").hide();
+	//$("div.warning").hide();
+	 window.history.back();
 });
 
 $("div#h_fileAction").click(function(){

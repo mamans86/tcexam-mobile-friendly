@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: ms
-// DATE: 2020-07-29 16:58:45
+// DATE: 2020-07-29 18:57:15
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -635,5 +635,8 @@ $tmx['a_img_ifnodisplay']='If image doestn\'t appear on editor, click here';
 $tmx['b_media_insert']='Insert media';
 $tmx['p_testpage_broken']='Oops! Test page is broken. Don\'t worry, you can continue the test. Please <a href="../">click here</a> to return to test list';
 $tmx['b_print']='Print';
+$tmx['m_addMsg']='You can\'t terminate the test, please answer all question';
+$tmx['w_back']='kembali';
+$tmx['w_save']='simpan';
 
 // --- EOF ---

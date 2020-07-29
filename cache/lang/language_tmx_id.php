@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: id
-// DATE: 2020-07-29 16:56:13
+// DATE: 2020-07-29 18:58:41
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -637,5 +637,8 @@ $tmx['a_img_ifnodisplay']='Apabila gambar tidak tampil pada editor, silakan klik
 $tmx['b_media_insert']='Sisipkan media';
 $tmx['p_testpage_broken']='Oops! Halaman ujian rusak, Jangan risau, Anda masih dapat melanjutkan ujian. Silakan <a href="../">klik disini</a> untuk kembali ke daftar ujian';
 $tmx['b_print']='Cetak';
+$tmx['m_addMsg']='Anda tidak bisa menghentikan ujian, mohon jawab semua pertanyaan';
+$tmx['w_back']='kembali';
+$tmx['w_save']='simpan';
 
 // --- EOF ---
