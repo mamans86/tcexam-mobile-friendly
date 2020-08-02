@@ -67,9 +67,9 @@ echo '<div id="qlistTitle"><div><p><i class="fas fa-user"></i> '.$l['w_user'].'<
 echo '<div id="userInfoCont">'.K_NEWLINE;
 echo '<div><span>'.$l['w_level'].'</span><span>'.$_SESSION['session_user_level'].'</span></div>'.K_NEWLINE;
 echo '<div><span>'.$l['w_username'].'</span><span>'.$_SESSION['session_user_name'].'</span></div>'.K_NEWLINE;
-echo '<div><span>'.$l['w_name'].'</span><span>'.$_SESSION['session_user_firstname'].'</span></div>'.K_NEWLINE;
+echo '<div><span>'.$l['w_name'].'</span><span>'.F_getFirstName($_SESSION['session_user_firstname']).'</span></div>'.K_NEWLINE;
 if($_SESSION['session_user_lastname']!=""){
-	echo '<div><span>'.$l['w_lastname'].'</span><span>'.$_SESSION['session_user_lastname'].'</span></div>'.K_NEWLINE;
+	echo '<div><span>'.$l['w_lastname'].'</span><span>'.F_getFirstName($_SESSION['session_user_lastname']).'</span></div>'.K_NEWLINE;
 }
 echo '<div class="logout"><span><a href="tce_logout.php" class="logoutbutton" title="'.$l['h_logout_link'].'" onclick="return confirm(\''.$l['w_logout'].'\')"><i class="fas fa-sign-out-alt"></i> '.$l['w_logout'].'</a></span></div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
