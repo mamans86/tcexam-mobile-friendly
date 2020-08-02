@@ -21,14 +21,22 @@
 */
 * {font-family:helvetica,sans-serif;font-size:0.97em}
 body{background:#f5f5f5}
+html,body{height:100%; margin:0}
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
 img{width:auto;max-width:100%;height:auto;max-height:100%}
 div.header{background:#263238}
 div.right{height:0}
-label.timerlabel{display: none;width: auto}
 input[type=checkbox]#show_graph,label[for=show_graph]{display:inline-block;width:auto}
-input#timer{display: inline-block;width: 11em;background: unset;border: none;color: #ffffffd9;padding: 0;position: absolute;top: 0;right: 0.5em;height: 53px;text-align: right;font-size: 1.2em}
-div.container{/*padding:1em;*/overflow:hidden}
-.hidden,#timersection,#menusection,#topofdoc,div.minibutton a.white{display:none}
+div#timerdiv{text-align:center;color: #616161;}
+div#timerdiv input{text-align:center;border: 1px solid #bdbdbd;background: #ffffff;color: #616161;padding: 0.65em 0;}
+.timerTestExecute{width:200px}
+.timerClock{width:100%}
+div.container{overflow:hidden}
+.hidden,#timersection,#menusection,#topofdoc,span#nosoal,span#qlistShow{display:none}
+.skip-link{height:0px;font-size:0px}
 div#scrollayer{text-transform:capitalize;color:#fff;background: #263238; height: 100%; width: 17em; margin: 0 !important;position:fixed;left:-300px;top:0;margin:0;padding:0;z-index:9;box-shadow:5px 0px 0px 3px rgba(0,0,0,0.15)}
 div#scrollayer ul {list-style-type:none;margin:0;padding:0}
 div#scrollayer ul li {color:#fff;margin:1em 0 1em 1em}
@@ -36,13 +44,22 @@ div#scrollayer ul li span.active{background:#009688;padding:0.5em 0.75em;display
 div#scrollayer ul li a{display: block;color: #ffffff80;padding-bottom: 1em}
 div#scrollayer ul li a:hover{font-weight:bold;color:#fff}
 p#menu_close {text-align: right;padding: 0;font-weight: bold;font-size: x-large;cursor: pointer;color: #ffffff9e;line-height: 1;margin-right: 1em;display: block}
-div#menu_open{background: #263238 url(../../images/logo_tcexam_118x25.png);font-size: x-large;background-repeat: no-repeat;background-position: 47px;padding: 0.4em 0 0.4em 0.4em;   border-bottom: 1px solid #455A64;color: #ffcc00}
+div#menu_open{background: #263238 url(../../images/logo_tcexam_118x25.png);font-size: x-large;background-repeat: no-repeat;background-position: 47px;padding: 0.4em 0 0.4em 0.4em;color: #ffffffc2;width:50%}div#topRight{width:auto;color:#fff;text-transform:capitalize}
+#userInfoBtn,#langSelBtn{position:relative;width:30px;height:30px;background:#263238;border-radius:50px;text-align:center;line-height:2.2;border: 2px solid #ffffffc2;margin:0 10px 0 0}
+
+#userInfoCont{padding:1em}
+#userInfoCont div{margin-bottom:1em}
+#userInfoCont div span,#userInfoCont div span a{display:block}
+#userInfoCont div span:first-child{margin-right:5px;text-transform:capitalize}
+#userInfoCont div span:nth-child(2){background:#FAFAFA;color:#607D8B;padding:0.25em 0.55em;border-radius:3px;font-weight:bold;border: 1px solid #dbdbdb}
+#userInfoCont div.logout{background:#F44336;text-align:center;border-radius:3px}
+#userInfoCont div.logout span a{padding:1em;color:#fff;text-transform:uppercase;font-weight:bold}
+
 div.btn-action{text-align:center}
 div#menu_open span {cursor:pointer}
 form#form_resultallusers{overflow:hidden;padding: 1em}
 form#form_resultallusers div.rowl{overflow:auto}
-.gsoformbox,.tceformbox,.popupcontainer,form#testform,table.testlist,table.userselect{background:#fff;box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.15);/*border-top: 1px solid #7593bb;*/border-bottom: 1px solid #d2d2d2}
-form#testform{padding:0;border-top: 1px solid #455A64}
+.gsoformbox,.tceformbox,.popupcontainer,form#testform,table.testlist,table.userselect,form#form_resultallusers{background:#fff;box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.05);/*border-top: 1px solid #7593bb;*/border-bottom: 1px solid #d2d2d2;}
 form#testform div div.tcecontentbox {padding:1em 1.3em}
 form#testform div input#terminatetest {display:block !important; margin: 0.5em auto 0.6em auto}
 div.navlink{border-top:1px solid #CFD8DC;border-bottom:1px solid #CFD8DC;text-align:center;padding:0.5em 1em}
@@ -51,22 +68,22 @@ div.navlink input[type=submit]{box-shadow: 0 0 0 2px #fff, 0 0 0px 4px rgb(238, 
 span.testcomment{height:107px;padding: 1em 1.3em;display: block;border-bottom: 1px solid #CFD8DC;position: fixed;top: -147px;right: 0;background: #fff;box-shadow:-7px 7px 17px 0px rgba(0,0,0,0.15)}
 div#forceterminateCont{padding:0 1em}
 div.row{margin:0.1em 0}
-div#nosoalCont{background:#263238;padding: 0.45em 1em 0.75em}
-span#commentShow, span#qlistShow, span#information, span#nosoal{text-transform:capitalize;background: #fff;color: #263238;font-weight: bold;padding: 0.35em 0.65em}
-span#commentShow, span#qlistShow, span#information{margin-left:1em;cursor:pointer;background: #2196F3;color: #fff;box-shadow: 0 0 0 3px #263238, 0 0 0px 4px rgba(255, 255, 255, 0.38)}
-span#commentShow,span#information {background:#263238}
+div#nosoalCont{background:#F5F5F5;border-bottom: 1px solid #ccc;}
+div#ns1{width:10%}
+div#ns2{width:100%}
+span#commentShow, span#qlistShow, span#information, span#nosoal{text-transform:capitalize;background: #fff;color: #263238;font-weight: bold}
+span#commentShow, span#qlistShow, span#information{margin: 0.5em 0.5em 0.5em 0;cursor: pointer;background: #ffffff;color: #616161;padding: 0.6em 0.9em;border: 1px solid #BDBDBD;}
+span#qlistShow{background: #2196F3;padding: 0.69em 1em;border: none;color: #ffffff;margin:0 0.1em 0 0.7em;}
 .qlistCont{overflow:hidden !important;position:fixed;right:-350px;top:0;background:#fff;padding:0 !important;border: 1px solid #CFD8DC;box-shadow: -7px 7px 17px 0px rgba(0,0,0,0.15);height:100%;width:275px}
-ol.qlist{list-style:none;padding:0;overflow: auto;height:83%;border-bottom: 1px solid #CFD8DC}
+ol.qlist,ul.qlist{list-style:none;padding:0;overflow: auto;height:83%;border-bottom: 1px solid #CFD8DC}
 div#qlistTitle{border-bottom: 1px solid #ECEFF1}
 div#qlistTitle p{padding: 0.25em 1.5em;display: inline-block;text-transform: capitalize;font-weight: bold}
-div#nosoalCont div#ns1{display: inline-block;width: 10%}
-div#nosoalCont div#ns2{display: inline-block;width: 90%}
-div#ns2{text-align: right}
-span#nosoal{font-size: large;padding: 0.25em 0.35em;color: #fff;background: unset}
+span#nosoal{font-size: large;color: #ffffff;padding: 5px 7px;background: #2196F3;}
 span#commentClose,span#qlistClose {float: right;margin: 10px 11px 0 0;color: #777;text-align: center;font-weight: bold;font-size: large;border-radius: 100px;display: inline-block;width: 23px;height: 23px;border: 1px solid #eee;cursor:pointer}
 span#commentClose{float:unset;margin:unset;position: absolute;top: 12px;right: 16px}
-div.pagehelp{background:#BBDEFB;border:1px solid #90CAF9;padding:0.5em;margin-top:1em}
-h1{color:#ffffffc2;text-align:center;padding:0.3em 0;margin:0;background:#263238;font-size: 1.15em}
+div.pagehelp{background:#BBDEFB;border-left: 3px solid #2196F3;padding: 0.25em 0.5em 0.25em 0;margin-top:1em;/* border-top: 2px solid #2196f3; */display: flex;font-size: small;align-items: center;}
+div.pagehelp div{color: #2196F3;/* background: #2196F3; *//* margin-right: 1em; *//* border: 1px solid; */padding: 0.15em 0.5em;/* flex: 100%; *//* height: 100px; */font-size: xx-large;}
+h1{color: #616161;text-align:center;padding:0.3em 0;margin:0;background: #f5f5f5;font-size: 1.15em;/* border-bottom: 1px solid #607D8B; */}
 a{text-decoration:none;color:#2196f3}
 label{text-transform:capitalize}
 label,input{display:block;width:100%;border:none}
@@ -83,12 +100,13 @@ ol.qlist li acronym.offbox{background:unset;padding:0.40em 0.775em}
 ol.qlist li input[type=button][disabled=disabled]{background:#4CAF50;color:#fff;font-weight:bold}
 ol.qlist li.selected{background:#CFD8DC}
 div.minibutton{text-align:center}
-div.minibutton span {color:#ECEFF1 !important}
-div.minibutton span.langselector{background:#fff;display:block;padding:0 0.5em;text-align:center;border:1px solid #CFD8DC;color:#fff !important;line-height:2}
-.langselector a{display:inline-block;background:unset;margin:0;padding:0 0.5em;border:none;font-size:x-small;color:#000 !important}
+div.minibutton span {color: #263238 !important;}
+div.minibutton span.langselector{background:#fff;display:block;padding: 0.5em;text-align:center;color:#fff !important;display: flex;flex-wrap: wrap;justify-content: left;font-size: large}
+.langselector a{display:inline-block;background:unset;margin: 0.5em;padding: 0.3em 0.5em;border: 1px solid #4CAF50;color: #000 !important;font-family: monospace;}
 .langselector a:hover{background:#4CAF50;color:#fff !important}
-.langselector span.selected{background:#4CAF50;padding:0.3em 0.5em;color:#fff;font-weight:bold;font-size:x-small;color:#fff !important}
-div.minibutton span.copyright {color:#333 !important;display:block;padding:1.1em 0 0 0;font-size:0.80em}
+.langselector span.selected{background:#4CAF50;font-weight:bold;color:#fff !important;margin: 0.5em;padding: 0.3em 0.5em;border: 1px solid #4CAF50;font-family: monospace;}
+#activeLang{position:absolute;bottom: -5px;right: -10px;background:#2196f3;border-radius:50px;font-size: 10px;display:inline-block;color:#fff;width: 20px;height: 20px;line-height: 2;text-align:center;font-family: monospace;}
+div.minibutton span.copyright {color: #f5f5f5 !important;display:block;padding:1.1em 0 0 0;font-size:0.80em;}
 div.minibutton span.copyright a {display:inline}
 div.minibutton a span {color:#fff !important;background:#2196f3;padding:0.3em 0.5em;font-size:0.75em}
 .userbar{background:#263238;padding:0.5em 1em;color:#fff;text-align:right}
@@ -98,18 +116,17 @@ div.minibutton a span {color:#fff !important;background:#2196f3;padding:0.3em 0.
 .error{background:#FF5722;border-left-color: #BF360C}.message{background:#2196f3;border-left-color: #0D47A1;}
 div.tcecontentbox{overflow:auto}
 div.question-block *{text-transform:unset}
-/*a.buttongreen,a.buttonblue,textarea,.gsoformbox,.tceformbox,input,.userbar a,.langselector span.selected,div.minibutton a span,.langselector a:hover,.tcecontentbox,.popupcontainer,.xmlbutton,table.testlist,table.userselect,ol.qlist li acronym,ol.qlist li,div.rowl ol.answer li span,div.popupcontainer div.tceformbox div.row,div.test_result div.row,form#form_test_terminate{border-radius:0.25em}*/
 div#scrollayer ul li span.active {border-right: 5px solid #ffffff5e;}
 a.buttongreen,a.buttonblue,.xmlbutton{display:block;text-align:center;text-transform:uppercase;padding:0.5em;background:#607D8B;color:#fff;margin:0.5em 0}
 a.buttongreen,a.buttonblue{display:inline-block}
-form#form_test_terminate {border-top:3px solid #B0BEC5;background:#fff;padding:1em 1.5em 1em 1.5em;text-align:center;margin:1em;box-shadow:0px 3px 13px 0px rgba(0,0,0,0.15)}
+form#form_test_terminate {border-top:3px solid #F44336;background:#fff;padding:1em 1.5em 1em 1.5em;text-align:center;margin:1em;box-shadow:0px 3px 13px 0px rgba(0,0,0,0.15)}
 form#form_test_terminate div input#forceterminate,.popupcontainer .row a:nth-child(1){background:#4CAF50}
 form#form_test_terminate div input#cancel,.popupcontainer .row a:nth-child(2){background: #ffffff;color: #F44336;border: 1px solid #F44336}
 div.popupcontainer div.tceformbox div.row {border:1px solid #eee;line-height:1}
 div.popupcontainer div.tceformbox div.row span.label,div.popupcontainer div.tceformbox div.row span.value {text-transform: uppercase;display: block;background: #607D8B;color: #ffffff;padding: 0.5em 0.75em;font-weight: bold}
 div.popupcontainer div.tceformbox div.row span.value{background:unset;color:unset;text-transform:unset;font-weight:unset}
-div.popupcontainer div.tcecontentbox{border-left: 1px solid #CFD8DC;border-bottom: 1px solid #CFD8DC;border-right: 1px solid #CFD8DC;border-top: none;padding: 0.5em 1em}
-div.popupcontainer h1{background: #2196f3;color: #fff}
+div.popupcontainer div.tcecontentbox{border-left: 1px solid #CFD8DC;border-bottom: 1px solid #CFD8DC;border-right: 1px solid #CFD8DC;border-top: none;padding: 0.5em 1em;background:#fff}
+div.popupcontainer h1{background:#009688;color:#fff}
 a.buttongreen{background:#4CAF50}
 a.buttonblue{background:#2196f3}
 textarea{width:100%;background:#E3F2FD;border:1px solid #2196f3;box-sizing:border-box}
@@ -119,20 +136,20 @@ table.testlist th, table.userselect th {text-transform:uppercase}
 table.testlist tr td{width: 7em;padding: 0.75em}
 table.testlist tr td, table.userselect tr td{border:1px solid #ddd;height:3.75em}
 table.testlist tr td a, table.userselect tr td a{display:inline-block}
-table.testlist tbody tr th, table.userselect tbody tr th{box-shadow:0px 5px 0px 0px rgba(33, 150, 243, 0.17);background:#fff;padding:0.75em 1em;border: 1px solid #ddd;border-bottom: 2px solid #2196F3}
+table.testlist tbody tr th, table.userselect tbody tr th{/* box-shadow:0px 5px 0px 0px rgba(33, 150, 243, 0.17); */background:#fff;padding:0.75em 1em;border: 1px solid #ddd;border-bottom: 2px solid #E91E63;}
 table.testlist tbody tr:nth-child(odd), table.userselect tbody tr:nth-child(odd){background:#fafafa}
 table.userselect tbody tr td input[type=checkbox]{display:none}
 
 table.userselect tbody tr:nth-last-child(1),table.userselect tbody tr:nth-last-child(2),table.userselect tbody tr:nth-last-child(3),table.userselect tbody tr:nth-last-child(4),table.userselect tbody tr:nth-last-child(5),table.userselect tbody tr:nth-last-child(6){border-bottom:1px solid #555}
 
-table.userselect tbody tr:nth-last-child(1) th,table.userselect tbody tr:nth-last-child(2) th,table.userselect tbody tr:nth-last-child(3) th,table.userselect tbody tr:nth-last-child(4) th,table.userselect tbody tr:nth-last-child(5) th,table.userselect tbody tr:nth-last-child(6) th{padding-right: 1em;border-bottom: 1px solid #ddd;box-shadow: none;border-right: 3px solid #2196F3}
+table.userselect tbody tr:nth-last-child(1) th,table.userselect tbody tr:nth-last-child(2) th,table.userselect tbody tr:nth-last-child(3) th,table.userselect tbody tr:nth-last-child(4) th,table.userselect tbody tr:nth-last-child(5) th,table.userselect tbody tr:nth-last-child(6) th{padding-right: 1em;border-bottom: 1px solid #ddd;box-shadow: none;border-right: 3px solid #E91E63;}
 
 div.rowl ol.answer {padding-left:0}
 div.rowl ol.answer li span label,div.rowl ol.answer li span input,div.rowl ol.answer li input,div.rowl ol.answer li label {display:inline-block;width:auto}
 div.rowl ol.answer li span{padding:0.5em}
 div.rowl ol.answer li{margin:1em 0;list-style-type:none}
-div#infolinkCont{background:#263238;text-align:center}
-span.infolink a{color: #ffffff;font-style: italic;margin-bottom:1em;display: inline-block;background:#4CAF50;padding:0.35em 1em;border-radius:100px}
+div#infolinkCont{background: #f5f5f5;text-align:center;border-bottom: 1px solid #ccc;}
+span.infolink a{color: #ffffff;font-style: italic;margin-bottom:1em;display: inline-block;background: #2196F3;padding:0.35em 1em;border-radius:100px;}
 
 div.container div.tceformbox div.row span.label,div.container div.tceformbox div.row span.formw {display:block;padding:0.5em 1em}
 div.container div.tceformbox div.row span.label {background:#607d8b;color:#fff;font-weight:bold}
@@ -162,12 +179,16 @@ span#close_btn{display: inline-block;font-weight: bold;background: #00000073;col
 .mamans86{margin:0 !important;padding:0 !important;color:#eee}
 span.active.admin {background: unset !important;border: 1px solid #ffffff40;border-right:unset !important}
 #txtComment,#txtQuestion{display:none}
-.login_box,.gsoformbox,.popupcontainer{border: 1px solid #CFD8DC;padding: 1em 1.5em}
-.popupcontainer .tceformbox {border:none;box-shadow:none}
+.login_box,.gsoformbox,.popupcontainer,form#form_resultallusers{border: 1px solid #CFD8DC;padding: 1em 1.5em}
+.popupcontainer{background:#f5f5f5}
+.popupcontainer .tceformbox {border:none;box-shadow:none;background:#f5f5f5}
+.popupcontainer .tceformbox div.row {background:#fff}
+div#utilTop{background: #f5f5f5;border-bottom: 1px solid #ccc;}
+.utilTopTest{padding:0.5em}
+.utilTopClock{padding:0.5em;border-bottom: 1px solid #607D8B;}
 #userreg_link{display:block;text-align:center;margin:1em}
 
-/*div#footer{position: absolute;right: 0;left: 0;bottom:0}*/
-div#footer{margin-bottom:1em/*;height:134px;position:absolute;left:0;right:0;bottom:0*/}
+div#footer{height:70px;margin-top:auto;padding:0 0.25em 0.75em 0.25em;background: #263238}
 span#txtInfo,h1#h1_testpage,div#infolinkCont{display:none}
 i#i_qnotdisplayed{color:#ddd}
 i#i_qdisplayed{font-weight:unset}
@@ -207,6 +228,7 @@ div#btn_fileAction input#hapus, input#hapuspaksa{background:#F44336;margin:0}
 div#print-header{align-items: center;display:none}div#print-header div#instData{width:100%;line-height:1;text-align:center}div#print-header div#instLogo {width:125px}div#print-header div#instLogo img {width:100px}
 .confirmbox{text-align: center;background: #FFB300;padding: 15px}
 .c-gray1{color:#aaa !important}
+.c-gray4{color:#ddd !important}
 .ta-center{text-align:center !important}
 .ft-bold{font-weight:bold !important}
 .txt-small{font-size:small !important}
@@ -217,7 +239,12 @@ div#print-header{align-items: center;display:none}div#print-header div#instData{
 .px-10{padding-left:10px !important;padding-right:10px !important}
 .m-0{margin:0 !important}
 .mt-5{margin-top:5px !important}.mt-10{margin-top:10px !important}
-
+.mr-5{margin-right:5px !important}
+.d-flex{display:flex;align-items:center}
+.d-flex-jc-end{display:flex;justify-content:flex-end;align-items:center;width:100%}
+.jc-sb{justify-content:space-between}
+.jc-se{justify-content:space-evenly}
+.c-pointer{cursor: pointer}
 @media (min-width: 768px) {
 	div.navlink input{margin-top:0;margin-bottom:0}
 	form#form_resultallusers div.row span.label {color:unset;background:unset;text-align:right}
@@ -237,6 +264,10 @@ div#print-header{align-items: center;display:none}div#print-header div#instData{
 	div.popupcontainer div.tceformbox div.row span.value {display:inline-block;width:auto}
 	#txtComment,#txtQuestion,span#txtInfo{display:unset}
 	form#form_test_terminate input{margin-top:0 !important}
+	.timerClock{width:auto}
+	label.timerlabel{text-align:right;padding-right:0.75em}
+	.show768{display:unset !important}
+	div#footer{height:50px}
 }
 
 @media (min-width: 992px) {

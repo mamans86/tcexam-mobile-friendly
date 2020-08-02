@@ -121,6 +121,11 @@ define('K_WYSIWYG_BBCODE',true);
  */
 define('K_PUBLIC_FILE_UPLOAD',true);
 
+/**
+ * If true enable pagehelp on Public Area.
+ */
+define('K_PUBLIC_PAGEHELP',true);
+
 // --- INCLUDE FILES -----------------------------------------------------------
 
 require_once('../../shared/config/tce_db_config.php');

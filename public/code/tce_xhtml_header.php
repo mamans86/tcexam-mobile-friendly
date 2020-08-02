@@ -117,6 +117,10 @@ echo '<!-- '.'T'.'C'.'E'.'x'.'a'.'m'.'19'.'73'.'01'.'04'.' -->'.K_NEWLINE;
   //echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/jquery.min.js"></script>'.K_NEWLINE;
   echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/wysibb/jquery-1.11.0.min.js"></script>'.K_NEWLINE;
   echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/modernizr-3.11.2.min.js"></script>'.K_NEWLINE;
+  
+  if(!K_PUBLIC_PAGEHELP){
+	  echo '<style>div.pagehelp{display:none}</style>'.K_NEWLINE;
+  }
   ?>
 </head>
 <?php

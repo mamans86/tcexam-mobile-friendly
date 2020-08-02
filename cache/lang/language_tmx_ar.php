@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: ar
-// DATE: 2020-07-29 18:58:20
+// DATE: 2020-08-02 05:59:02
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -637,5 +637,7 @@ $tmx['b_print']='Print';
 $tmx['m_addMsg']='You can\'t terminate the test, please answer all question';
 $tmx['w_back']='back';
 $tmx['w_save']='save';
+$tmx['w_testinfo']='Test Information Detail';
+$tmx['w_timeleft']='Time left';
 
 // --- EOF ---

@@ -110,9 +110,9 @@ if (isset($_REQUEST['testid']) and ($_REQUEST['testid'] > 0)) {
         $thispage_title .= ': '.F_getTestName($test_id);
 
         require_once('../code/tce_page_header.php');
-		echo '<div id="infolinkCont"><span class="infolink">'.F_testInfoLink($test_id, $l['w_info']).'</span></div>'.K_NEWLINE;
+		echo '<div id="infolinkCont"><span class="infolink">'.F_testInfoLink($test_id, $l['w_testinfo']).'</span></div>'.K_NEWLINE;
         echo '<div class="container">'.K_NEWLINE;
-
+		//include('../../shared/code/tce_page_timer.php');
         
 
         if (!isset($_REQUEST['terminationform'])) {

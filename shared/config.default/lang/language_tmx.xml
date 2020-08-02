@@ -49207,7 +49207,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>language</seg>
          </tuv>
          <tuv xml:lang="ID">
-            <seg>language</seg>
+            <seg>bahasa</seg>
          </tuv>
          <tuv xml:lang="IT">
             <seg>lingua</seg>
@@ -49219,7 +49219,7 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
             <seg>language</seg>
          </tuv>
          <tuv xml:lang="MS">
-            <seg>language</seg>
+            <seg>bahasa</seg>
          </tuv>
          <tuv xml:lang="NL">
             <seg>language</seg>
@@ -50691,6 +50691,166 @@ YYYYMMDDhhmmss_tcexam_backup.sql.gz، جہاں YYYYMMDDhhmmss سال (Y)، ما�
          </tuv>
          <tuv xml:lang="UR">
             <seg>save</seg>
+         </tuv>
+      </tu>
+	  <tu tuid="w_testinfo" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>Informasi Detil Ujian</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>Test Information Detail</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>Test Information Detail</seg>
+         </tuv>
+      </tu>
+	  <tu tuid="w_timeleft" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>Sisa masa</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>Sisa waktu</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>Time left</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>Time left</seg>
          </tuv>
       </tu>
    </body>

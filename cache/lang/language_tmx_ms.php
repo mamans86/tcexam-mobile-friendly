@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: ms
-// DATE: 2020-07-29 18:57:15
+// DATE: 2020-08-02 05:59:57
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -619,7 +619,7 @@ $tmx['w_font']='font';
 $tmx['w_font_size']='font size';
 $tmx['w_keyboard']='keyboard';
 $tmx['w_layout']='layout';
-$tmx['w_language']='language';
+$tmx['w_language']='bahasa';
 $tmx['w_max']='max';
 $tmx['w_remaining']='remaining';
 $tmx['w_executed']='executed';
@@ -638,5 +638,7 @@ $tmx['b_print']='Print';
 $tmx['m_addMsg']='You can\'t terminate the test, please answer all question';
 $tmx['w_back']='kembali';
 $tmx['w_save']='simpan';
+$tmx['w_testinfo']='Test Information Detail';
+$tmx['w_timeleft']='Sisa masa';
 
 // --- EOF ---

@@ -2026,7 +2026,7 @@ function F_questionsMenu($testdata, $testuser_id, $testlog_id = 0, $disable = fa
 		$navlink .= '<input type="submit" name="confirmanswer" id="confirmanswer" value="'.$l['w_save'].'" />';
     }
 	
-	echo '<div id="nosoalCont"><div id="ns1"><span id="nosoal">#'.$qsel.'</span></div><div id="ns2"><span id="information" onclick="infoToggle()"><i class="fas fa-info"></i> <span id="txtInfo">'.$l['w_info'].'</span></span>';
+	echo '<div id="nosoalCont" class="d-flex"><div id="ns1"><span id="nosoal">#'.$qsel.'</span></div><div id="ns2" class="d-flex-jc-end"><span id="information" onclick="infoToggle()"><i class="fas fa-info"></i> <span id="txtInfo">'.$l['w_info'].'</span></span>';
 	if (F_getBoolean($testdata['test_comment_enabled']) and (!$disable)){
 		echo '<span id="commentShow" onclick="commentOpen()"><i class="fas fa-comment"></i> <span id="txtComment">'.$l['w_comment'].'</span></span>';
 	}
@@ -2063,7 +2063,7 @@ function F_questionsMenu($testdata, $testuser_id, $testlog_id = 0, $disable = fa
     if (F_getBoolean($testdata['test_menu_enabled']) and (!$disable)) {
         // display questions menu
         $rstr .= '<a name="questionssection" id="questionssection"></a>'.K_NEWLINE;
-        $rstr .= '<div class="tcecontentbox qlistCont">'.K_NEWLINE; //fieldset
+        $rstr .= '<div class="tcecontentbox qlistCont" id="qlistContID">'.K_NEWLINE; //fieldset
         //$rstr .= '<legend>';
         $rstr .= '<div id="qlistTitle"><div><p><i class="fas fa-question-circle"></i> '.$l['w_questions'].'</p><span id="qlistClose" onclick="qlistHide()">&times;<span></div></div>';
         //$rstr .= '</legend>'.K_NEWLINE;
@@ -2183,6 +2183,7 @@ function F_testLoginForm($faction, $fid, $fmethod, $fenctype, $test_id)
     require_once('../../shared/code/tce_functions_form.php');
     $str = '';
     $str .= '<div class="container">'.K_NEWLINE;
+	//$str .= '<div id="nosoalCont"><div id="ns1"><span id="nosoal">#'.$qsel.'</span></div><div id="ns2"><span id="information" onclick="infoToggle()"><i class="fas fa-info"></i> <span id="txtInfo">'.$l['w_info'].'</span></span>'.K_NEWLINE;
     $str .= '<div class="tceformbox">'.K_NEWLINE;
     $str .= '<form action="'.$faction.'" method="'.$fmethod.'" id="'.$fid.'" enctype="'.$fenctype.'">'.K_NEWLINE;
     // test password

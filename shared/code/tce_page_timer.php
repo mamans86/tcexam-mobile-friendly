@@ -40,12 +40,30 @@ if (!isset($_REQUEST['examtime'])) {
         $timeout_logout = 'false';
     }
 }
-
+if(f_sc_name('tce_test_execute.php') and $_SESSION['session_user_level']>0 and isset($_REQUEST['testid'])){
+		$timerTestExecute='timerTestExecute';
+		$utilTop='utilTopTest';
+	}else{
+		$timerTestExecute='timerClock';
+		$utilTop='utilTopClock';
+	}
 echo '<form action="'.$_SERVER['SCRIPT_NAME'].'" id="timerform">'.K_NEWLINE;
-echo '<div>'.K_NEWLINE;
-echo '<label for="timer" class="timerlabel">'.$l['w_time'].':</label>'.K_NEWLINE;
-echo '<input type="text" name="timer" id="timer" value="" size="29" maxlength="29" title="'.$l['w_clock_timer'].'" readonly="readonly"/>'.K_NEWLINE;
-echo '&nbsp;</div>'.K_NEWLINE;
+
+echo '<div id="utilTop" class="d-flex '.$utilTop.'">'.K_NEWLINE;
+echo '<div id="nosoalTop"></div>'.K_NEWLINE;
+echo '<div class="d-flex-jc-end">'.K_NEWLINE;
+echo '<div id="timerdiv" class="d-flex '.$timerTestExecute.'">'.K_NEWLINE;
+if(f_sc_name('tce_test_execute.php') and $_SESSION['session_user_level']>0 and isset($_REQUEST['testid'])){
+	$timeLabel = '<i class="fas fa-clock"></i> '.$l['w_timeleft'];
+}else{
+	$timeLabel = '<i class="fas fa-clock"></i> '.$l['w_time'];
+}
+echo '<label for="timer" class="timerlabel">'.$timeLabel.'</label>'.K_NEWLINE;
+echo '<input type="text" name="timer" id="timer" value="" size="29" maxlength="29" title="'.$l['w_clock_timer'].'" readonly="readonly"/></div>'.K_NEWLINE;
+echo '<div id="qlistTop"></div>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
+//echo '&nbsp;</div>'.K_NEWLINE;
 echo '</form>'.K_NEWLINE;
 echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'timer.js" type="text/javascript"></script>'.K_NEWLINE;
 echo '<script type="text/javascript">'.K_NEWLINE;

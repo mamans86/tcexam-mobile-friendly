@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: id
-// DATE: 2020-07-29 18:58:41
+// DATE: 2020-08-02 05:59:44
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -621,7 +621,7 @@ $tmx['w_font']='font';
 $tmx['w_font_size']='font size';
 $tmx['w_keyboard']='keyboard';
 $tmx['w_layout']='layout';
-$tmx['w_language']='language';
+$tmx['w_language']='bahasa';
 $tmx['w_max']='max';
 $tmx['w_remaining']='remaining';
 $tmx['w_executed']='executed';
@@ -640,5 +640,7 @@ $tmx['b_print']='Cetak';
 $tmx['m_addMsg']='Anda tidak bisa menghentikan ujian, mohon jawab semua pertanyaan';
 $tmx['w_back']='kembali';
 $tmx['w_save']='simpan';
+$tmx['w_testinfo']='Informasi Detil Ujian';
+$tmx['w_timeleft']='Sisa waktu';
 
 // --- EOF ---

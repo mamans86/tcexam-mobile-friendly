@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: nl
-// DATE: 2020-07-29 18:58:48
+// DATE: 2020-08-02 06:00:00
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -639,5 +639,7 @@ $tmx['b_print']='Print';
 $tmx['m_addMsg']='You can\'t terminate the test, please answer all question';
 $tmx['w_back']='back';
 $tmx['w_save']='save';
+$tmx['w_testinfo']='Test Information Detail';
+$tmx['w_timeleft']='Time left';
 
 // --- EOF ---

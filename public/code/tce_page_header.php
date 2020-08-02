@@ -34,11 +34,80 @@ require_once('tce_xhtml_header.php');
 
 // display header (image logo + timer)
 echo '<div class="header">'.K_NEWLINE;
+echo '<div class="d-flex jc-sb">'.K_NEWLINE;
 echo '<div id="menu_open"><span onclick="menuOpen()">&#9776;</span></div>'.K_NEWLINE;
-echo '<div class="left"></div>'.K_NEWLINE;
+echo '<div id="topRight" class="d-flex jc-se c-pointer c-gray4">'.K_NEWLINE;
+
+if (K_LANGUAGE_SELECTOR) {
+    $lang_array = unserialize(K_AVAILABLE_LANGUAGES);
+    $lngstr = '';
+    foreach ($lang_array as $lang_code => $lang_name) {
+        if ($lang_code == K_USER_LANG) {
+            $lngstr .= strtoupper($lang_code);
+        }
+    }
+	$activeLang = $lngstr;
+}
+
+echo '<div class="hidden show768 mr-5" id="langSelLbl" onclick="langSelOpen()">'.$l['w_language'].'</div><div id="langSelBtn" onclick="langSelOpen()"><i class="fas fa-flag"></i><span id="activeLang">'.$activeLang.'</span></div>'.K_NEWLINE;
+if(isset($_SESSION['session_user_level']) and $_SESSION['session_user_level']>0){
+echo '<div class="hidden show768 mr-5" id="userInfoLbl" onclick="userInfoOpen()">'.$l['w_user'].'</div> <div id="userInfoBtn" onclick="userInfoOpen()"><i class="fas fa-user"></i></div>'.K_NEWLINE;
+}
+
+echo '</div></div>'.K_NEWLINE;
 echo '<div class="right">'.K_NEWLINE;
 echo '<a name="timersection" id="timersection"></a>'.K_NEWLINE;
-include('../../shared/code/tce_page_timer.php');
+//include('../../shared/code/tce_page_timer.php');
+echo '</div>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
+
+if(isset($_SESSION['session_user_level']) and $_SESSION['session_user_level']>0){
+echo '<div class="qlistCont" id="userInfoID">'.K_NEWLINE;
+echo '<div id="qlistTitle"><div><p><i class="fas fa-user"></i> '.$l['w_user'].'</p><span id="qlistClose" onclick="userInfoHide()">&times;<span></div></div>';
+echo '<div id="userInfoCont">'.K_NEWLINE;
+echo '<div><span>'.$l['w_level'].'</span><span>'.$_SESSION['session_user_level'].'</span></div>'.K_NEWLINE;
+echo '<div><span>'.$l['w_username'].'</span><span>'.$_SESSION['session_user_name'].'</span></div>'.K_NEWLINE;
+echo '<div><span>'.$l['w_name'].'</span><span>'.$_SESSION['session_user_firstname'].'</span></div>'.K_NEWLINE;
+if($_SESSION['session_user_lastname']!=""){
+	echo '<div><span>'.$l['w_lastname'].'</span><span>'.$_SESSION['session_user_lastname'].'</span></div>'.K_NEWLINE;
+}
+echo '<div class="logout"><span><a href="tce_logout.php" class="logoutbutton" title="'.$l['h_logout_link'].'" onclick="return confirm(\''.$l['w_logout'].'\')"><i class="fas fa-sign-out-alt"></i> '.$l['w_logout'].'</a></span></div>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
+}
+
+echo '<div class="qlistCont" id="langSelID">'.K_NEWLINE;
+echo '<div id="qlistTitle"><div><p><i class="fas fa-flag"></i> '.$l['w_language'].'</p><span id="qlistClose" onclick="langSelHide()">&times;<span></div></div>';
+echo '<div>'.K_NEWLINE;
+// language selector
+//if (K_LANGUAGE_SELECTOR and (stristr($_SERVER['SCRIPT_NAME'], 'tce_test_execute.php') === false)) {
+if (K_LANGUAGE_SELECTOR) {
+    echo '<div class="minibutton" dir="ltr">'.K_NEWLINE;
+    echo '<span class="langselector" title="change language">'.K_NEWLINE;
+    $lang_array = unserialize(K_AVAILABLE_LANGUAGES);
+    $lngstr = '';
+    foreach ($lang_array as $lang_code => $lang_name) {
+        //$lngstr .= ' ';
+        if ($lang_code == K_USER_LANG) {
+            $lngstr .= '<span class="selected" title="'.$lang_name.'">'.strtoupper($lang_code).'</span>';
+        } else {
+            // query string was removed because unnecessary
+            //if (isset($_SERVER['QUERY_STRING']) AND (strlen($_SERVER['QUERY_STRING'])>0)) {
+            //	$querystr = preg_replace("/([\?|\&]?)lang=([a-z]{2,3})/si", '', $_SERVER['QUERY_STRING']);
+            //}
+            //if (isset($querystr) AND (strlen($querystr)>0)) {
+            //	$langlink = $_SERVER['SCRIPT_NAME'].'?'.str_replace('&', '&amp;', $querystr).'&amp;lang='.$lang_code;
+            //} else {
+                $langlink = $_SERVER['SCRIPT_NAME'].'?lang='.$lang_code;
+            //}
+            $lngstr .= '<a href="'.$langlink.'" class="langselector" title="'.$lang_name.'">'.strtoupper($lang_code).'</a>';
+        }
+    }
+    //echo substr($lngstr, 3);
+    echo $lngstr;
+    echo '</span>'.K_NEWLINE;
+    echo '</div>'.K_NEWLINE;
+}
 echo '</div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
@@ -63,7 +132,8 @@ require_once(dirname(__FILE__).'/tce_page_menu.php');
 echo '</div>'.K_NEWLINE;
 
 echo '<div class="body">'.K_NEWLINE;
-
+include('../../shared/code/tce_page_timer.php');
+//include('../../shared/code/tce_page_timer.php');
 echo '<a name="topofdoc" id="topofdoc"></a>'.K_NEWLINE;
 if(isset($thispage_title_icon)){
 	$page_icon = $thispage_title_icon;

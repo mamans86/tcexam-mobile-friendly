@@ -7,12 +7,29 @@ function menuClose(){
 }
 
 function qlistOpen(){
-	$(".qlistCont").animate({right:"0px"});
+	$("#qlistContID").animate({right:"0px"});
 }
 
 function qlistHide(){
-	$(".qlistCont").animate({right:"-350px"});
+	$("#qlistContID").animate({right:"-350px"});
 }
+
+function userInfoOpen(){
+	$("#userInfoID").animate({right:"0px"});
+}
+
+function userInfoHide(){
+	$("#userInfoID").animate({right:"-350px"});
+}
+
+function langSelOpen(){
+	$("#langSelID").animate({right:"0px"});
+}
+
+function langSelHide(){
+	$("#langSelID").animate({right:"-350px"});
+}
+
 function commentOpen(){
 	$("span.testcomment").animate({top:"0px"});
 }
@@ -22,8 +39,8 @@ function commentHide(){
 }
 
 function infoToggle(){
-	$("h1#h1_testpage").toggle();
-	$("div#infolinkCont").toggle();
+	$("h1#h1_testpage").slideToggle();
+	$("div#infolinkCont").slideToggle();
 }
 $("span#close_btn").click(function(){
 	$(this).parent().hide();
@@ -52,3 +69,9 @@ $("input#cancel").click(function(){
 $("div#h_fileAction").click(function(){
 	$("div#c_fileAction").toggle();
 });
+
+//$("div#nosoalCont").prependTo("div#timerdiv");
+$("span#nosoal").appendTo("div#nosoalTop").show();
+$("span#qlistShow").appendTo("div#qlistTop").show();
+
+$("div.pagehelp").prepend("<div><i class='fas fa-info-circle'></i></div>");
