@@ -55,19 +55,29 @@ function F_loginForm($faction, $fid, $fmethod, $fenctype, $username)
         $str .= '<small><a id="userreg_link" href="../../public/code/tce_user_registration.php" title="'.$l['t_user_registration'].'">'.$l['w_user_registration_link'].'</a></small>'.K_NEWLINE;
     }
     $str .= '<div class="tceformbox login_box">'.K_NEWLINE;
+	
+	$str .= '<div id="insCont" class="ta-center">'.K_NEWLINE;
+	$str .= '	<div id="insLogo"><img style="width:77px;height:77px" src="'.K_PATH_HOST.K_PATH_TCEXAM.'cache/logo/'.K_INSTITUTION_LOGO.'"/></div>'.K_NEWLINE;
+	$str .= '	<div id="appDesc"><p class="txt-xsmall m-0 mt-10 px-5 c-gray1">'.K_APP_DESC.'</p></div>'.K_NEWLINE;
+	$str .= '	<div id="insName"><p class="ft-bold m-0 px-5 mt-5 bd-none">'.K_INSTITUTION_NAME.'</p></div>'.K_NEWLINE;
+	$str .= '</div>'.K_NEWLINE;
+
     $str .= '<form action="'.$faction.'" method="'.$fmethod.'" id="'.$fid.'" enctype="'.$fenctype.'">'.K_NEWLINE;
     // user name
+	
+	$str .= '<div id="loginFieldCont" class="box-bd bd-gray5">'.K_NEWLINE;
     $str .= getFormRowTextInput('xuser_name', $l['w_username'], $l['h_login_name'], '', $username, '', 255, false, false, false, '');
     // password
     $str .= getFormRowTextInput('xuser_password', $l['w_password'], $l['h_password'], '', '', '', 255, false, false, true, '');
     // One Time Password code (OTP)
+	$str .= '</div>'.K_NEWLINE;
     if (K_OTP_LOGIN) {
         $str .= getFormRowTextInput('xuser_otpcode', $l['w_otpcode'], $l['h_otpcode'], '', '', '', 255, false, false, true, '');
     }
     if (defined('K_PASSWORD_RESET') and K_PASSWORD_RESET) {
         // print a link to password reset page
-        $str .= '<div class="row">'.K_NEWLINE;
-        $str .= '<span class="formw"><a href="../../public/code/tce_password_reset.php" title="'.$l['h_reset_password'].'" style="font-size:90%;">'.$l['w_forgot_password'].'</a></span>'.K_NEWLINE;
+        $str .= '<div>'.K_NEWLINE;
+        $str .= '<span><a href="../../public/code/tce_password_reset.php" title="'.$l['h_reset_password'].'" style="font-size:90%;">'.$l['w_forgot_password'].'</a></span>'.K_NEWLINE;
         $str .= '</div>'.K_NEWLINE;
     }
     // buttons

@@ -235,9 +235,12 @@ if ($r = F_db_query($sql, $db)) {
 echo '<div class="container">'.K_NEWLINE;
 
 echo '<div class="tceformbox">'.K_NEWLINE;
-echo '<form action="'.$_SERVER['SCRIPT_NAME'].'" method="post" enctype="multipart/form-data" id="form_resultuser">'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+require_once('../../shared/code/tmf_print_header.php');
+
+echo '<form action="'.$_SERVER['SCRIPT_NAME'].'" method="post" enctype="multipart/form-data" id="form_resultuser">'.K_NEWLINE;
+echo '<div id="headerSum">'.K_NEWLINE;
+echo '<div class="row print-hidden">'.K_NEWLINE;
 echo '<span class="label">'.K_NEWLINE;
 echo '<label for="test_id">'.$l['w_test'].'</label>'.K_NEWLINE;
 echo '</span>'.K_NEWLINE;
@@ -253,6 +256,7 @@ if ($r = F_db_query($sql, $db)) {
             echo ' selected="selected"';
         }
         echo '>'.substr($m['test_begin_time'], 0, 10).' '.htmlspecialchars($m['test_name'], ENT_NOQUOTES, $l['a_meta_charset']).'</option>'.K_NEWLINE;
+		$testname = $m['test_name'];
     }
 } else {
     F_display_db_error();
@@ -268,7 +272,17 @@ echo '</div>'.K_NEWLINE;
 
 echo getFormNoscriptSelect('selectcategory');
 
+echo '<div id="testname_print">'.K_NEWLINE;
 echo '<div class="row">'.K_NEWLINE;
+echo '<span class="label">'.K_NEWLINE;
+echo '<span>'.$l['w_test'].':</span>'.K_NEWLINE;
+echo '</span>'.K_NEWLINE;
+echo '<span class="formw testname">'.$testname.K_NEWLINE;
+echo '</span>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
+	
+echo '<div class="row print-hidden">'.K_NEWLINE;
 echo '<span class="label">'.K_NEWLINE;
 echo '<label for="testuser_id">'.$l['w_user'].' - '.$l['w_test'].'</label>'.K_NEWLINE;
 echo '</span>'.K_NEWLINE;
@@ -286,6 +300,8 @@ if ($r = F_db_query($sql, $db)) {
         echo '>';
         echo ''.$usrcount.'. ';
         echo ''.htmlspecialchars($m['user_lastname'].' '.$m['user_firstname'].' - '.$m['user_name'].' ['.$m['testuser_creation_time'].']', ENT_NOQUOTES, $l['a_meta_charset']).'';
+		$username = $m['user_name'];
+		$user_firstname = $m['user_firstname'];
         echo '</option>'.K_NEWLINE;
         $usrcount++;
     }
@@ -296,6 +312,17 @@ echo '</select>'.K_NEWLINE;
 
 echo '</span>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
+
+echo '<div id="username_print">'.K_NEWLINE;
+echo '<div class="row">'.K_NEWLINE;
+echo '<span class="label">'.K_NEWLINE;
+echo '<span>'.$l['w_user'].':</span>'.K_NEWLINE;
+echo '</span>'.K_NEWLINE;
+echo '<span class="formw username">'.$username.' ('.$user_firstname.')'.K_NEWLINE;
+echo '</span>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
+echo '</div>'.K_NEWLINE;
+
 
 echo getFormNoscriptSelect('selectrecord');
 
@@ -344,14 +371,14 @@ if (isset($teststat) and !empty($teststat)) {
     $score_right_all = $teststat['qstats']['right'].' / '.$teststat['qstats']['recurrence'].' ('.$teststat['qstats']['right_perc'].'%)';
     echo getFormDescriptionLine($l['w_answers_right'].':', $l['h_answers_right'], $score_right_all);
     echo getFormDescriptionLine($l['w_comment'].':', $l['h_testcomment'], F_decode_tcecode($teststat['testinfo']['user_comment']));
-
+	echo '</div>'.K_NEWLINE;
     if (isset($testuser_id) and !empty($testuser_id) and !empty($teststat)) {
         echo '<div class="rowl">'.K_NEWLINE;
         echo F_printUserTestStat($testuser_id);
         echo '</div>'.K_NEWLINE;
 
         // print statistics for modules and subjects
-        echo '<div class="rowl">'.K_NEWLINE;
+        echo '<div class="rowl" id="row-stat">'.K_NEWLINE;
         echo '<hr />'.K_NEWLINE;
         echo '<h2>'.$l['w_stats'].'</h2>';
         echo F_printTestStat($test_id, 0, $user_id, 0, 0, $testuser_id, $teststat, 1);
@@ -359,7 +386,7 @@ if (isset($teststat) and !empty($teststat)) {
         echo '</div>'.K_NEWLINE;
     }
 
-    echo '<div class="row d-block">'.K_NEWLINE;
+    echo '<div class="row d-block" id="btn-action">'.K_NEWLINE;
 
     // show buttons by case
     if (($test_id > 0) and ($user_id > 0) and ($testuser_id > 0)) {
@@ -375,6 +402,7 @@ if (isset($teststat) and !empty($teststat)) {
 
         echo '<br /><br />';
 		echo '<div class="d-block">'.K_NEWLINE;
+		echo '<a name="print" href="#print" class="xmlbutton" title="'.$l['b_print'].'" onclick="window.print()">'.$l['b_print'].'</a> ';
         echo '<a href="tce_pdf_results.php?mode=3'.$filter.'" class="xmlbutton" title="'.$l['h_pdf'].'">'.$l['w_pdf'].'</a> ';
         echo '<a href="tce_email_results.php?mode=1&amp;menu_mode=startlongprocess'.$filter.'" class="xmlbutton" title="'.$l['h_email_result'].'">'.$l['w_email_result'].'</a> ';
         echo '<a href="tce_email_results.php?mode=0&amp;menu_mode=startlongprocess'.$filter.'" class="xmlbutton" title="'.$l['h_email_result'].' + PDF">'.$l['w_email_result'].' + PDF</a> ';
@@ -392,7 +420,35 @@ echo '<div class="pagehelp">'.$l['hp_result_user'].'</div><br/>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 require_once('../code/tce_page_footer.php');
+?>
+<script>
+$str2 = $("ol.question").html();
 
+
+// The array of regex patterns to look for
+$format_search =  [
+    /\[img\](.*?)\[\/img\]/ig,
+	/\[b\](.*?)\[\/b\]/ig,
+    /\[i\](.*?)\[\/i\]/ig,
+    /\[u\](.*?)\[\/u\]/ig
+]; // note: NO comma after the last entry
+
+// The matching array of strings to replace matches with
+$format_replace = [
+    '<img src="$1" />',
+	'<strong>$1</strong>',
+    '<em>$1</em>',
+    '<span style="text-decoration: underline;">$1</span>'
+];
+
+// Perform the actual conversion
+for (var i =0;i<$format_search.length;i++) {
+  $str2 = $str2.replace($format_search[i], $format_replace[i]);
+}
+$("ol.question").html($str2);
+</script>
+
+<?php
 //============================================================+
 // END OF FILE
 //============================================================+

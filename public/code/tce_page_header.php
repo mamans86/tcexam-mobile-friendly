@@ -112,10 +112,11 @@ echo '</div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 // display menu
+if($_SESSION['session_user_level']>0){
 echo '<div id="scrollayer" class="scrollmenu">'.K_NEWLINE;
 echo '<p id="menu_close" onclick="menuClose()">&times;</p>'.K_NEWLINE;
-echo '<div id="insCont" class="ta-center">'.K_NEWLINE;
-echo '	<div id="insLogo"><img width="77px" height="77px" src="'.K_PATH_HOST.K_PATH_TCEXAM.'cache/logo/'.K_INSTITUTION_LOGO.'"/></div>'.K_NEWLINE;
+echo '<div id="insCont" class="ta-center px-0 py-1em">'.K_NEWLINE;
+echo '	<div id="insLogo"><img style="width:77px;height:77px" src="'.K_PATH_HOST.K_PATH_TCEXAM.'cache/logo/'.K_INSTITUTION_LOGO.'"/></div>'.K_NEWLINE;
 echo '	<div id="appDesc"><p class="txt-small m-0 mt-10 px-5 c-gray1">'.K_APP_DESC.'</p></div>'.K_NEWLINE;
 echo '	<div id="insName"><p class="ft-bold m-0 px-5 mt-5">'.K_INSTITUTION_NAME.'</p></div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
@@ -130,6 +131,7 @@ echo '</style>'.K_NEWLINE;
 echo '<![endif]-->'.K_NEWLINE;
 require_once(dirname(__FILE__).'/tce_page_menu.php');
 echo '</div>'.K_NEWLINE;
+}
 
 echo '<div class="body">'.K_NEWLINE;
 include('../../shared/code/tce_page_timer.php');

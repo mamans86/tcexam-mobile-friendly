@@ -183,6 +183,7 @@ if ($sql) {
             $test_score_wrong = round(($m['test_score_wrong'] * $m['question_difficulty']), 3);
             $test_score_unanswered = round(($m['test_score_unanswered'] * $m['question_difficulty']), 3);
             $question = F_decode_tcecode($m['question_description']);
+            //$question = $m['question_description'];
             $explanation =  F_decode_tcecode($m['question_explanation']);
             //$answer = F_decode_tcecode($m['testlog_answer_text']);
             $answer = $m['testlog_answer_text'];
@@ -385,7 +386,33 @@ echo '<div class="pagehelp">'.$l['hp_edit_rating'].'</div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 require_once('../code/tce_page_footer.php');
+?>
+<script>
+$str = $("span#user-answer").html();
+// The array of regex patterns to look for
+$format_search =  [
+    /\[img\](.*?)\[\/img\]/ig,
+	/\[b\](.*?)\[\/b\]/ig,
+    /\[i\](.*?)\[\/i\]/ig,
+    /\[u\](.*?)\[\/u\]/ig
+]; // note: NO comma after the last entry
 
+// The matching array of strings to replace matches with
+$format_replace = [
+    '<img src="$1" />',
+	'<strong>$1</strong>',
+    '<em>$1</em>',
+    '<span style="text-decoration: underline;">$1</span>'
+];
+
+// Perform the actual conversion
+for (var i =0;i<$format_search.length;i++) {
+  $str = $str.replace($format_search[i], $format_replace[i]);
+}
+
+$("span#user-answer").html($str);
+</script>
+<?php
 //============================================================+
 // END OF FILE
 //============================================================+

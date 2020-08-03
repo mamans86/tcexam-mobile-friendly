@@ -45,7 +45,7 @@ div#scrollayer ul li a{display: block;color: #ffffff80;padding-bottom: 1em}
 div#scrollayer ul li a:hover{font-weight:bold;color:#fff}
 p#menu_close {text-align: right;padding: 0;font-weight: bold;font-size: x-large;cursor: pointer;color: #ffffff9e;line-height: 1;margin-right: 1em;display: block}
 div#menu_open{background: #263238 url(../../images/logo_tcexam_118x25.png);font-size: x-large;background-repeat: no-repeat;background-position: 47px;padding: 0.4em 0 0.4em 0.4em;color: #ffffffc2;width:50%}div#topRight{width:auto;color:#fff;text-transform:capitalize}
-#userInfoBtn,#langSelBtn{position:relative;width:30px;height:30px;background:#263238;border-radius:50px;text-align:center;line-height:2.2;border: 2px solid #ffffffc2;margin:0 10px 0 0}
+#userInfoBtn,#langSelBtn{position:relative;width:30px;height:30px;background:#263238;border-radius:50px;text-align:center;/* line-height:2.2; */border: 2px solid #ffffffc2;margin:0 10px 0 0;display: flex;align-items: center;justify-content: center;}
 
 #userInfoCont{padding:1em}
 #userInfoCont div{margin-bottom:1em}
@@ -74,7 +74,7 @@ div#ns2{width:100%}
 span#commentShow, span#qlistShow, span#information, span#nosoal{text-transform:capitalize;background: #fff;color: #263238;font-weight: bold}
 span#commentShow, span#qlistShow, span#information{margin: 0.5em 0.5em 0.5em 0;cursor: pointer;background: #ffffff;color: #616161;padding: 0.6em 0.9em;border: 1px solid #BDBDBD;}
 span#qlistShow{background: #2196F3;padding: 0.69em 1em;border: none;color: #ffffff;margin:0 0.1em 0 0.7em;}
-.qlistCont{overflow:hidden !important;position:fixed;right:-350px;top:0;background:#fff;padding:0 !important;border: 1px solid #CFD8DC;box-shadow: -7px 7px 17px 0px rgba(0,0,0,0.15);height:100%;width:275px}
+.qlistCont{overflow:hidden !important;position:fixed;right:-350px;top:0;background:#fff;padding:0 !important;border: 1px solid #CFD8DC;box-shadow: -7px 7px 17px 0px rgba(0,0,0,0.15);height:100%;width:275px;z-index: 99;}
 ol.qlist,ul.qlist{list-style:none;padding:0;overflow: auto;height:83%;border-bottom: 1px solid #CFD8DC}
 div#qlistTitle{border-bottom: 1px solid #ECEFF1}
 div#qlistTitle p{padding: 0.25em 1.5em;display: inline-block;text-transform: capitalize;font-weight: bold}
@@ -87,7 +87,7 @@ h1{color: #616161;text-align:center;padding:0.3em 0;margin:0;background: #f5f5f5
 a{text-decoration:none;color:#2196f3}
 label{text-transform:capitalize}
 label,input{display:block;width:100%;border:none}
-select,input[type=text],input[type=password]{padding:0.65em 1em; border:1px solid #CFD8DC;box-sizing: border-box;}
+select,input[type=text],input[type=password]{padding:0.65em 1em; border:1px solid #ddd;box-sizing: border-box;}
 input#install,input[type=submit],input#wclose{background:#4CAF50;border:none;padding:0.75em;color:#fff;text-transform:uppercase;font-weight:bold;margin-top:1em;cursor:pointer}
 input[type=submit]#prevquestion{background: #ffffff;color: #444;border: 1px solid #aaa}
 input#install,input[type=submit]#nextquestion{background:#2196f3}
@@ -101,7 +101,7 @@ ol.qlist li input[type=button][disabled=disabled]{background:#4CAF50;color:#fff;
 ol.qlist li.selected{background:#CFD8DC}
 div.minibutton{text-align:center}
 div.minibutton span {color: #263238 !important;}
-div.minibutton span.langselector{background:#fff;display:block;padding: 0.5em;text-align:center;color:#fff !important;display: flex;flex-wrap: wrap;justify-content: left;font-size: large}
+div.minibutton span.langselector{background:#fff;display:block;padding: 0.5em;text-align:center;color:#fff !important;display: flex;flex-wrap: wrap;justify-content: space-between;font-size: large;}
 .langselector a{display:inline-block;background:unset;margin: 0.5em;padding: 0.3em 0.5em;border: 1px solid #4CAF50;color: #000 !important;font-family: monospace;}
 .langselector a:hover{background:#4CAF50;color:#fff !important}
 .langselector span.selected{background:#4CAF50;font-weight:bold;color:#fff !important;margin: 0.5em;padding: 0.3em 0.5em;border: 1px solid #4CAF50;font-family: monospace;}
@@ -112,7 +112,7 @@ div.minibutton a span {color:#fff !important;background:#2196f3;padding:0.3em 0.
 .userbar{background:#263238;padding:0.5em 1em;color:#fff;text-align:right}
 .userbar span{color:#ffffffc7}
 .userbar a{margin-left:0.5em;background:#fff;padding:0.2em 0.5em;color:#263238;font-weight:bold}
-.message, .error, .warning {background: #FFC107;text-align: center;color: #fff;padding: 1.5em 1em;border-left: 8px solid #c79601;box-shadow: -4px 2px 10px 4px rgba(0,0,0,0.15);text-overflow: ellipsis;overflow: hidden}
+.message, .error, .warning {display: flex;align-items: center;justify-content: center;background: #FFC107;color: #fff;padding: 1.5em 1em;border-left: 8px solid #c79601;box-shadow: -4px 2px 10px 4px rgba(0,0,0,0.15);text-overflow: ellipsis;overflow: hidden}
 .error{background:#FF5722;border-left-color: #BF360C}.message{background:#2196f3;border-left-color: #0D47A1;}
 div.tcecontentbox{overflow:auto}
 div.question-block *{text-transform:unset}
@@ -195,7 +195,7 @@ i#i_qdisplayed{font-weight:unset}
 input.q_notdisplayed{background:#fff !important;color:#333 !important;border:1px solid #90A4AE}
 input.q_displayed{background:#78909C !important}
 input.q_answered{background:#000 !important}
-div#insCont{padding: 1em 0;border-top: 1px solid #ffffff40;border-bottom: 1px solid #ffffff40}
+div#insCont{padding: 0.35em 1em 1em 1em;border-top: 1px solid #ffffff40;border-bottom: 1px solid #ffffff40}
 div#insName p{border-right: 5px solid #FFEB3B;border-left: 5px solid #FFEB3B}
 div#notest,div#broken_testpage{display:block;background:#F44336;color:#fff;padding:1em 1.5em;border-left:5px solid red;border-left:8px solid #D32F2F}
 div#broken_testpage p a{background: #FFCDD2;color: #C62828;padding: 3px 7px;border-radius: 3px}
@@ -234,6 +234,8 @@ div#print-header{align-items: center;display:none}div#print-header div#instData{
 .txt-small{font-size:small !important}
 .txt-xsmall{font-size:x-small !important}
 .txt-lg{font-size:large !important}
+.px-0{padding-left:0 !important;padding-right:0 !important}
+.py-1em{padding-top:1em !important;padding-bottom:1em !important}
 .p-0{padding:0 !important}
 .px-5{padding-left:5px !important;padding-right:5px !important}
 .px-10{padding-left:10px !important;padding-right:10px !important}
@@ -245,6 +247,11 @@ div#print-header{align-items: center;display:none}div#print-header div#instData{
 .jc-sb{justify-content:space-between}
 .jc-se{justify-content:space-evenly}
 .c-pointer{cursor: pointer}
+.bd-none{border:none !important}
+.box-bd{border-width:1px;border-style:solid;padding:0.5em 1em}
+.bd-gray1{border-color:#aaa !important}
+.bd-gray4{border-color:#ddd !important}
+.bd-gray5{border-color:#eee !important}
 @media (min-width: 768px) {
 	div.navlink input{margin-top:0;margin-bottom:0}
 	form#form_resultallusers div.row span.label {color:unset;background:unset;text-align:right}
@@ -258,7 +265,7 @@ div#print-header{align-items: center;display:none}div#print-header div#instData{
 	form#form_TCExam_installer div.row span.formw input[type=checkbox]{width:unset;display:inline-block}
 	form#form_TCExam_installer div.row span.label{text-align:right} 
 	input#install,a.buttongreen, a.buttonblue, .xmlbutton, input[type=submit], input#wclose{display:inline-block !important; width:auto; margin-right:1em}
-	.login_box{width:25em;margin:auto}
+	.login_box{width:25em;margin:0 auto 30px}
 	input#login{display:block !important; width:10em; margin:2em auto 0 auto}
 	div.popupcontainer div.tceformbox div.row span.label {display:inline-block;width:16em}
 	div.popupcontainer div.tceformbox div.row span.value {display:inline-block;width:auto}

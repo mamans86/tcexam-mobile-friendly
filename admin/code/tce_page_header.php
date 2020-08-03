@@ -44,11 +44,13 @@ echo '</div>'.K_NEWLINE;
 // display menu
 echo '<div id="menuBody">'.K_NEWLINE;
 echo '<div id="scrollayer" class="scrollmenu">'.K_NEWLINE;
+if($_SESSION['session_user_level']>0){
 echo '<div id="menuContent">'.K_NEWLINE;
 echo '<p id="logoIMG"><img width="77px" height="77px" src="'.K_PATH_HOST.K_PATH_TCEXAM.'cache/logo/'.K_INSTITUTION_LOGO.'" /></p>'.K_NEWLINE;
 echo '<p id="appDesc">'.K_APP_DESC.'</p>'.K_NEWLINE;
 echo '<p id="insName">'.K_INSTITUTION_NAME.'</p>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
+}
 
 // CSS changes for old browsers
 echo '<!--[if lte IE 7]>'.K_NEWLINE;
