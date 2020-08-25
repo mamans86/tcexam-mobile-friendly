@@ -42,6 +42,7 @@ require_once('tce_page_header.php');
 
 echo '<div class="container mb-15 ta-left">'.K_NEWLINE;
 echo '<div class="d-block p-15">'.K_NEWLINE;
+echo '<span id="tcexam-desc">TCExam Mobile Friendly version is a fork of TCExam by <a href="https://mamans86.blogspot.com">@mamans86</a>. This version fix several bug in original TCExam and add UI enhancement for public and admin area.</span><br/><hr/>'.K_NEWLINE;
 echo '<span id="tcexam-desc">'.$l['d_tcexam_desc'].'</span>'.K_NEWLINE;
 
 echo '<ul class="credits">'.K_NEWLINE;

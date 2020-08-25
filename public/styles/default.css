@@ -27,7 +27,7 @@ body{
   flex-direction:column; 
 }
 img{width:auto;max-width:100%;height:auto;max-height:100%}
-div.header{background:#263238}
+div.header{background:#212121}
 div.right{height:0}
 input[type=checkbox]#show_graph,label[for=show_graph]{display:inline-block;width:auto}
 div#timerdiv{text-align:center;color: #616161;}
@@ -37,15 +37,15 @@ div#timerdiv input{text-align:center;border: 1px solid #bdbdbd;background: #ffff
 div.container{overflow:hidden}
 .hidden,#timersection,#menusection,#topofdoc,span#nosoal,span#qlistShow{display:none}
 .skip-link{height:0px;font-size:0px}
-div#scrollayer{text-transform:capitalize;color:#fff;background: #263238; height: 100%; width: 17em; margin: 0 !important;position:fixed;left:-300px;top:0;margin:0;padding:0;z-index:9;box-shadow:5px 0px 0px 3px rgba(0,0,0,0.15)}
+div#scrollayer{text-transform:capitalize;color:#fff;background: #212121; height: 100%; width: 17em; margin: 0 !important;position:fixed;left:-300px;top:0;margin:0;padding:0;z-index:9;box-shadow:5px 0px 0px 3px rgba(0,0,0,0.15)}
 div#scrollayer ul {list-style-type:none;margin:0;padding:0}
 div#scrollayer ul li {color:#fff;margin:1em 0 1em 1em}
 div#scrollayer ul li span.active{background:#009688;padding:0.5em 0.75em;display:block;font-weight:bold}
 div#scrollayer ul li a{display: block;color: #ffffff80;padding-bottom: 1em}
 div#scrollayer ul li a:hover{font-weight:bold;color:#fff}
 p#menu_close {text-align: right;padding: 0;font-weight: bold;font-size: x-large;cursor: pointer;color: #ffffff9e;line-height: 1;margin-right: 1em;display: block}
-div#menu_open{background: #263238 url(../../images/logo_tcexam_118x25.png);font-size: x-large;background-repeat: no-repeat;background-position: 47px;padding: 0.4em 0 0.4em 0.4em;color: #ffffffc2;width:50%}div#topRight{width:auto;color:#fff;text-transform:capitalize}
-#userInfoBtn,#langSelBtn{position:relative;width:30px;height:30px;background:#263238;border-radius:50px;text-align:center;/* line-height:2.2; */border: 2px solid #ffffffc2;margin:0 10px 0 0;display: flex;align-items: center;justify-content: center;}
+div#menu_open{background: #212121 url(../../images/logo_tcexam_118x25.png);font-size: x-large;background-repeat: no-repeat;background-position: 47px;padding: 0.4em 0 0.4em 0.4em;color: #ffffffc2;width:50%}div#topRight{width:auto;color:#fff;text-transform:capitalize}
+#userInfoBtn,#langSelBtn{position:relative;width:30px;height:30px;background:#212121;border-radius:50px;text-align:center;/* line-height:2.2; */border: 2px solid #ffffffc2;margin:0 10px 0 0;display: flex;align-items: center;justify-content: center;}
 
 #userInfoCont{padding:1em}
 #userInfoCont div{margin-bottom:1em}
@@ -71,7 +71,7 @@ div.row{margin:0.1em 0}
 div#nosoalCont{background:#F5F5F5;border-bottom: 1px solid #ccc;}
 div#ns1{width:10%}
 div#ns2{width:100%}
-span#commentShow, span#qlistShow, span#information, span#nosoal{text-transform:capitalize;background: #fff;color: #263238;font-weight: bold}
+span#commentShow, span#qlistShow, span#information, span#nosoal{text-transform:capitalize;background: #fff;color: #212121;font-weight: bold}
 span#commentShow, span#qlistShow, span#information{margin: 0.5em 0.5em 0.5em 0;cursor: pointer;background: #ffffff;color: #616161;padding: 0.6em 0.9em;border: 1px solid #BDBDBD;}
 span#qlistShow{background: #2196F3;padding: 0.69em 1em;border: none;color: #ffffff;margin:0 0.1em 0 0.7em;}
 .qlistCont{overflow:hidden !important;position:fixed;right:-350px;top:0;background:#fff;padding:0 !important;border: 1px solid #CFD8DC;box-shadow: -7px 7px 17px 0px rgba(0,0,0,0.15);height:100%;width:275px;z-index: 99;}
@@ -100,7 +100,7 @@ ol.qlist li acronym.offbox{background:unset;padding:0.40em 0.775em}
 ol.qlist li input[type=button][disabled=disabled]{background:#4CAF50;color:#fff;font-weight:bold}
 ol.qlist li.selected{background:#CFD8DC}
 div.minibutton{text-align:center}
-div.minibutton span {color: #263238 !important;}
+div.minibutton span {color: #212121 !important;}
 div.minibutton span.langselector{background:#fff;display:block;padding: 0.5em;text-align:center;color:#fff !important;display: flex;flex-wrap: wrap;justify-content: space-between;font-size: large;}
 .langselector a{display:inline-block;background:unset;margin: 0.5em;padding: 0.3em 0.5em;border: 1px solid #4CAF50;color: #000 !important;font-family: monospace;}
 .langselector a:hover{background:#4CAF50;color:#fff !important}
@@ -109,9 +109,9 @@ div.minibutton span.langselector{background:#fff;display:block;padding: 0.5em;te
 div.minibutton span.copyright {color: #f5f5f5 !important;display:block;padding:1.1em 0 0 0;font-size:0.80em;}
 div.minibutton span.copyright a {display:inline}
 div.minibutton a span {color:#fff !important;background:#2196f3;padding:0.3em 0.5em;font-size:0.75em}
-.userbar{background:#263238;padding:0.5em 1em;color:#fff;text-align:right}
+.userbar{background:#212121;padding:0.5em 1em;color:#fff;text-align:right}
 .userbar span{color:#ffffffc7}
-.userbar a{margin-left:0.5em;background:#fff;padding:0.2em 0.5em;color:#263238;font-weight:bold}
+.userbar a{margin-left:0.5em;background:#fff;padding:0.2em 0.5em;color:#212121;font-weight:bold}
 .message, .error, .warning {display: flex;align-items: center;justify-content: center;background: #FFC107;color: #fff;padding: 1.5em 1em;border-left: 8px solid #c79601;box-shadow: -4px 2px 10px 4px rgba(0,0,0,0.15);text-overflow: ellipsis;overflow: hidden}
 .error{background:#FF5722;border-left-color: #BF360C}.message{background:#2196f3;border-left-color: #0D47A1;}
 div.tcecontentbox{overflow:auto}
@@ -188,7 +188,7 @@ div#utilTop{background: #f5f5f5;border-bottom: 1px solid #ccc;}
 .utilTopClock{padding:0.5em;border-bottom: 1px solid #607D8B;}
 #userreg_link{display:block;text-align:center;margin:1em}
 
-div#footer{height:70px;margin-top:auto;padding:0 0.25em 0.75em 0.25em;background: #263238}
+div#footer{height:70px;margin-top:auto;padding:0 0.25em 0.75em 0.25em;background: #212121}
 span#txtInfo,h1#h1_testpage,div#infolinkCont{display:none}
 i#i_qnotdisplayed{color:#ddd}
 i#i_qdisplayed{font-weight:unset}

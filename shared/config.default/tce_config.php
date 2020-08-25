@@ -175,7 +175,7 @@ define('K_QUESTION_LINE_MAX_LENGTH', 70);
 /**
  * If true, check for possible session hijacking (set to false if you have login problems).
  */
-define('K_CHECK_SESSION_FINGERPRINT', true);
+define('K_CHECK_SESSION_FINGERPRINT', false);
 
 // Client Cookie settings
 
@@ -236,6 +236,11 @@ define('K_USE_ERROR_LOG', false);
  * If true display messages and errors on Javascript popup window.
  */
 define('K_ENABLE_JSERRORS', false);
+
+/**
+ * If true display regular HTML tags.
+ */
+define('K_ENABLE_HTML', true);
 
 /**
  * Set your own timezone here.

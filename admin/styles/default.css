@@ -761,7 +761,7 @@ div#scrollayer ul li ul {
     padding: 0.25em 0;
     border-left: 5px solid #ffffff3d;
 }
-div#scrollayer{text-transform:capitalize;color:#fff;background: #263238; margin: 0 !important;flex: 0 0 250px;border-top: 3px solid;border-image-source: linear-gradient(45deg, #F44336, #FFEB3B);border-image-slice: 1;display:none}
+div#scrollayer{text-transform:capitalize;color:#fff;background: #212121; margin: 0 !important;flex: 0 0 250px;border-top: 3px solid;border-image-source: linear-gradient(45deg, #F44336, #FFEB3B);border-image-slice: 1;display:none}
 div#scrollayer ul {list-style-type:none;margin:0;padding:0}
 div#scrollayer ul li {color:#fff;margin:1em 0 1em 1em}
 div#scrollayer ul li span.active{background:#009688;padding:0.5em 0.75em;display:block;font-weight:bold;border-right: 5px solid #ffffff7a}
@@ -1065,8 +1065,8 @@ input[type=submit]#download,input[type=submit]#delgroup,input[type=submit]#delet
 input[type=submit]#lock,input[type=submit]#unlock{
 	border:2px solid #fff;
     color: #ffffff;
-    background: #263238;
-	box-shadow: 0px 0px 0px 1px #26323885;
+    background: #212121;
+	box-shadow: 0px 0px 0px 1px #21212185;
 }
 
 form#form_delete div {

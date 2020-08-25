@@ -62,6 +62,7 @@ $menu['tce_menu_modules.php']['sub'] = array(
     'tce_show_all_questions.php' => array('link' => 'tce_show_all_questions.php', 'title' => $l['t_questions_list'], 'name' => "<i class='fas fa-stream'></i> ".$l['w_list'], 'level' => K_AUTH_ADMIN_RESULTS, 'key' => '', 'enabled' => true),
     'tce_import_questions.php' => array('link' => 'tce_import_questions.php', 'title' => $l['t_question_importer'], 'name' => "<i class='fas fa-file-import'></i> ".$l['w_import'], 'level' => K_AUTH_ADMIN_IMPORT, 'key' => '', 'enabled' => true),
     'tce_filemanager.php' => array('link' => 'tce_filemanager.php', 'title' => $l['t_filemanager'], 'name' => "<i class='fas fa-folder'></i> ".$l['w_file_manager'], 'level' => K_AUTH_ADMIN_FILEMANAGER, 'key' => '', 'enabled' => true),
+	'tmf_filebrowser.php' => array('link' => 'tmf_filebrowser.php', 'title' => 'File Browser', 'name' => "<i class='fas fa-folder-open'></i> File Browser", 'level' => K_AUTH_ADMIN_FILEMANAGER, 'key' => '', 'enabled' => true),
     'tce_edit_sslcerts.php' => array('link' => 'tce_edit_sslcerts.php', 'title' => $l['t_sslcerts'], 'name' => "<i class='fas fa-key'></i> ".$l['w_sslcerts'], 'level' => K_AUTH_ADMIN_SSLCERT, 'key' => '', 'enabled' => true)
 );
 

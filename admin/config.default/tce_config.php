@@ -139,6 +139,15 @@ define('K_ENABLE_CUSTOM_EXPORT', '');
 define('K_DOWNLOAD_BACKUPS', true);
 
 /**
+ * Set admin password for File Browser.
+ * $2y$10$ToJdHobEEeptL1qjjICaluVIC93D0LkrrIxGtH2Pj3AafTUELEAQO
+ * defaut password is tmf@123
+ * You can generate secure password hash on https://s.id/pQ2Ut or https://tinyurl.com/y3m3h9qw
+ */
+define('K_ADMIN_FILE_BROWSER_PWD', '$2y$10$ToJdHobEEeptL1qjjICaluVIC93D0LkrrIxGtH2Pj3AafTUELEAQO');
+
+
+/**
  * If true check the unicity of question and answer descriptions using utf8_bin collation when using MySQL.
  */
 define('K_MYSQL_QA_BIN_UNIQUITY', true);

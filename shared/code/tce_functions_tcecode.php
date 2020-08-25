@@ -46,7 +46,11 @@ function F_decode_tcecode($text_to_decode)
     $i=0;
 
     // escape some special HTML characters
-    $newtext = htmlspecialchars($text_to_decode, ENT_NOQUOTES, $l['a_meta_charset']);
+	if(K_ENABLE_HTML){
+		$newtext = $text_to_decode;
+	}else{
+		$newtext = htmlspecialchars($text_to_decode, ENT_NOQUOTES, $l['a_meta_charset']);
+	}
 
     // --- convert some BBCode to TCECode: ---
     // [*]list item - convert to new [li] tag
