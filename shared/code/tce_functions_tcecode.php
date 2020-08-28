@@ -47,7 +47,7 @@ function F_decode_tcecode($text_to_decode)
 
     // escape some special HTML characters
 	if(K_ENABLE_HTML){
-		$newtext = $text_to_decode;
+		$newtext = html_entity_decode($text_to_decode);
 	}else{
 		$newtext = htmlspecialchars($text_to_decode, ENT_NOQUOTES, $l['a_meta_charset']);
 	}
