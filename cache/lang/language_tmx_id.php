@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: id
-// DATE: 2020-08-02 05:59:44
+// DATE: 2020-12-27 18:42:37
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -306,7 +306,10 @@ $tmx['w_modify']='ubah';
 $tmx['w_name']='nama';
 $tmx['w_name_first']='nama depan';
 $tmx['w_name_last']='nama belakang';
+$tmx['w_unsure']='Ragu';
 $tmx['w_next']='berikutnya';
+$tmx['w_to_dark']='Beralih ke mode gelap';
+$tmx['w_to_light']='Beralih ke mode terang';
 $tmx['w_notes']='catatan';
 $tmx['w_num_answers']='jumlah jawaban';
 $tmx['w_num_questions']='jumlah soal';

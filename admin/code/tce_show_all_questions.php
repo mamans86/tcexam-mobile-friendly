@@ -254,7 +254,7 @@ echo '</div>'.K_NEWLINE;
 
 echo getFormNoscriptSelect('selectrecord');
 
-echo '<div class="row"><hr /></div>'.K_NEWLINE;
+// echo '<div class="row"><hr /></div>'.K_NEWLINE;
 
 // display questions statistics
 $qtype = array('<acronym class="offbox" title="'.$l['w_single_answer'].'">S</acronym>', '<acronym class="offbox" title="'.$l['w_multiple_answers'].'">M</acronym>', '<acronym class="offbox" title="'.$l['w_free_answer'].'">T</acronym>', '<acronym class="offbox" title="'.$l['w_ordering_answer'].'">O</acronym>'); // question types
@@ -268,17 +268,17 @@ if ($r = F_db_query($sql, $db)) {
     $countitem = 1;
     while ($m = F_db_fetch_array($r)) {
         $nqsum += $m['numquestions'];
-        $qstat .= ' + '.$m['numquestions'].' '.$qtype[($m['question_type']-1)].'';
+        $qstat .= ' + <span class="spanbox questionNum">'.$m['numquestions'].' '.$qtype[($m['question_type']-1)].'</span>';
     }
 } else {
     F_display_db_error();
 }
 
 echo '<div class="rowl">';
-echo '<span>'.$l['w_questions'].': '.$nqsum.' = '.$qstat.'</span><br />'.K_NEWLINE;
+echo '<span class="txt-large">'.$l['w_questions'].': <acronym class="onbox">'.$nqsum.'</acronym> = '.$qstat.'</span>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
-echo '<div class="row"><hr /></div>'.K_NEWLINE;
+// echo '<div class="row"><hr /></div>'.K_NEWLINE;
 
 echo '<div class="rowl">'.K_NEWLINE;
 
@@ -290,7 +290,7 @@ echo '&nbsp;'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 echo '<div class="row"><hr /></div>'.K_NEWLINE;
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row jc-center" id="btnAction">'.K_NEWLINE;
 
 // show buttons by case
 if (isset($subject_id) and ($subject_id > 0)) {
@@ -397,20 +397,24 @@ function F_show_select_questions($wherequery, $subject_module_id, $subject_id, $
         $questlist = '';
         $itemcount = $firstrow;
         while ($m = F_db_fetch_array($r)) {
+			if (F_getBoolean($m['question_enabled'])) {
+                $bgStrong = '';
+				$titleStrong = $l['w_enable'];
+            } else {
+                $bgStrong = 'bg-danger';
+				$titleStrong = $l['w_disable'];
+            }
+			
             $itemcount++;
-            $questlist .= '<li>'.K_NEWLINE;
-            $questlist .= '<strong>'.$itemcount.'.</strong> ';
-            $questlist .= '<input type="checkbox" name="questionid'.$itemcount.'" id="questionid'.$itemcount.'" value="'.$m['question_id'].'" title="'.$l['w_select'].'"';
+            $questlist .= '<li class="d-flex">'.K_NEWLINE;
+            $questlist .= '<div class="d-flex fdircol ta-center narrowCol"><strong title="'.$titleStrong.'" class="d-flex jc-center liQNum '.$bgStrong.'"><input type="checkbox" name="questionid'.$itemcount.'" id="questionid'.$itemcount.'" value="'.$m['question_id'].'" title="'.$l['w_select'].'"';
             if (isset($_REQUEST['checkall']) and ($_REQUEST['checkall'] == 1)) {
                 $questlist .= ' checked="checked"';
             }
-            $questlist .= ' />';
+            $questlist .= ' />&nbsp;'.$itemcount.'</strong>';
+			$questlist .= '<div class="qProperties d-flex fdircol">';
             // display question description
-            if (F_getBoolean($m['question_enabled'])) {
-                $questlist .= '<acronym class="onbox" title="'.$l['w_enabled'].'">+</acronym>';
-            } else {
-                $questlist .= '<acronym class="offbox" title="'.$l['w_disabled'].'">-</acronym>';
-            }
+            
             switch ($m['question_type']) {
                 case 1: {
                     $questlist .= ' <acronym class="offbox" title="'.$l['w_single_answer'].'">S</acronym>';
@@ -433,35 +437,41 @@ function F_show_select_questions($wherequery, $subject_module_id, $subject_id, $
             if ($m['question_position'] > 0) {
                 $questlist .= ' <acronym class="onbox" title="'.$l['h_position'].'">'.intval($m['question_position']).'</acronym>';
             } else {
-                $questlist .= ' <acronym class="offbox" title="'.$l['h_position'].'">&nbsp;</acronym>';
+                // $questlist .= ' <acronym class="offbox" title="'.$l['h_position'].'">&nbsp;</acronym>';
+                $questlist .= '';
             }
             if (F_getBoolean($m['question_fullscreen'])) {
                 $questlist .= ' <acronym class="onbox" title="'.$l['w_fullscreen'].': '.$l['w_enabled'].'">F</acronym>';
             } else {
-                $questlist .= ' <acronym class="offbox" title="'.$l['w_fullscreen'].': '.$l['w_disabled'].'">&nbsp;</acronym>';
+                // $questlist .= ' <acronym class="offbox" title="'.$l['w_fullscreen'].': '.$l['w_disabled'].'">&nbsp;</acronym>';
+                $questlist .= '';
             }
             if (F_getBoolean($m['question_inline_answers'])) {
                 $questlist .= ' <acronym class="onbox" title="'.$l['w_inline_answers'].': '.$l['w_enabled'].'">I</acronym>';
             } else {
-                $questlist .= ' <acronym class="offbox" title="'.$l['w_inline_answers'].': '.$l['w_disabled'].'">&nbsp;</acronym>';
+                // $questlist .= ' <acronym class="offbox" title="'.$l['w_inline_answers'].': '.$l['w_disabled'].'">&nbsp;</acronym>';
+                $questlist .= '';
             }
             if (F_getBoolean($m['question_auto_next'])) {
                 $questlist .= ' <acronym class="onbox" title="'.$l['w_auto_next'].': '.$l['w_enabled'].'">A</acronym>';
             } else {
-                $questlist .= ' <acronym class="offbox" title="'.$l['w_auto_next'].': '.$l['w_disabled'].'">&nbsp;</acronym>';
+                // $questlist .= ' <acronym class="offbox" title="'.$l['w_auto_next'].': '.$l['w_disabled'].'">&nbsp;</acronym>';
+                $questlist .= '';
             }
             if ($m['question_timer'] > 0) {
                 $questlist .= ' <acronym class="onbox" title="'.$l['h_question_timer'].'">'.intval($m['question_timer']).'</acronym>';
             } else {
-                $questlist .= ' <acronym class="offbox" title="'.$l['h_question_timer'].'">&nbsp;</acronym>';
+                // $questlist .= ' <acronym class="offbox" title="'.$l['h_question_timer'].'">&nbsp;</acronym>';
+                $questlist .= '';
             }
 
             $questlist .= ' <a href="tce_edit_question.php?subject_module_id='.$subject_module_id.'&amp;question_subject_id='.$subject_id.'&amp;question_id='.$m['question_id'].'" title="'.$l['t_questions_editor'].' [ID = '.$m['question_id'].']" class="xmlbutton btn-edit"><i class="fas fa-edit"></i>'.$l['w_edit'].'</a>';
-
-            $questlist .= '<br /><br />'.K_NEWLINE;
-            $questlist .=  '<div class="paddingleft">'.F_decode_tcecode($m['question_description']).'</div>'.K_NEWLINE;
+            $questlist .= '</div>';
+			$questlist .= '</div>';
+            $questlist .= '<div class="w-100p p-15 bg-white brad-3 borderStd"><div class="d-flex">';
+			$questlist .= '<div>'.F_decode_tcecode($m['question_description']).'</div>'.K_NEWLINE;
             if (K_ENABLE_QUESTION_EXPLANATION and !empty($m['question_explanation'])) {
-                $questlist .=  '<div class="paddingleft"><br /><span class="explanation">'.$l['w_explanation'].':</span><br />'.F_decode_tcecode($m['question_explanation']).'</div>'.K_NEWLINE;
+                $questlist .=  '<div><span class="explanation">'.$l['w_explanation'].':</span>'.F_decode_tcecode($m['question_explanation']).'</div>'.K_NEWLINE;
             }
             if (!$hide_answers) {
                 // display alternative answers
@@ -469,51 +479,65 @@ function F_show_select_questions($wherequery, $subject_module_id, $subject_id, $
 					FROM '.K_TABLE_ANSWERS.'
 					WHERE answer_question_id=\''.$m['question_id'].'\'
 					ORDER BY answer_enabled DESC,answer_position,answer_isright DESC';
-                if ($ra = F_db_query($sqla, $db)) {
+					$ansNum=0;
+                if ($ra = F_db_query($sqla, $db)) {					
                     $answlist = '';
                     while ($ma = F_db_fetch_array($ra)) {
-                        $answlist .= '<li>';
-                        if (F_getBoolean($ma['answer_enabled'])) {
-                            $answlist .= '<acronym class="onbox" title="'.$l['w_enabled'].'">+</acronym>';
+						$ansNum++;
+						if (F_getBoolean($ma['answer_enabled'])) {
+                            $bgAcro = '';
                         } else {
-                            $answlist .= '<acronym class="offbox" title="'.$l['w_disabled'].'">-</acronym>';
+                            $bgAcro = 'bg-danger';
                         }
-                        if ($m['question_type'] != 4) {
-                            if (F_getBoolean($ma['answer_isright'])) {
-                                $answlist .= ' <acronym class="okbox" title="'.$l['h_answer_right'].'">T</acronym>';
-                            } else {
-                                $answlist .= ' <acronym class="nobox" title="'.$l['h_answer_wrong'].'">F</acronym>';
-                            }
-                        }
+                        $answlist .= '<li class="d-flex ai-start"><div class="d-flex fdircol ta-center"><acronym class="black '.$bgAcro.'">'.$ansNum.'</acronym>';
+                        
+                        
                         if ($ma['answer_position'] > 0) {
                             $answlist .= ' <acronym class="onbox" title="'.$l['h_position'].'">'.intval($ma['answer_position']).'</acronym>';
                         } else {
-                            $answlist .= ' <acronym class="offbox" title="'.$l['h_position'].'">&nbsp;</acronym>';
+                            // $answlist .= ' <acronym class="offbox" title="'.$l['h_position'].'">&nbsp;</acronym>';
+                            $answlist .= '';
                         }
                         if ($ma['answer_keyboard_key'] > 0) {
                             $answlist .= ' <acronym class="onbox" title="'.$l['h_answer_keyboard_key'].'">'.F_text_to_xml(chr($ma['answer_keyboard_key'])).'</acronym>';
                         } else {
-                            $answlist .= ' <acronym class="offbox" title="'.$l['h_answer_keyboard_key'].'">&nbsp;</acronym>';
+                            // $answlist .= ' <acronym class="offbox" title="'.$l['h_answer_keyboard_key'].'">&nbsp;</acronym>';
+                            $answlist .= '';
                         }
 
-                        $answlist .= ' <a href="tce_edit_answer.php?subject_module_id='.$subject_module_id.'&amp;question_subject_id='.$subject_id.'&amp;answer_question_id='.$m['question_id'].'&amp;answer_id='.$ma['answer_id'].'" title="'.$l['t_answers_editor'].' [ID = '.$ma['answer_id'].']" class="xmlbutton btn-edit"><i class="fas fa-edit"></i>'.$l['w_edit'].'</a>';
+                        
                         //$answlist .= " ";
                         //$answlist .= "".F_decode_tcecode($ma['answer_description'])."";
-                        $answlist .= '<br /><br />'.K_NEWLINE;
-                        $answlist .= '<div class="paddingleft">'.F_decode_tcecode($ma['answer_description']).'</div>'.K_NEWLINE;
+                        // $answlist .= '<br /><br />'.K_NEWLINE;
+                        $answlist .= '</div><div class="paddingleft paddingright fgrow">'.F_decode_tcecode($ma['answer_description']).'</div>'.K_NEWLINE;
                         if (K_ENABLE_ANSWER_EXPLANATION and !empty($ma['answer_explanation'])) {
-                            $answlist .=  '<div class="paddingleft"><br /><span class="explanation">'.$l['w_explanation'].':</span><br />'.F_decode_tcecode($ma['answer_explanation']).'</div>'.K_NEWLINE;
+                            $answlist .=  '<div class="paddingleft"><span class="explanation">'.$l['w_explanation'].':</span>'.F_decode_tcecode($ma['answer_explanation']).'</div>'.K_NEWLINE;
                         }
+						
+						$answlist .= '<div class="d-flex jc-center fdircol">';
+						if ($m['question_type'] != 4) {
+                            if (F_getBoolean($ma['answer_isright'])) {
+                                $answlist .= ' <acronym class="okbox" title="'.$l['h_answer_right'].'">&check;</acronym>';
+                            } else {
+                                // $answlist .= ' <acronym class="nobox" title="'.$l['h_answer_wrong'].'">F</acronym>';
+                                $answlist .= '';
+                            }
+                        }
+						
+						$answlist .= ' <a href="tce_edit_answer.php?subject_module_id='.$subject_module_id.'&amp;question_subject_id='.$subject_id.'&amp;answer_question_id='.$m['question_id'].'&amp;answer_id='.$ma['answer_id'].'" title="'.$l['t_answers_editor'].' [ID = '.$ma['answer_id'].']" class="btn-edit-revert ps-start"><i class="fas fa-edit"></i></a>';
+						
+                        $answlist .= '</div>'.K_NEWLINE;
                         $answlist .= '</li>'.K_NEWLINE;
                     }
+					$questlist .= "</div>";
                     if (strlen($answlist) > 0) {
-                        $questlist .= "<ol class=\"answer\">\n".$answlist."</ol><br /><br />\n";
+                        $questlist .= "<ol class=\"answer\">\n".$answlist."</ol>\n";
                     }
                 } else {
                     F_display_db_error();
                 }
             } // end if hide_answers
-            $questlist .= '</li>'.K_NEWLINE;
+            $questlist .= '</div></li>'.K_NEWLINE;
         }
         if (strlen($questlist) > 0) {
             // display the list

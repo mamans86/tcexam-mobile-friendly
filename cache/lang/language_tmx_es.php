@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: es
-// DATE: 2020-08-02 05:59:26
+// DATE: 2020-12-27 19:11:28
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -306,7 +306,10 @@ $tmx['w_modify']='modificar';
 $tmx['w_name']='nombre';
 $tmx['w_name_first']='nombre';
 $tmx['w_name_last']='apellido';
+$tmx['w_unsure']='Unsure';
 $tmx['w_next']='siguiente';
+$tmx['w_to_dark']='Switch to dark mode';
+$tmx['w_to_light']='Switch to light mode';
 $tmx['w_notes']='notas';
 $tmx['w_num_answers']='número de respuestas';
 $tmx['w_num_questions']='número de preguntas';

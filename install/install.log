@@ -1,0 +1,106 @@
+--- START LOG: 2020-12-07 14:38:48 ---
+[START] database installation
+  create or replace database and get connection
+  [START] create database tables
+    [SQL] 0
+    [SQL] 1
+    [SQL] 2
+    [SQL] 3
+    [SQL] 4
+    [SQL] 5
+    [SQL] 6
+    [SQL] 7
+    [SQL] 8
+    [SQL] 9
+    [SQL] 10
+    [SQL] 11
+    [SQL] 12
+    [SQL] 13
+    [SQL] 14
+    [SQL] 15
+    [SQL] 16
+    [SQL] 17
+    [SQL] 18
+    [SQL] 19
+    [SQL] 20
+    [SQL] 21
+    [SQL] 22
+    [SQL] 23
+    [SQL] 24
+    [SQL] 25
+    [SQL] 26
+    [SQL] 27
+    [SQL] 28
+    [SQL] 29
+    [SQL] 30
+    [SQL] 31
+    [SQL] 32
+    [SQL] 33
+    [SQL] 34
+    [SQL] 35
+    [SQL] 36
+    [SQL] 37
+    [SQL] 38
+    [SQL] 39
+    [SQL] 40
+    [SQL] 41
+    [SQL] 42
+    [SQL] 43
+    [SQL] 44
+    [SQL] 45
+    [SQL] 46
+    [SQL] 47
+    [SQL] 48
+    [SQL] 49
+    [SQL] 50
+    [SQL] 51
+    [SQL] 52
+    [SQL] 53
+    [SQL] 54
+    [SQL] 55
+    [SQL] 56
+    [SQL] 57
+    [SQL] 58
+    [SQL] 59
+    [SQL] 60
+    [SQL] 61
+    [SQL] 62
+    [SQL] 63
+    [SQL] 64
+    [SQL] 65
+    [SQL] 66
+  [END:OK] create database tables
+  [START] fill tables with default data
+    [SQL] 0
+    [SQL] 1
+    [SQL] 2
+    [SQL] 3
+    [SQL] 4
+  [END:OK] fill tables with default data
+[END] database installation
+[START] update config files
+  [START] process file: tce_db_config.php
+    open file [OK]
+    read file [OK]
+      update value 0 [OK]
+      update value 1 [OK]
+      update value 2 [OK]
+      update value 3 [OK]
+      update value 4 [OK]
+      update value 5 [OK]
+      update value 6 [OK]
+    write file [OK]
+    close file [OK]
+  [END] process file: tce_db_config.php
+  [START] process file: tce_paths.php
+    open file [OK]
+    read file [OK]
+      update value 0 [OK]
+      update value 1 [OK]
+      update value 2 [OK]
+      update value 3 [OK]
+    write file [OK]
+    close file [OK]
+  [END] process file: tce_paths.php
+[END] update config files
+--- END LOG: 2020-12-07 14:39:31 ---

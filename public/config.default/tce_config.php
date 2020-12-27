@@ -122,9 +122,19 @@ define('K_WYSIWYG_BBCODE',true);
 define('K_PUBLIC_FILE_UPLOAD',true);
 
 /**
+ * If true show basic score on question list
+ */
+define('K_SHOW_BASIC_SCORE',false);
+
+/**
+ * If true show question description on question list
+ */
+define('K_SHOW_QDESC',false);
+
+/**
  * If true enable pagehelp on Public Area.
  */
-define('K_PUBLIC_PAGEHELP',true);
+define('K_PUBLIC_PAGEHELP',false);
 
 // --- INCLUDE FILES -----------------------------------------------------------
 

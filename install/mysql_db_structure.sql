@@ -75,7 +75,7 @@ CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 CREATE TABLE tce_questions (
 	question_id Bigint UNSIGNED NOT NULL AUTO_INCREMENT,
 	question_subject_id Bigint UNSIGNED NOT NULL,
-	question_description Text NOT NULL,
+	question_description Longtext NOT NULL,
 	question_explanation Text NULL,
 	question_type Smallint(3) UNSIGNED NOT NULL DEFAULT 1,
 	question_difficulty Smallint NOT NULL DEFAULT 1,
@@ -92,7 +92,7 @@ CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 CREATE TABLE tce_answers (
 	answer_id Bigint UNSIGNED NOT NULL AUTO_INCREMENT,
 	answer_question_id Bigint UNSIGNED NOT NULL,
-	answer_description Text NOT NULL,
+	answer_description Longtext NOT NULL,
 	answer_explanation Text NULL,
 	answer_isright Bool NOT NULL DEFAULT '0',
 	answer_enabled Bool NOT NULL DEFAULT '0',

@@ -75,3 +75,15 @@ $("span#nosoal").appendTo("div#nosoalTop").show();
 $("span#qlistShow").appendTo("div#qlistTop").show();
 
 $("div.pagehelp").prepend("<div><i class='fas fa-info-circle'></i></div>");
+
+$("#showPass").click(function(){
+	$(this).toggle();
+	$("#hidePass").toggle();
+	$("#xuser_password").attr("type","text");
+});
+
+$("#hidePass").click(function(){
+	$(this).toggle();
+	$("#showPass").toggle();
+	$("#xuser_password").attr("type","password");
+});

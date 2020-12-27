@@ -42,6 +42,7 @@ $pagelevel = 0;
 require_once('../../shared/code/tce_authorization.php');
 
 $thispage_title = $l['t_password_assistance'];
+$thispage_title_icon = '<span class="icon-lock"></span>';
 require_once('../code/tce_page_header.php');
 require_once('../../shared/code/tce_functions_form.php');
 
@@ -91,14 +92,16 @@ if (isset($_POST['resetpassword'])) { // process submitted data
 
 echo '<div class="container">'.K_NEWLINE;
 
-echo '<div class="tceformbox">'.K_NEWLINE;
+echo '<div class="tceformbox p-1em">'.K_NEWLINE;
 echo '<form action="'.$_SERVER['SCRIPT_NAME'].'" method="post" enctype="multipart/form-data" id="form_usereditor">'.K_NEWLINE;
 
-echo '<p>'.$l['d_reset_password'].'</p>'.K_NEWLINE;
+echo $l['d_reset_password'];
 
+echo '<div class="box-bd-2 bd-gray5 mt-5 brad">';
 echo getFormRowTextInput('user_email', $l['w_email'], $l['h_usered_email'], '', '', K_EMAIL_RE_PATTERN, 255, false, false, false, '');
+echo '</div>';
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row d-flex-jc-center">'.K_NEWLINE;
 
 F_submit_button('resetpassword', $l['w_submit'], $l['h_submit']);
 

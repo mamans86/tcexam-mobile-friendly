@@ -156,12 +156,10 @@ echo '<a href="index.php" id="index-link" title="'.$l['h_index'].'">&lt; '.$l['w
 
 echo '<div class="pagehelp">'.$l['hp_result_user'].'</div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
-
-require_once('../code/tce_page_footer.php');
 ?>
 <script>
-$str2 = $("ol.question").html();
-
+var $str2 = document.querySelector("ol.question").innerHTML;
+var $str3 = document.querySelector("ol.question");
 
 // The array of regex patterns to look for
 $format_search =  [
@@ -183,9 +181,10 @@ $format_replace = [
 for (var i =0;i<$format_search.length;i++) {
   $str2 = $str2.replace($format_search[i], $format_replace[i]);
 }
-$("ol.question").html($str2);
+$str3.innerHTML = $str2;
 </script>
 <?php
+require_once('../code/tce_page_footer.php');
 //============================================================+
 // END OF FILE
 //============================================================+

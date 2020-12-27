@@ -24297,6 +24297,86 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
             <seg>آخری نام</seg>
          </tuv>
       </tu>
+	  <tu tuid="w_unsure" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>Ragu</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>Ragu</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>Unsure</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>Unsure</seg>
+         </tuv>
+      </tu>
       <tu tuid="w_next" datatype="plaintext">
          <tuv xml:lang="NL">
             <seg>volgende</seg>
@@ -24375,6 +24455,166 @@ Statistiken der Fragen und Antworten können nicht nur online betrachtet werden,
          </tuv>
          <tuv xml:lang="UR">
             <seg>اگلا</seg>
+         </tuv>
+      </tu>
+	  <tu tuid="w_to_dark" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>Beralih ke modus gelap</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>Beralih ke mode gelap</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>Switch to dark mode</seg>
+         </tuv>
+      </tu>
+	  <tu tuid="w_to_light" datatype="plaintext">
+         <tuv xml:lang="NL">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="MR">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="IT">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="TR">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="JP">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="VN">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="HI">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="MS">
+            <seg>Beralih ke modus terang</seg>
+         </tuv>
+         <tuv xml:lang="PL">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="EN">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="HE">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="EL">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="RU">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="ID">
+            <seg>Beralih ke mode terang</seg>
+         </tuv>
+         <tuv xml:lang="FR">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="BG">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="AZ">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="ES">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="CN">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="HU">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="BR">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="RO">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="FA">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="AR">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="DE">
+            <seg>Switch to light mode</seg>
+         </tuv>
+         <tuv xml:lang="UR">
+            <seg>Switch to light mode</seg>
          </tuv>
       </tu>
       <tu tuid="w_notes" datatype="plaintext">

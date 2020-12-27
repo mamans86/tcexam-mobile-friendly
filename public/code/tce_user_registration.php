@@ -45,7 +45,11 @@ require_once('../../shared/code/tce_functions_otp.php');
 
 $thispage_title = $l['t_user_registration'];
 $thispage_description = $l['hp_user_registration'];
+$enable_calendar=1;
 require_once('../code/tce_page_header.php');
+?>
+<style>label{display:inline-block;width:auto;font-weight:bold}</style>
+<?php
 require_once('../../shared/code/tce_functions_form.php');
 
 // set fields descriptions for error messages
@@ -329,7 +333,7 @@ if ($regfields['user_agreement'] > 0) {
     echo '</div>'.K_NEWLINE;
 }
 
-echo '<div class="row">'.K_NEWLINE;
+echo '<div class="row py-1em px-10">'.K_NEWLINE;
 
 F_submit_button('add', $l['w_add'], $l['h_add']);
 

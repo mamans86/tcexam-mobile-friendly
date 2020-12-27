@@ -153,7 +153,7 @@ if (isset($_REQUEST['forceinstall']) AND ($_REQUEST['forceinstall'] == 1)) {
 			AND isset($_REQUEST['db_host']) AND $_REQUEST['db_host']
 			AND isset($_REQUEST['db_port']) AND $_REQUEST['db_port']
 			AND isset($_REQUEST['db_user']) AND $_REQUEST['db_user']
-			AND isset($_REQUEST['db_password']) AND $_REQUEST['db_password']
+			//AND isset($_REQUEST['db_password']) AND $_REQUEST['db_password']
 			AND ((isset($_REQUEST['database_name']) AND $_REQUEST['database_name']) OR ($_REQUEST['db_type'] == 'ORACLE'))
 			AND isset($_REQUEST['table_prefix']) AND $_REQUEST['table_prefix']
 			AND isset($_REQUEST['path_host']) AND $_REQUEST['path_host']

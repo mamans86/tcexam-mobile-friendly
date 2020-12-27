@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: ar
-// DATE: 2020-08-02 05:59:02
+// DATE: 2020-12-27 19:11:24
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -306,7 +306,10 @@ $tmx['w_modify']='تعديل';
 $tmx['w_name']='اﻻسم';
 $tmx['w_name_first']='اﻻسم اﻻول';
 $tmx['w_name_last']='اﻻسم اﻻخير';
+$tmx['w_unsure']='Unsure';
 $tmx['w_next']='التالي';
+$tmx['w_to_dark']='Switch to dark mode';
+$tmx['w_to_light']='Switch to light mode';
 $tmx['w_notes']='ملاحظات';
 $tmx['w_num_answers']='عدد اﻻجابات';
 $tmx['w_num_questions']='عدد اﻻسئلة';

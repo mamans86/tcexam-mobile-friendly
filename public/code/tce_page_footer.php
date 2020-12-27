@@ -38,7 +38,7 @@ echo '</div>'.K_NEWLINE; //close div#footer
 echo '<!-- '.base64_decode(K_KEY_SECURITY).' -->'.K_NEWLINE;
 
 echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'plugins.js"></script>'.K_NEWLINE;
-echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'main.js"></script>'.K_NEWLINE;
+//echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'main.js"></script>'.K_NEWLINE;
 echo '</body>'.K_NEWLINE;
 echo '</html>';
 

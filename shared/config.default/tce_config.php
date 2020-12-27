@@ -37,7 +37,7 @@ define ('K_TCEXAM_VERSION', file_get_contents('../../VERSION'));
 /**
  * 2-letters code for default language.
  */
-define('K_LANGUAGE', 'en');
+define('K_LANGUAGE', 'id');
 
 /**
  * If true, display a language selector.
@@ -50,7 +50,16 @@ define('K_ADDRESS_LINE1','Pegaden Tengah Street, Wonopringgo');
 define('K_ADDRESS_LINE2','Pekalongan Regency');
 define('K_ADDRESS_LINE3','Province Central Java');
 
+/**
+* If true, force user to mark all question before terminate test
+*/
 define('K_FORCE_ANSWER_ALL',true);
+
+/**
+* If true, enable chat feature
+*/
+define('K_CHAT_FEATURE',false);
+
 /**
  * Defines a serialized array of available languages.
  * Each language is indexed using a 2-letters code (ISO 639).
@@ -98,7 +107,7 @@ define('K_OTP_LOGIN', false);
 /**
  * Ratio at which the delay will be increased after every failed login attempt.
  */
-define('K_BRUTE_FORCE_DELAY_RATIO', 2);
+define('K_BRUTE_FORCE_DELAY_RATIO', 0);
 
 /**
  * Number of difficulty levels for questions.
@@ -108,7 +117,7 @@ define('K_QUESTION_DIFFICULTY_LEVELS', 10);
 /**
  * If true enable virtual keyboard on some textarea fields.
  */
-define('K_ENABLE_VIRTUAL_KEYBOARD', true);
+define('K_ENABLE_VIRTUAL_KEYBOARD', false);
 
 /**
  * Popup window height in pixels for test info.
@@ -224,7 +233,7 @@ define('K_LOGOUT_URL', '');
 /**
  * Define error reporting types for debug.
  */
-define('K_ERROR_TYPES', E_ALL | E_STRICT);
+define('K_ERROR_TYPES', 0);
 //define ('K_ERROR_TYPES', E_ERROR | E_WARNING | E_PARSE);
 
 /**
@@ -247,7 +256,7 @@ define('K_ENABLE_HTML', true);
  * Possible values are listed on:
  * http://php.net/manual/en/timezones.php
  */
-define('K_TIMEZONE', 'UTC');
+define('K_TIMEZONE', 'Asia/Jakarta');
 
 /**
  * Default minutes used to extend test duration.

@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: bg
-// DATE: 2020-08-02 05:59:08
+// DATE: 2020-12-27 19:11:25
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -306,7 +306,10 @@ $tmx['w_modify']='променя';
 $tmx['w_name']='име';
 $tmx['w_name_first']='име';
 $tmx['w_name_last']='фамилия';
+$tmx['w_unsure']='Unsure';
 $tmx['w_next']='следващ';
+$tmx['w_to_dark']='Switch to dark mode';
+$tmx['w_to_light']='Switch to light mode';
 $tmx['w_notes']='забележки';
 $tmx['w_num_answers']='брой отговори';
 $tmx['w_num_questions']='брой въпроси';

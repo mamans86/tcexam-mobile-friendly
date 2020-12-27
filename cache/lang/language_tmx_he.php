@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: he
-// DATE: 2020-08-02 05:59:35
+// DATE: 2020-12-27 19:11:31
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -306,7 +306,10 @@ $tmx['w_modify']='עדכן';
 $tmx['w_name']='שם';
 $tmx['w_name_first']='שם פרטי';
 $tmx['w_name_last']='שם משפחה';
+$tmx['w_unsure']='Unsure';
 $tmx['w_next']='הבא בתור';
+$tmx['w_to_dark']='Switch to dark mode';
+$tmx['w_to_light']='Switch to light mode';
 $tmx['w_notes']='הערות';
 $tmx['w_num_answers']='מספר התשובות';
 $tmx['w_num_questions']='מספר השאלות';

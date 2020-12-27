@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: ms
-// DATE: 2020-08-02 05:59:57
+// DATE: 2020-12-27 19:11:34
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -306,7 +306,10 @@ $tmx['w_modify']='mengubah suai';
 $tmx['w_name']='nama';
 $tmx['w_name_first']='nama pertama';
 $tmx['w_name_last']='nama keluarga';
+$tmx['w_unsure']='Ragu';
 $tmx['w_next']='lain';
+$tmx['w_to_dark']='Beralih ke modus gelap';
+$tmx['w_to_light']='Beralih ke modus terang';
 $tmx['w_notes']='nota';
 $tmx['w_num_answers']='jumlah bagi jawapan';
 $tmx['w_num_questions']='bilangan soalan';

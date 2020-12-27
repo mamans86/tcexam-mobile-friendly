@@ -49,7 +49,7 @@ define('K_DATABASE_PORT', '3306');
 /**
  * database name (TCExam)
  */
-define('K_DATABASE_NAME', 'tmf');
+define('K_DATABASE_NAME', 'tcexam');
 
 /**
  * database user name
@@ -159,6 +159,12 @@ define('K_TABLE_SSLCERTS', K_TABLE_PREFIX.'sslcerts');
  * This table contains the list of SSL certificates enabled for a selected test.
  */
 define('K_TABLE_TEST_SSLCERTS', K_TABLE_PREFIX.'testsslcerts');
+
+/**
+* Chat Related Table
+*/
+define('K_TABLE_CHAT_LOG', K_TABLE_PREFIX.'chat_log');
+define('K_TABLE_CHAT_MSG', K_TABLE_PREFIX.'chat_msg');
 
 //============================================================+
 // END OF FILE

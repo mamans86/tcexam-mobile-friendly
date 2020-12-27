@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: ur
-// DATE: 2020-08-02 06:00:16
+// DATE: 2020-12-27 19:11:41
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -306,7 +306,10 @@ $tmx['w_modify']='تبدیل کریں';
 $tmx['w_name']='نام';
 $tmx['w_name_first']='پہلا نام';
 $tmx['w_name_last']='آخری نام';
+$tmx['w_unsure']='Unsure';
 $tmx['w_next']='اگلا';
+$tmx['w_to_dark']='Switch to dark mode';
+$tmx['w_to_light']='Switch to light mode';
 $tmx['w_notes']='نوٹس';
 $tmx['w_num_answers']='جوا کی تعداد';
 $tmx['w_num_questions']='سوالات کی تعداد';

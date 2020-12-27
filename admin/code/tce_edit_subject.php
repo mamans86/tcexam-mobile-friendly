@@ -403,7 +403,7 @@ echo '<br />'.K_NEWLINE;
 echo '<a href="#" title="'.$l['h_preview'].'" class="xmlbutton" onclick="previewWindow=window.open(\'tce_preview_tcecode.php?tcexamcode=\'+encodeURIComponent(document.getElementById(\'form_subjecteditor\').subject_description.value),\'previewWindow\',\'dependent,height=500,width=500,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no\'); return false;">'.$l['w_preview'].'</a>'.K_NEWLINE;
 
 echo '</span>'.K_NEWLINE;
-echo '<span class="formw d-block" style="border:1px solid #808080;">'.K_NEWLINE;
+echo '<span class="formw d-block">'.K_NEWLINE;
 echo '<textarea cols="50" rows="5" name="subject_description" id="subject_description" onselect="FJ_update_selection(document.getElementById(\'form_subjecteditor\').subject_description)" title="'.$l['h_subject_description'].'"';
 if (K_ENABLE_VIRTUAL_KEYBOARD) {
     echo ' class="keyboardInput"';

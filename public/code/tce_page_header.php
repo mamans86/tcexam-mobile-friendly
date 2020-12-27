@@ -35,7 +35,13 @@ require_once('tce_xhtml_header.php');
 // display header (image logo + timer)
 echo '<div class="header">'.K_NEWLINE;
 echo '<div class="d-flex jc-sb">'.K_NEWLINE;
-echo '<div id="menu_open"><span onclick="menuOpen()">&#9776;</span></div>'.K_NEWLINE;
+echo '<div id="menu_open">';
+//if(isset($_SESSION['session_user_level']) and $_SESSION['session_user_level']>0){
+	echo '<span onclick="menuOpen()">&#9776;</span>';
+//}else{
+//	echo '<span>&#9776;</span>';
+//}
+echo '</div>'.K_NEWLINE;
 echo '<div id="topRight" class="d-flex jc-se c-pointer c-gray4">'.K_NEWLINE;
 
 if (K_LANGUAGE_SELECTOR) {
@@ -49,9 +55,9 @@ if (K_LANGUAGE_SELECTOR) {
 	$activeLang = $lngstr;
 }
 
-echo '<div class="hidden show768 mr-5" id="langSelLbl" onclick="langSelOpen()">'.$l['w_language'].'</div><div id="langSelBtn" onclick="langSelOpen()"><i class="fas fa-flag"></i><span id="activeLang">'.$activeLang.'</span></div>'.K_NEWLINE;
+echo '<div class="hidden show768 mr-5" id="langSelLbl" onclick="langSelOpen()">'.$l['w_language'].'</div><div id="langSelBtn" onclick="langSelOpen()"><span class="icon-flag"></span><span id="activeLang">'.$activeLang.'</span></div>'.K_NEWLINE;
 if(isset($_SESSION['session_user_level']) and $_SESSION['session_user_level']>0){
-echo '<div class="hidden show768 mr-5" id="userInfoLbl" onclick="userInfoOpen()">'.$l['w_user'].'</div> <div id="userInfoBtn" onclick="userInfoOpen()"><i class="fas fa-user"></i></div>'.K_NEWLINE;
+echo '<div class="hidden show768 mr-5" id="userInfoLbl" onclick="userInfoOpen()">'.$l['w_user'].'</div> <div id="userInfoBtn" onclick="userInfoOpen()"><span class="icon-user"></span></div>'.K_NEWLINE;
 }
 
 echo '</div></div>'.K_NEWLINE;
@@ -63,7 +69,7 @@ echo '</div>'.K_NEWLINE;
 
 if(isset($_SESSION['session_user_level']) and $_SESSION['session_user_level']>0){
 echo '<div class="qlistCont" id="userInfoID">'.K_NEWLINE;
-echo '<div id="qlistTitle"><div><p><i class="fas fa-user"></i> '.$l['w_user'].'</p><span id="qlistClose" onclick="userInfoHide()">&times;<span></div></div>';
+echo '<div id="qlistTitle"><div><p><span class="icon-user"></span> '.$l['w_user'].'</p><span id="qlistClose" onclick="userInfoHide()">&times;<span></div></div>';
 echo '<div id="userInfoCont">'.K_NEWLINE;
 echo '<div><span>'.$l['w_level'].'</span><span>'.$_SESSION['session_user_level'].'</span></div>'.K_NEWLINE;
 echo '<div><span>'.$l['w_username'].'</span><span>'.$_SESSION['session_user_name'].'</span></div>'.K_NEWLINE;
@@ -71,13 +77,13 @@ echo '<div><span>'.$l['w_name'].'</span><span>'.F_getFirstName($_SESSION['sessio
 if($_SESSION['session_user_lastname']!=""){
 	echo '<div><span>'.$l['w_lastname'].'</span><span>'.F_getFirstName($_SESSION['session_user_lastname']).'</span></div>'.K_NEWLINE;
 }
-echo '<div class="logout"><span><a href="tce_logout.php" class="logoutbutton" title="'.$l['h_logout_link'].'" onclick="return confirm(\''.$l['w_logout'].'\')"><i class="fas fa-sign-out-alt"></i> '.$l['w_logout'].'</a></span></div>'.K_NEWLINE;
+echo '<div class="logout"><span><a href="tce_logout.php" class="logoutbutton" title="'.$l['h_logout_link'].'" onclick="return confirm(\''.$l['w_logout'].'\')"><span class="icon-switch"></span> '.$l['w_logout'].'</a></span></div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 }
 
 echo '<div class="qlistCont" id="langSelID">'.K_NEWLINE;
-echo '<div id="qlistTitle"><div><p><i class="fas fa-flag"></i> '.$l['w_language'].'</p><span id="qlistClose" onclick="langSelHide()">&times;<span></div></div>';
+echo '<div id="qlistTitle"><div><p><span class="icon-flag"></span> '.$l['w_language'].'</p><span id="qlistClose" onclick="langSelHide()">&times;<span></div></div>';
 echo '<div>'.K_NEWLINE;
 // language selector
 //if (K_LANGUAGE_SELECTOR and (stristr($_SERVER['SCRIPT_NAME'], 'tce_test_execute.php') === false)) {
@@ -112,7 +118,7 @@ echo '</div>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
 // display menu
-if($_SESSION['session_user_level']>0){
+//if($_SESSION['session_user_level']>0){
 echo '<div id="scrollayer" class="scrollmenu">'.K_NEWLINE;
 echo '<p id="menu_close" onclick="menuClose()">&times;</p>'.K_NEWLINE;
 echo '<div id="insCont" class="ta-center px-0 py-1em">'.K_NEWLINE;
@@ -131,7 +137,7 @@ echo '</style>'.K_NEWLINE;
 echo '<![endif]-->'.K_NEWLINE;
 require_once(dirname(__FILE__).'/tce_page_menu.php');
 echo '</div>'.K_NEWLINE;
-}
+//}
 
 echo '<div class="body">'.K_NEWLINE;
 include('../../shared/code/tce_page_timer.php');

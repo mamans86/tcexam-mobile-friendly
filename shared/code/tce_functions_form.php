@@ -254,7 +254,7 @@ function getFormRowTextInput($field_name, $name, $description = '', $tip = '', $
     $str = ''; // string to return
     $button = '';
     if ($date) {
-        $button = '<button name="'.$field_name.'_date_trigger" id="'.$field_name.'_date_trigger" title="'.$l['w_calendar'].'"><i class="fas fa-calendar"></i></button>';
+        $button = '<button name="'.$field_name.'_date_trigger" id="'.$field_name.'_date_trigger" title="'.$l['w_calendar'].'"><span class="icon-calendar"></span></button>';
         $jsdate = 'Calendar.setup({inputField: "'.$field_name.'", ifFormat: "%Y-%m-%d", button: "'.$field_name.'_date_trigger"});'.K_NEWLINE;
         $format = '^([0-9]{4})([\-])([0-9]{2})([\-])([0-9]{2})$';
         $maxlen = 10;
@@ -262,7 +262,7 @@ function getFormRowTextInput($field_name, $name, $description = '', $tip = '', $
             $tip = $l['w_date_format'];
         }
     } elseif ($datetime) {
-        $button = '<button name="'.$field_name.'_date_trigger" id="'.$field_name.'_date_trigger" title="'.$l['w_calendar'].'"><i class="fas fa-calendar"></i></button>';
+        $button = '<button name="'.$field_name.'_date_trigger" id="'.$field_name.'_date_trigger" title="'.$l['w_calendar'].'"><span class="icon-calendar"></span></button>';
         $jsdate = 'Calendar.setup({inputField: "'.$field_name.'", ifFormat: "%Y-%m-%d %H:%M:%S", showsTime: "true", button: "'.$field_name.'_date_trigger"});'.K_NEWLINE;
         $format = '^([0-9]{4})([\-])([0-9]{2})([\-])([0-9]{2})([ ])([0-9]{2})([\:])([0-9]{2})([\:])([0-9]{2})$';
         $maxlen = 19;

@@ -254,7 +254,7 @@ function F_show_select_user($order_field, $orderdir, $firstrow, $rowsperpage, $g
                 F_show_page_navigator($_SERVER['SCRIPT_NAME'], $sql, $firstrow, $rowsperpage, $param_array);
             }
 
-            echo '<div class="row d-block ta-center">'.K_NEWLINE;
+            echo '<div class="row jc-center" id="btnAction">'.K_NEWLINE;
             echo '<br />';
             echo '<a href="tce_xml_users.php" class="xmlbutton" title="'.$l['h_xml_export'].'">XML</a> ';
             echo '<a href="tce_xml_users.php?format=JSON" class="xmlbutton" title="JSON">JSON</a> ';

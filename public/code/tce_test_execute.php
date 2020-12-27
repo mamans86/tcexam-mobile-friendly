@@ -34,7 +34,7 @@ require_once('../config/tce_config.php');
 
 $pagelevel = K_AUTH_PUBLIC_TEST_EXECUTE;
 $thispage_title = $l['t_test_execute'];
-$thispage_title_icon = '<i class="fas fa-clock"></i>';
+$thispage_title_icon = '<span class="icon-clock"></span>';
 $thispage_description = $l['hp_test_execute'];
 require_once('../../shared/code/tce_authorization.php');
 require_once('../../shared/code/tce_functions_form.php');

@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: hi
-// DATE: 2020-08-02 05:59:38
+// DATE: 2020-12-27 19:11:32
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -306,7 +306,10 @@ $tmx['w_modify']='संशोधन ';
 $tmx['w_name']='नाम';
 $tmx['w_name_first']='प्रथम नाम';
 $tmx['w_name_last']='अंतिम नाम';
+$tmx['w_unsure']='Unsure';
 $tmx['w_next']='अगला';
+$tmx['w_to_dark']='Switch to dark mode';
+$tmx['w_to_light']='Switch to light mode';
 $tmx['w_notes']='नोटस ';
 $tmx['w_num_answers']='जवाबो की संख्या';
 $tmx['w_num_questions']='प्रश्नों की संख्या';

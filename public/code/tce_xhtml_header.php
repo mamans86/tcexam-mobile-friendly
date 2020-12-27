@@ -89,6 +89,7 @@ if (!isset($thispage_style) or empty($thispage_style)) {
   echo '<meta property="og:image" content="">'.K_NEWLINE;
   // calendar
   //$enable_calendar=true;
+  //echo $enable_calendar;
 if (isset($enable_calendar) and $enable_calendar) {
     echo '<style type="text/css">@import url('.K_PATH_SHARED_JSCRIPTS.'jscalendar/calendar-blue.css);</style>'.K_NEWLINE;
     echo '<script type="text/javascript" src="'.K_PATH_SHARED_JSCRIPTS.'jscalendar/calendar.js"></script>'.K_NEWLINE;
@@ -107,16 +108,16 @@ echo '<!-- '.'T'.'C'.'E'.'x'.'a'.'m'.'19'.'73'.'01'.'04'.' -->'.K_NEWLINE;
   <!-- Place favicon.ico in the root directory -->
   <?php
   echo '<link rel="shortcut icon" href="'.$thispage_icon.'" />'.K_NEWLINE;
+  //$svgBg = '<link rel="stylesheet" href="'.K_PATH_HOST.K_PATH_TCEXAM.'public/styles/bg/'.rand(1,10).'.css">';
   ?>
-  <link rel="stylesheet" href="<?php echo K_PATH_HOST.K_PATH_TCEXAM.'public/styles/normalize.css'; ?>">
-  <link rel="stylesheet" href="<?php echo K_PATH_HOST.K_PATH_TCEXAM.'public/styles/main.css'; ?>">
   <link rel="stylesheet" href="<?php echo $thispage_style; ?>">
-  <link rel="stylesheet" href="<?php echo K_PATH_HOST.K_PATH_TCEXAM; ?>public/styles/fontawesome/css/all.min.css" type="text/css" />
+  <?php //echo $svgBg.K_NEWLINE; ?>
+  <!--link rel="stylesheet" href="<?php echo K_PATH_HOST.K_PATH_TCEXAM; ?>public/styles/fontawesome/css/all.min.css" type="text/css" /-->
   <meta name="theme-color" content="#fafafa">
   <?php
   //echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/jquery.min.js"></script>'.K_NEWLINE;
-  echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/wysibb/jquery-1.11.0.min.js"></script>'.K_NEWLINE;
-  echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/modernizr-3.11.2.min.js"></script>'.K_NEWLINE;
+  //echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/wysibb/jquery.wysibb.min.js"></script>'.K_NEWLINE;
+  // echo '<script src="'.K_PATH_SHARED_JSCRIPTS.'vendor/modernizr-3.11.2.min.js"></script>'.K_NEWLINE;
   
   if(!K_PUBLIC_PAGEHELP){
 	  echo '<style>div.pagehelp{display:none}</style>'.K_NEWLINE;
@@ -125,7 +126,7 @@ echo '<!-- '.'T'.'C'.'E'.'x'.'a'.'m'.'19'.'73'.'01'.'04'.' -->'.K_NEWLINE;
 </head>
 <?php
 echo '<body>'.K_NEWLINE;
-
+echo '<div class="backdrop" onclick="drawerClose()"></div>'.K_NEWLINE;
 global $login_error;
 if (isset($login_error) and $login_error) {
     F_print_error('WARNING', $l['m_login_wrong']);

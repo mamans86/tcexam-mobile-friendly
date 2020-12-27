@@ -41,3 +41,19 @@ for (var i =0;i<$format_search.length;i++) {
 }
 $("span#user-answer").html($str);
 $("ol.question").html($str2);**/
+
+$('#user_groups,#subject_id[multiple]').selectize({
+	plugins: ['remove_button']
+});
+
+$("#showPass").click(function(){
+	$(this).toggle();
+	$("#hidePass").toggle();
+	$("#xuser_password").attr("type","text");
+});
+
+$("#hidePass").click(function(){
+	$(this).toggle();
+	$("#showPass").toggle();
+	$("#xuser_password").attr("type","password");
+});

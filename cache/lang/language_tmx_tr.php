@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: tr
-// DATE: 2020-08-02 06:00:13
+// DATE: 2020-12-27 19:11:40
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -306,7 +306,10 @@ $tmx['w_modify']='degistir';
 $tmx['w_name']='isim';
 $tmx['w_name_first']='isim';
 $tmx['w_name_last']='soyisim';
+$tmx['w_unsure']='Unsure';
 $tmx['w_next']='sonraki';
+$tmx['w_to_dark']='Switch to dark mode';
+$tmx['w_to_light']='Switch to light mode';
 $tmx['w_notes']='notlar';
 $tmx['w_num_answers']='cevaplarin sayisi';
 $tmx['w_num_questions']='sorularin sayisi';

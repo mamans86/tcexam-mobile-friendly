@@ -51,7 +51,7 @@ echo '</div>'.K_NEWLINE;
 **/
 
 echo '<div class="minibutton" dir="ltr">';
-echo '<span class="copyright"><a href="http://www.tcexam.org">TCExam</a> ver. '.K_TCEXAM_VERSION.' - Copyright &copy; 2004-2020 Nicola Asuni - <a href="http://www.tecnick.com">Tecnick.com LTD</a></span>';
+echo '<span class="copyright"><a href="http://www.tcexam.org">TCExam</a> ver. '.html_entity_decode(K_TCEXAM_VERSION).' - Copyright &copy; 2004-2020 Nicola Asuni - <a href="http://www.tecnick.com">Tecnick.com LTD</a></span>';
 echo '</div>'.K_NEWLINE;
 
 // Display W3C logos

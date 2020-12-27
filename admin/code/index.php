@@ -35,8 +35,17 @@ require_once('../config/tce_config.php');
 $pagelevel = K_AUTH_INDEX;
 require_once('../../shared/code/tce_authorization.php');
 require_once('tce_page_header.php');
+echo '
+<style>
+#licensingInfo{direction:ltr;border-radius:3px;text-align: left;padding: 1em;margin: 1em;background-color:#2196F3;font-weight: bold;color: #fff}
+#licensingInfo a {color:yellow}
+#adminIndex{margin: 1em;background: #fff;border-radius: 3px;padding: 1em;box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);}
+#adminIndex a {border-bottom:1px solid #2196f3}
+#adminIndex a:hover {color:#fff;background:#2196f3}
+</style>
+';
 
-echo '<div style="direction: ltr;text-align: left;border: 3px solid #263238;padding: 1em;margin: 1em 1.2em 1em 2.8em;background-color: #E3F2FD;font-weight: bold;box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.15)">TCEXAM IS SUBJECT TO THE <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html" title="External link to GNU Affero General Public License">GNU-AGPL v.3 LICENSE</a> LICENSE WITH THE FOLLOWING ADDITIONAL TERMS:<ul><li>YOU CAN\'T ALTER, REMOVE, MOVE OR HIDE THE ORIGINAL TCEXAM LOGO, COPYRIGHTS STATEMENTS, LINKS TO <a href="http://www.tecnick.com" title="External link to Tecnick.com">TECNICK.COM</a> AND <a href="http://www.tcexam.org" title="External link to TCExam">TCEXAM</a> WEBSITES, OTHER PROPRIETARY NOTICES, LEGENDS, SYMBOLS OR LABELS IN THE SOFTWARE.</li><li>TCEXAM NAME AND LOGO ARE TRADEMARKS OF <a href="http://www.tecnick.com" title="External link to Tecnick.com">TECNICK.COM LTD</a> AND SHALL BE USED IN ACCORDANCE WITH ACCEPTED TRADEMARK PRACTICE, INCLUDING IDENTIFICATION OF TRADEMARK OWNER\'S NAME.</li></ul>FOR ANY USAGE THAT REQUIRES DIFFERENT (COMMERCIAL) LICENSING TERMS, PLEASE CONTACT <a href="mailto:info@tecnick.com" title="mail to tecnick.com">INFO@TECNICK.COM</a> TO PURCHASE A COMMERCIAL LICENSE.</div>'.K_NEWLINE;
+echo '<div id="licensingInfo">TCEXAM IS SUBJECT TO THE <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html" title="External link to GNU Affero General Public License">GNU-AGPL v.3 LICENSE</a> LICENSE WITH THE FOLLOWING ADDITIONAL TERMS:<ul><li>YOU CAN\'T ALTER, REMOVE, MOVE OR HIDE THE ORIGINAL TCEXAM LOGO, COPYRIGHTS STATEMENTS, LINKS TO <a href="http://www.tecnick.com" title="External link to Tecnick.com">TECNICK.COM</a> AND <a href="http://www.tcexam.org" title="External link to TCExam">TCEXAM</a> WEBSITES, OTHER PROPRIETARY NOTICES, LEGENDS, SYMBOLS OR LABELS IN THE SOFTWARE.</li><li>TCEXAM NAME AND LOGO ARE TRADEMARKS OF <a href="http://www.tecnick.com" title="External link to Tecnick.com">TECNICK.COM LTD</a> AND SHALL BE USED IN ACCORDANCE WITH ACCEPTED TRADEMARK PRACTICE, INCLUDING IDENTIFICATION OF TRADEMARK OWNER\'S NAME.</li></ul>FOR ANY USAGE THAT REQUIRES DIFFERENT (COMMERCIAL) LICENSING TERMS, PLEASE CONTACT <a href="mailto:info@tecnick.com" title="mail to tecnick.com">INFO@TECNICK.COM</a> TO PURCHASE A COMMERCIAL LICENSE.</div>'.K_NEWLINE;
 
 
 // Display test limits (if any)
@@ -93,7 +102,7 @@ if (K_MAX_TESTS_YEAR !== false) {
 if (strlen($limits) > 0) {
     echo '<table style="border: 1px solid #808080;margin-left:auto; margin-right:auto;"><tr><th colspan="4" style="text-align:center;">'.$l['w_remaining_tests'].'</th></tr><tr style="background-color:#CCCCCC;"><th>'.$l['w_limit'].'</th><th>'.$l['w_max'].'</th><th>'.$l['w_executed'].'</th><th>'.$l['w_remaining'].'</th></tr>'.$limits.'</table><br />'.K_NEWLINE;
 }
-echo '<div class="d-block p-15">';
+echo '<div id="adminIndex">';
 echo $l['d_admin_index'];
 echo '</div>';
 

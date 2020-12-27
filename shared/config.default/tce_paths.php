@@ -32,16 +32,21 @@
  * Host URL (e.g.: "http://www.yoursite.com").
  */
 define('K_PATH_HOST', 'http://localhost');
-
+/* if((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443)
+{
+	define('K_PATH_HOST', 'https://'.$_SERVER['SERVER_NAME']);
+}else{
+	define('K_PATH_HOST', 'http://'.$_SERVER['SERVER_NAME']);
+} */
 /**
  * Relative URL where this program is installed (e.g.: "/").
  */
-define('K_PATH_TCEXAM', '/tmf/');
+define('K_PATH_TCEXAM', '/tmf6/');
 
 /**
  * Real full path where this program is installed (e.g: "/var/www/html/TCExam/").
  */
-define('K_PATH_MAIN', 'C:/xampp/htdocs/tmf/');
+define('K_PATH_MAIN', 'C:/xampp/htdocs/tmf6/');
 
 /**
  * Constant used on TCPDF library.

@@ -146,7 +146,6 @@ define('K_DOWNLOAD_BACKUPS', true);
  */
 define('K_ADMIN_FILE_BROWSER_PWD', '$2y$10$ToJdHobEEeptL1qjjICaluVIC93D0LkrrIxGtH2Pj3AafTUELEAQO');
 
-
 /**
  * If true check the unicity of question and answer descriptions using utf8_bin collation when using MySQL.
  */

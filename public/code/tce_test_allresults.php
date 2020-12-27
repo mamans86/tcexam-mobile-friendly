@@ -36,7 +36,7 @@ $pagelevel = K_AUTH_PUBLIC_TEST_RESULTS;
 require_once('../../shared/code/tce_authorization.php');
 
 $thispage_title = $l['t_all_results_user'];
-$thispage_title_icon = '<i class="fas fa-paste"></i>';
+$thispage_title_icon = '<span class="icon-clipboard"></span>';
 $enable_calendar = true;
 require_once('tce_page_header.php');
 require_once('../../shared/code/tce_functions_form.php');

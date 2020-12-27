@@ -941,6 +941,7 @@ if ($r = F_db_query($sql, $db)) {
     F_display_db_error();
 }
 echo '</select>'.K_NEWLINE;
+
 echo '</span>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
@@ -1242,7 +1243,8 @@ if (isset($test_id) and ($test_id > 0)) {
 
     echo '<div class="rowl" title="'.$l['h_subjects'].'">'.K_NEWLINE;
     echo '<br />'.K_NEWLINE;
-    echo '<div class="preview">'.K_NEWLINE;
+    echo '<fieldset class="addedQuestions">'.K_NEWLINE;
+    echo '<legend>Questions in this test</legend>'.K_NEWLINE;
     $subjlist = '';
     $sql = 'SELECT * FROM '.K_TABLE_TEST_SUBJSET.'
 		WHERE tsubset_test_id=\''.$test_id.'\'
@@ -1251,20 +1253,30 @@ if (isset($test_id) and ($test_id > 0)) {
         while ($m = F_db_fetch_array($r)) {
             $subjlist .= '<li>';
             $subjects_list = '';
-            $sqls = 'SELECT subject_id,subject_name
+            $sqls = 'SELECT subject_id,subject_name,subject_module_id
 				FROM '.K_TABLE_SUBJECTS.', '.K_TABLE_SUBJECT_SET.'
 				WHERE subject_id=subjset_subject_id
 					AND subjset_tsubset_id=\''.$m['tsubset_id'].'\'
 				ORDER BY subject_name';
-            if ($rs = F_db_query($sqls, $db)) {
+            if ($rs = F_db_query($sqls, $db)) {											
                 while ($ms = F_db_fetch_array($rs)) {
-                    $subjects_list .= '<a href="tce_edit_subject.php?subject_id='.$ms['subject_id'].'" title="'.$l['t_subjects_editor'].'">'.htmlspecialchars($ms['subject_name'], ENT_NOQUOTES, $l['a_meta_charset']).'</a>, ';
+					$sqlmn = 'SELECT module_name
+					FROM '.K_TABLE_MODULES.'
+					WHERE module_id='.$ms['subject_module_id'];
+					if ($rmn = F_db_query($sqlmn, $db)) {
+						if ($mmn = F_db_fetch_array($rmn)) {
+							$module_name = $mmn[0];
+						}
+					}
+                    $subjects_list .= '<a href="tce_edit_module.php?module_id='.$ms['subject_module_id'].'" class="moduleName" title="'.$l['t_modules_editor'].'">'.htmlspecialchars($module_name, ENT_NOQUOTES, $l['a_meta_charset']).'</a><br/>';
+                    $subjects_list .= '<a href="tce_edit_subject.php?subject_id='.$ms['subject_id'].'" class="topicName" title="'.$l['t_subjects_editor'].'">'.htmlspecialchars($ms['subject_name'], ENT_NOQUOTES, $l['a_meta_charset']).'</a>, ';
                 }
             } else {
                 F_display_db_error();
             }
             // remove last comma + space
             $subjlist .= substr($subjects_list, 0, -2);
+            $subjlist .= '<br />'.K_NEWLINE;
             $subjlist .= '<br />'.K_NEWLINE;
             $subjlist .= '<acronym class="offbox" title="'.$l['h_num_questions'].'">'.$m['tsubset_quantity'].'</acronym> ';
             $subjlist .= '<acronym class="offbox" title="'.$l['h_question_type'].'">';
@@ -1303,7 +1315,7 @@ if (isset($test_id) and ($test_id > 0)) {
     echo $l['w_max_score'].': '.$test_max_score_new;
     echo '<input type="hidden" name="test_max_score" id="test_max_score" value="'.$test_max_score_new.'" />';
 
-    echo '</div>'.K_NEWLINE;
+    echo '</fieldset>'.K_NEWLINE;
     echo '<br /><br />'.K_NEWLINE;
     echo '</div>'.K_NEWLINE;
 

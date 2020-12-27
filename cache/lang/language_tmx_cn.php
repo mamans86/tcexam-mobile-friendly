@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: cn
-// DATE: 2020-08-02 05:59:13
+// DATE: 2020-12-27 19:11:27
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -306,7 +306,10 @@ $tmx['w_modify']='修改';
 $tmx['w_name']='名称';
 $tmx['w_name_first']='名';
 $tmx['w_name_last']='姓';
+$tmx['w_unsure']='Unsure';
 $tmx['w_next']='下一个';
+$tmx['w_to_dark']='Switch to dark mode';
+$tmx['w_to_light']='Switch to light mode';
 $tmx['w_notes']='备注';
 $tmx['w_num_answers']='答案数量';
 $tmx['w_num_questions']='问题数目';

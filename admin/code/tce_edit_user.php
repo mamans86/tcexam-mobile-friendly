@@ -490,6 +490,7 @@ if ($r = F_db_query($sql, $db)) {
     F_display_db_error();
 }
 echo '</select>'.K_NEWLINE;
+
 echo '</span>'.K_NEWLINE;
 echo '</div>'.K_NEWLINE;
 
@@ -508,11 +509,11 @@ if (!empty($user_otpkey)) {
     echo '</div>'.K_NEWLINE;
 }
 
-echo '<div class="row d-iflex">'.K_NEWLINE;
+echo '<div class="row jc-center">'.K_NEWLINE;
 // show buttons by case
 if (isset($user_id) and ($user_id > 0)) {
     if (($user_level < $_SESSION['session_user_level']) or ($user_id == $_SESSION['session_user_id']) or ($_SESSION['session_user_level'] >= K_AUTH_ADMINISTRATOR)) {
-        echo '<span class="d-iflex c-update">';
+        echo '<span class="d-iflex c-update jc-center">';
         echo '<input type="checkbox" name="confirmupdate" id="confirmupdate" value="1" title="confirm &rarr; update" />';
         F_submit_button('update', $l['w_update'], $l['h_update']);
         echo '</span>';

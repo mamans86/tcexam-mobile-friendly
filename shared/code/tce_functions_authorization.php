@@ -51,9 +51,6 @@ function F_loginForm($faction, $fid, $fmethod, $fenctype, $username)
      require_once('../../shared/code/tce_functions_form.php');
     $str = '';
     $str .= '<div class="container">'.K_NEWLINE;
-    if (K_USRREG_ENABLED) {
-        $str .= '<small><a id="userreg_link" href="../../public/code/tce_user_registration.php" title="'.$l['t_user_registration'].'">'.$l['w_user_registration_link'].'</a></small>'.K_NEWLINE;
-    }
     $str .= '<div class="tceformbox login_box">'.K_NEWLINE;
 	
 	$str .= '<div id="insCont" class="ta-center">'.K_NEWLINE;
@@ -65,31 +62,37 @@ function F_loginForm($faction, $fid, $fmethod, $fenctype, $username)
     $str .= '<form action="'.$faction.'" method="'.$fmethod.'" id="'.$fid.'" enctype="'.$fenctype.'">'.K_NEWLINE;
     // user name
 	
-	$str .= '<div id="loginFieldCont" class="box-bd bd-gray5">'.K_NEWLINE;
-    $str .= getFormRowTextInput('xuser_name', $l['w_username'], $l['h_login_name'], '', $username, '', 255, false, false, false, '');
+	$str .= '<div id="loginFieldCont" class="box-bd">'.K_NEWLINE;
+    $str .= getFormRowTextInput('xuser_name', $l['w_username'], $l['h_login_name'], '<span class="icon icon-user"></span>&nbsp;', $username, '', 255, false, false, false, '');
     // password
-    $str .= getFormRowTextInput('xuser_password', $l['w_password'], $l['h_password'], '', '', '', 255, false, false, true, '');
+    $str .= getFormRowTextInput('xuser_password', $l['w_password'], $l['h_password'], '<span class="icon icon-eye" id="showPass"></span><span class="icon icon-eye-blocked" id="hidePass"></span>', '', '', 255, false, false, true, '');
     // One Time Password code (OTP)
 	$str .= '</div>'.K_NEWLINE;
     if (K_OTP_LOGIN) {
         $str .= getFormRowTextInput('xuser_otpcode', $l['w_otpcode'], $l['h_otpcode'], '', '', '', 255, false, false, true, '');
     }
-    if (defined('K_PASSWORD_RESET') and K_PASSWORD_RESET) {
-        // print a link to password reset page
-        $str .= '<div>'.K_NEWLINE;
-        $str .= '<span><a href="../../public/code/tce_password_reset.php" title="'.$l['h_reset_password'].'" style="font-size:90%;">'.$l['w_forgot_password'].'</a></span>'.K_NEWLINE;
-        $str .= '</div>'.K_NEWLINE;
-    }
+
     // buttons
-    $str .= '<div class="row">'.K_NEWLINE;
+    $str .= '<div class="row" style="padding:0 1em">'.K_NEWLINE;
     $str .= '<input type="submit" name="login" id="login" value="'.$l['w_login'].'" title="'.$l['h_login_button'].'" />'.K_NEWLINE;
     // the following field is used to check if the form has been submitted
     $str .= '<input type="hidden" name="logaction" id="logaction" value="login" />'.K_NEWLINE;
     $str .= '</div>'.K_NEWLINE;
+		$str .= '<div class="ta-center" id="forgotReg">'.K_NEWLINE;
+    if (defined('K_PASSWORD_RESET') and K_PASSWORD_RESET) {
+        // print a link to password reset page
+        
+        $str .= '<p><a href="../../public/code/tce_password_reset.php" title="'.$l['h_reset_password'].'" style="font-size:90%;">'.$l['w_forgot_password'].'</a></p>'.K_NEWLINE;
+        
+    }
+	if (K_USRREG_ENABLED) {
+        $str .= '<p><a id="userreg_link" href="../../public/code/tce_user_registration.php" title="'.$l['t_user_registration'].'" style="font-size:90%;">'.$l['w_user_registration_link'].'</a></p>'.K_NEWLINE;
+    }
+	$str .= '</div>'.K_NEWLINE;
     $str .= F_getCSRFTokenField().K_NEWLINE;
     $str .= '</form>'.K_NEWLINE;
     $str .= '</div>'.K_NEWLINE;
-    $str .= '<div class="pagehelp">'.$l['hp_login'].'</div>'.K_NEWLINE;
+    //$str .= '<div class="pagehelp">'.$l['hp_login'].'</div>'.K_NEWLINE;
     $str .= '</div>'.K_NEWLINE;
     return $str;
 }

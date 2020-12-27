@@ -708,7 +708,7 @@ echo '<br />'.K_NEWLINE;
 echo '<a href="#" title="'.$l['h_preview'].'" class="xmlbutton" onclick="previewWindow=window.open(\'tce_preview_tcecode.php?tcexamcode=\'+encodeURIComponent(document.getElementById(\'form_questioneditor\').question_description.value),\'previewWindow\',\'dependent,height=500,width=500,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no\'); return false;">'.$l['w_preview'].'</a>'.K_NEWLINE;
 
 echo '</span>'.K_NEWLINE;
-echo '<span class="formw d-block" style="border:1px solid #808080;">'.K_NEWLINE;
+echo '<span class="formw d-block" style="border: 1px solid #E0E0E0;padding: 0.25em;border-radius: 2px;background: #fff;">'.K_NEWLINE;
 echo '<textarea cols="50" rows="10" name="question_description" id="question_description" onselect="FJ_update_selection(document.getElementById(\'form_questioneditor\').question_description)" title="'.$l['h_question_description'].'"';
 if (K_ENABLE_VIRTUAL_KEYBOARD) {
     echo ' class="keyboardInput"';
@@ -724,7 +724,7 @@ if (K_ENABLE_QUESTION_EXPLANATION) {
     echo '<span class="label">'.K_NEWLINE;
     echo '<label for="question_explanation">'.$l['w_explanation'].'</label>'.K_NEWLINE;
     echo '<br />'.K_NEWLINE;
-    $showexplanationarea = 'javascript:if(document.getElementById(\'explanationarea\').style.display==\'none\'){document.getElementById(\'explanationarea\').style.display=\'block\';document.getElementById(\'showexplanationarea\').style.display=\'none\';document.getElementById(\'hideexplanationarea\').style.display=\'block\';}; return false;';
+    $showexplanationarea = 'javascript:if(document.getElementById(\'explanationarea\').style.display==\'none\'){document.getElementById(\'explanationarea\').style.display=\'block\';document.getElementById(\'showexplanationarea\').style.display=\'none\';document.getElementById(\'hideexplanationarea\').style.display=\'flex\';}; return false;';
     echo '<span id="showexplanationarea"><a class="xmlbutton" href="#" onclick="'.$showexplanationarea.'" title="'.$l['w_show'].'">'.$l['w_show'].' &rarr;</a></span>';
     $hideexplanationarea = 'javascript:if(document.getElementById(\'explanationarea\').style.display==\'block\'){document.getElementById(\'explanationarea\').style.display=\'none\';document.getElementById(\'showexplanationarea\').style.display=\'block\';document.getElementById(\'hideexplanationarea\').style.display=\'none\';}; return false;';
     echo '<span id="hideexplanationarea" style="display:none;">';
@@ -732,7 +732,7 @@ if (K_ENABLE_QUESTION_EXPLANATION) {
     echo '<a class="xmlbutton" href="#" onclick="'.$hideexplanationarea.'" title="'.$l['w_hide'].'">'.$l['w_hide'].'</a> ';
     echo '</span>';
     echo '</span>'.K_NEWLINE;
-    echo '<span id="explanationarea" class="formw" style="display:none;border:1px solid #808080;">'.K_NEWLINE;
+    echo '<span id="explanationarea" class="formw" style="display:none;border: 1px solid #E0E0E0;padding: 0.25em;border-radius: 2px;background: #fff;">'.K_NEWLINE;
     echo '<textarea cols="50" rows="10" name="question_explanation" id="question_explanation" onselect="FJ_update_selection(document.getElementById(\'form_questioneditor\').question_explanation)" title="'.$l['h_explanation'].'"';
     if (K_ENABLE_VIRTUAL_KEYBOARD) {
         echo ' class="keyboardInput"';
@@ -745,10 +745,10 @@ if (K_ENABLE_QUESTION_EXPLANATION) {
 }
 
 // question type
-echo '<div class="row d-iflex ta-left">'.K_NEWLINE;
+echo '<div class="row d-block ta-left">'.K_NEWLINE;
 echo '<span class="label">&nbsp;</span>'.K_NEWLINE;
 echo '<div class="formw">'.K_NEWLINE;
-echo '<fieldset class="noborder">'.K_NEWLINE;
+echo '<fieldset class="noborder" style="width:92%">'.K_NEWLINE;
 echo '<legend title="'.$l['h_question_type'].'">'.$l['w_type'].'</legend>'.K_NEWLINE;
 
 echo '<input type="radio" name="question_type" id="single_answer" value="1"';

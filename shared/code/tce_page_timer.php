@@ -54,9 +54,9 @@ echo '<div id="nosoalTop"></div>'.K_NEWLINE;
 echo '<div class="d-flex-jc-end">'.K_NEWLINE;
 echo '<div id="timerdiv" class="d-flex '.$timerTestExecute.'">'.K_NEWLINE;
 if(f_sc_name('tce_test_execute.php') and $_SESSION['session_user_level']>0 and isset($_REQUEST['testid'])){
-	$timeLabel = '<i class="fas fa-clock"></i> '.$l['w_timeleft'];
+	$timeLabel = '<span class="icon-clock"></span> '.$l['w_timeleft'];
 }else{
-	$timeLabel = '<i class="fas fa-clock"></i> '.$l['w_time'];
+	$timeLabel = '<span class="icon-clock"></span> '.$l['w_time'];
 }
 echo '<label for="timer" class="timerlabel">'.$timeLabel.'</label>'.K_NEWLINE;
 echo '<input type="text" name="timer" id="timer" value="" size="29" maxlength="29" title="'.$l['w_clock_timer'].'" readonly="readonly"/></div>'.K_NEWLINE;

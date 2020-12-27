@@ -350,7 +350,7 @@ echo getFormNoscriptSelect('display_mode');
 
 echo getFormRowCheckBox('show_graph', $l['w_graph'], $l['w_result_graph'], '', 1, $show_graph, false, '');
 
-echo '<div class="row d-iflex">'.K_NEWLINE;
+echo '<div class="row">'.K_NEWLINE;
 echo '<span class="label">&nbsp;</span>'.K_NEWLINE;
 echo '<span class="formw">'.K_NEWLINE;
 echo '<input type="submit" name="selectcategory" id="selectcategory" value="'.$l['w_select'].'" />'.K_NEWLINE;
@@ -410,7 +410,7 @@ if (isset($_REQUEST['sel'])) {
     }
 
     if ($itemcount > 0) {
-        echo '<div class="row d-block">'.K_NEWLINE;
+        echo '<div class="row jc-center" id="btnAction">'.K_NEWLINE;
         // show buttons by case
         echo '<a href="tce_xml_results.php?menu_mode=startlongprocess'.$filter.'" class="xmlbutton" title="'.$l['h_xml_export'].'">XML</a> ';
         echo '<a href="tce_xml_results.php?format=JSON&amp;menu_mode=startlongprocess'.$filter.'" class="xmlbutton" title="JSON">JSON</a> ';

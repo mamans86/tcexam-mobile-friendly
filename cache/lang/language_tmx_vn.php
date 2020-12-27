@@ -1,6 +1,6 @@
 <?php
 // CACHE FILE FOR LANGUAGE: vn
-// DATE: 2020-08-02 06:00:19
+// DATE: 2020-12-27 19:11:42
 // *** DELETE THIS FILE TO RELOAD DATA FROM TMX FILE ***
 
 $tmx['a_meta_charset']='UTF-8';
@@ -308,7 +308,10 @@ $tmx['w_modify']='sửa';
 $tmx['w_name']='tên';
 $tmx['w_name_first']='tên';
 $tmx['w_name_last']='họ';
+$tmx['w_unsure']='Unsure';
 $tmx['w_next']='kế tiếp';
+$tmx['w_to_dark']='Switch to dark mode';
+$tmx['w_to_light']='Switch to light mode';
 $tmx['w_notes']='ghi chú';
 $tmx['w_num_answers']='số lượng đáp án';
 $tmx['w_num_questions']='số lượng câu hỏi';

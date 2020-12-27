@@ -85,9 +85,14 @@ echo '<meta name="keywords" content="'.htmlspecialchars($thispage_keywords, ENT_
 
 echo '<link rel="stylesheet" href="'.K_PATH_HOST.K_PATH_TCEXAM.'public/styles/normalize.css">'.K_NEWLINE;
 echo '<link rel="stylesheet" href="'.K_PATH_HOST.K_PATH_TCEXAM.'public/styles/main.css">'.K_NEWLINE;
+echo '<link rel="stylesheet" href="'.K_PATH_HOST.K_PATH_TCEXAM.'admin/styles/selectize.css">'.K_NEWLINE;
   
 echo '<link rel="stylesheet" href="'.$thispage_style.'" type="text/css" />'.K_NEWLINE;
+//$svgBg = '<link rel="stylesheet" href="'.K_PATH_HOST.K_PATH_TCEXAM.'public/styles/bg/'.rand(1,11).'.css">';
+//echo $svgBg.K_NEWLINE;
 echo '<link rel="shortcut icon" href="'.$thispage_icon.'" />'.K_NEWLINE;
+echo '<script src="'.K_PATH_HOST.K_PATH_TCEXAM.'shared/jscripts/vendor/jquery.min.js"></script>'.K_NEWLINE;
+echo '<script src="'.K_PATH_HOST.K_PATH_TCEXAM.'shared/jscripts/vendor/selectize.min.js"></script>'.K_NEWLINE;
 // calendar
 if (isset($enable_calendar) and $enable_calendar) {
     echo '<style type="text/css">@import url('.K_PATH_SHARED_JSCRIPTS.'jscalendar/calendar-blue.css);</style>'.K_NEWLINE;
@@ -101,6 +106,7 @@ if (isset($enable_calendar) and $enable_calendar) {
 }
 echo '<!-- T'.'CE'.'x'.'am1'.'97'.'30'.'10'.'4 -->'.K_NEWLINE;
 echo '<link rel="stylesheet" href="'.K_PATH_HOST.K_PATH_TCEXAM.'public/styles/fontawesome/css/all.min.css" type="text/css" />'.K_NEWLINE;
+
 echo '</head>'.K_NEWLINE;
 
 echo '<body>'.K_NEWLINE;
