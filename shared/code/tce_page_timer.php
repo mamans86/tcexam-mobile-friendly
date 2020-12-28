@@ -54,7 +54,7 @@ echo '<div id="nosoalTop"></div>'.K_NEWLINE;
 echo '<div class="d-flex-jc-end">'.K_NEWLINE;
 echo '<div id="timerdiv" class="d-flex '.$timerTestExecute.'">'.K_NEWLINE;
 if(f_sc_name('tce_test_execute.php') and $_SESSION['session_user_level']>0 and isset($_REQUEST['testid'])){
-	$timeLabel = '<span class="icon-clock"></span> '.$l['w_timeleft'];
+	$timeLabel = '<span class="icon-clock"></span> <span id="timeLeftLbl">'.$l['w_timeleft'].'</span>';
 }else{
 	$timeLabel = '<span class="icon-clock"></span> '.$l['w_time'];
 }

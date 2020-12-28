@@ -2050,7 +2050,7 @@ function F_questionsMenu($testdata, $testuser_id, $testlog_id = 0, $disable = fa
 		$navlink .= '</div>';
     }
 	
-	echo '<div id="nosoalCont" class="d-flex"><div id="ns1"><span id="fontplus" onclick="zoomintext()">&plus;</span><span id="fontminus" onclick="zoomouttext()">&minus;</span><span id="nosoal">#'.$qsel.'</span></div><div id="ns-center" class="d-flex-jc-center"><span id="darkModeBtn" onclick="darkMode()"><span id="darkModeLbl">'.$l['w_to_dark'].'</span></span><span id="lightModeBtn" onclick="lightMode()"><span id="lightModeLbl">'.$l['w_to_light'].'</span></span></div><div id="ns2" class="d-flex-jc-end"><span id="information" onclick="infoToggle()"><span class="icon-info"></span> <span id="txtInfo">'.$l['w_info'].'</span></span>';
+	echo '<div id="nosoalCont" class="d-flex ai-unset jc-sb fwrap p-05em"><div id="ns1" class="d-flex ai-unset"><span id="fontplus" onclick="zoomintext()">&plus;</span><span id="fontminus" onclick="zoomouttext()">&minus;</span><span id="nosoal">#'.$qsel.'</span></div><div id="ns-center" class="d-flex ai-unset"><span id="darkModeBtn" onclick="darkMode()"><span id="darkModeLbl">'.$l['w_to_dark'].'</span></span><span id="lightModeBtn" onclick="lightMode()"><span id="lightModeLbl">'.$l['w_to_light'].'</span></span></div><div id="ns2" class="d-flex ai-unset"><span id="information" onclick="infoToggle()"><span class="icon-info"></span> <span id="txtInfo">'.$l['w_info'].'</span></span>';
 	if (F_getBoolean($testdata['test_comment_enabled']) and (!$disable)){
 		echo '<span id="commentShow" onclick="commentOpen()"><span class="icon-bubble"></span> <span id="txtComment">'.$l['w_comment'].'</span></span>';
 	}
