@@ -179,6 +179,12 @@ function clearUnsure(){
 	localStorage.setItem('unsure', '[]');
 }
 
+if(fTestForm){
+	if(!localStorage.getItem("darkMode")){
+		localStorage.setItem("darkMode","0")
+	}
+}
+
 function darkMode(){
 	if(fTestForm){
 		var questionBlock = document.querySelector(".question-block");
