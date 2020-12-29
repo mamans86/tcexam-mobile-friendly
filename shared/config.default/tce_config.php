@@ -308,7 +308,7 @@ $lang_resources = new TMXResourceBundle(K_PATH_TMX_FILE, K_USER_LANG, K_PATH_LAN
 $l = $lang_resources->getResource(); // language array
 
 ini_set('arg_separator.output', '&amp;');
-//date_default_timezone_set(K_TIMEZONE);
+date_default_timezone_set(K_TIMEZONE);
 
 if (!defined('PHP_VERSION_ID')) {
     $version = PHP_VERSION;
