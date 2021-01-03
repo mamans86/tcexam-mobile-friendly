@@ -1,6 +1,6 @@
-# TCExam Mobile Friendly Version
+# TCExam Mobile Friendly (TMF) Project
 
-TCExam Mobile Friendly version created from HTML5 Boiler Plate Template started by forking TCExam v14.3.0. TCExam Mobile Friendly version applied to Public Area (test taker page) and Admin Area Page too :)
+TCExam Mobile Friendly (TMF) Project created from HTML5 Boiler Plate Template started by forking TCExam v14.3.0. TCExam Mobile Friendly version applied to Public Area (test taker page) and Admin Area Page too :)
 
 If there are any update from tecnickcom/tcexam i will update this version too if possible.
 
