@@ -1,32 +1,19 @@
-# TCExam Mobile Friendly Version
+# TCExam Mobile Friendly (TMF) Project
 
-TCExam Mobile Friendly version created from HTML5 Boiler Plate Template started by forking TCExam v14.3.0. TCExam Mobile Friendly version applied to Public Area (test taker page) and Admin Area Page too :)
+TCExam Mobile Friendly (TMF) Project created from HTML5 Boiler Plate Template started by forking TCExam v14.3.0. TCExam Mobile Friendly version applied to Public Area (test taker page) and Admin Area Page too :)
 
 If there are any update from tecnickcom/tcexam i will update this version too if possible.
 
 ## Screenshot
 
 ###### Login Page - Mobile View
-![Login Page - Mobile View](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Login-Screen-v20.07.12.jpg?raw=true)
+![Login Page - Mobile View](https://1.bp.blogspot.com/-iFxj0A0RRQY/X-wgdSfP1DI/AAAAAAAASrw/ChJWM3Ko9I80WklFkJaPruXerWPWFZFHwCLcBGAsYHQ/s511/TMF_login_screen.PNG?raw=true)
 
-###### Test Page - MCMA (Multi Choice Multi Answer)
-![Test Page - MCMA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test-Page-MultiAnswer-v20.07.12.jpg?raw=true)
-
-###### Test Page - MCSA (Multi Choice Single Answer)
-![Test Page - MCSA](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test-Page-SingleAnswer-v20.07.12.png?raw=true)
-
-###### Test Page - Questions List
-![Test Page - Questions List](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Test-Page-QuestionList-v20.07.12.png?raw=true)
-
-###### Public Area Main Menu
-![Public Area Main Menu](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/TMF-MainMenu-v20.07.12.png?raw=true)
-
-###### Admin Area UI
-![Admin Area UI](https://github.com/mamans86/tcexam-mobile-friendly/blob/develop/screenshot/Admin%20Area%20UI.jpg?raw=true)
+You can find other screenshot here: https://tkj.yayasan-gondang.com/2020/12/tcexam-mobile-friendly-tmf-enhancement.html
 
 ## TO DO LIST
-- [ ] Add unsure answer mark in test page
-- [ ] Add text zooming in test page
+- [x] Add unsure answer mark in test page
+- [x] Add text zooming in test page
 - [x] Add question number on top of question description
 - [x] Create button to toggle question list on top of question description
 - [x] Create mobile friendly Admin Area
