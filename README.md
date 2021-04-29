@@ -1,3 +1,4 @@
+This report no longer maintained, please go to our newer project called TMFAJAX ( TCExam Mobile Friendly with AJAX Support ). You can visit the report here https://github.com/Xamzone/tmfajax
 # TCExam Mobile Friendly (TMF) Project
 
 TCExam Mobile Friendly (TMF) Project created from HTML5 Boiler Plate Template started by forking TCExam v14.3.0. TCExam Mobile Friendly version applied to Public Area (test taker page) and Admin Area Page too :)
